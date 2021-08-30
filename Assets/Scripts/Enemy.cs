@@ -165,7 +165,7 @@ public class Enemy : MonoBehaviour
                 if (m_nextBattleReader == m_battleCountNum)
                 {
                     GameManager.gameSetFlag = false;
-                    StartCoroutine(ResultSet());
+                    GameManager.turn = GameManager.Turn.GameEnd;
                 }
                 else
                 {
@@ -175,12 +175,6 @@ public class Enemy : MonoBehaviour
             }
         }
 
-    }
-
-    IEnumerator ResultSet()
-    {
-        yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene("Result");
     }
 
     IEnumerator NextBattleSet()

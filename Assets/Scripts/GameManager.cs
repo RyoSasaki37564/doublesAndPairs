@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         ResetTurn,  //ドロップ再配置
         NextBattleTurn, //次の戦闘の受け取りターン
         GameOut,  //ゲーム外状態。ゲームセットとゲームスタートの橋渡し役。
+        GameEnd, //クエスト終了
     }
     public static Turn turn;
 
@@ -107,6 +108,9 @@ public class GameManager : MonoBehaviour
                 totalTime = iii;
                 seconds = (int)totalTime;
                 timerText.text = "PLAY!";
+                break;
+            case Turn.GameEnd:
+                StartCoroutine(ResultSet());
                 break;
             default:
                 break;
