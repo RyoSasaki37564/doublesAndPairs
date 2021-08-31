@@ -162,16 +162,12 @@ public class Enemy : MonoBehaviour
                 m_currentEHp = m_enemyHpMax;
                 m_enemyHPNum.text = m_currentEHp.ToString();
 
-                if (m_nextBattleReader == m_battleCountNum)
-                {
-                    GameManager.gameSetFlag = false;
-                    GameManager.turn = GameManager.Turn.GameEnd;
-                }
-                else
-                {
-                    m_kamishibai = false;
-                    StartCoroutine(NextBattleSet());
-                }
+                m_kamishibai = false;
+                StartCoroutine(NextBattleSet());
+            }
+            else
+            {
+                GameManager.turn = GameManager.Turn.GameEnd;
             }
         }
 
