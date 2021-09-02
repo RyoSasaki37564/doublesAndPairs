@@ -92,19 +92,16 @@ public class Enemy : MonoBehaviour
     {
 
         m_eHPSlider.value = m_currentEHp;
+        m_enemyHPNum.text = m_currentEHp.ToString();
 
         if (RedDropDestroy.fireAttackFlag == true)
         {
             m_currentEHp -= FireDamage.m_firePower;
-            m_enemyHPNum.text = m_currentEHp.ToString();
-
             RedDropDestroy.fireAttackFlag = false;
         }
         if (RedDropDestroy.fireMagicFlag == true)
         {
             m_currentEHp -= FireDamage.m_fireMPower;
-            m_enemyHPNum.text = m_currentEHp.ToString();
-
             RedDropDestroy.fireMagicFlag = false;
         }
 
@@ -112,15 +109,11 @@ public class Enemy : MonoBehaviour
         if (BlueDropDestroy.iceAttackFlag == true)
         {
             m_currentEHp -= IceDamage.m_icePower;
-            m_enemyHPNum.text = m_currentEHp.ToString();
-
             BlueDropDestroy.iceAttackFlag = false;
         }
         if (BlueDropDestroy.iceMagicFlag == true)
         {
             m_currentEHp -= IceDamage.m_iceMPower;
-            m_enemyHPNum.text = m_currentEHp.ToString();
-
             BlueDropDestroy.iceMagicFlag = false;
         }
 
@@ -128,15 +121,11 @@ public class Enemy : MonoBehaviour
         if (GreenDropDestroy.woodAttackFlag == true)
         {
             m_currentEHp -= WoodDamage.m_woodPower;
-            m_enemyHPNum.text = m_currentEHp.ToString();
-
             GreenDropDestroy.woodAttackFlag = false;
         }
         if (GreenDropDestroy.woodMagicFlag == true)
         {
             m_currentEHp -= WoodDamage.m_woodMPower;
-            m_enemyHPNum.text = m_currentEHp.ToString();
-
             GreenDropDestroy.woodMagicFlag = false;
         }
 

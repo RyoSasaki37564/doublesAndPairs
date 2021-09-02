@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     {
         m_enemyMastarObj = GameObject.Find("EnemyObj"); //エネミーマスターデータを扱うためにエネミーを取得
 
+        Skill.m_faze = Skill.Faze.firstFazer;
 
         iii = (int)totalTime; //カウントのストッパー
 

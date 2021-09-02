@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Skill : MonoBehaviour
 {
     [SerializeField] GameObject[] m_fazerSkills = new GameObject[3]; //フェイザーを格納
+    [SerializeField] GameObject m_skillEffectPosition = default; //生成位置
+    [SerializeField] Text m_skillBottunText = default; //スキルボタンの文字
+
+    bool m_skillChargeFlg = false;
 
     public enum Faze
     {
@@ -16,21 +21,42 @@ public abstract class Skill : MonoBehaviour
     public static Faze m_faze;
 
     // Start is called before the first frame update
+    private void Start()
+    {
+        m_skillChargeFlg = true;
+        m_skillBottunText.text = m_faze.ToString();
+    }
     public virtual void Fazer()
     {
-        switch (m_faze)
+        if (m_skillChargeFlg == true)
         {
-            case Faze.firstFazer:
-                Instantiate(m_fazerSkills[0], transform.position, transform.rotation);
-                break;
-            case Faze.secondFazer:
-                Instantiate(m_fazerSkills[1], transform.position, transform.rotation);
-                break;
-            case Faze.lethalFazer:
-                Instantiate(m_fazerSkills[2], transform.position, transform.rotation);
-                break;
-            default:
-                break;
+            switch (m_faze)
+            {
+                case Faze.firstFazer:
+                    m_skillBottunText.text = m_faze.ToString();
+                    Instantiate(m_fazerSkills[0], m_skillEffectPosition.transform.position, m_skillEffectPosition.transform.rotation);
+                    m_skillChargeFlg = false;
+                    m_skillBottunText.text = "使用不可";
+                    break;
+                case Faze.secondFazer:
+                    m_skillBottunText.text = m_faze.ToString();
+                    Instantiate(m_fazerSkills[1], m_skillEffectPosition.transform.position, m_skillEffectPosition.transform.rotation);
+                    m_skillChargeFlg = false;
+                    m_skillBottunText.text = "使用不可";
+                    break;
+                case Faze.lethalFazer:
+                    m_skillBottunText.text = m_faze.ToString();
+                    Instantiate(m_fazerSkills[2], m_skillEffectPosition.transform.position, m_skillEffectPosition.transform.rotation);
+                    m_skillChargeFlg = false;
+                    m_skillBottunText.text = "使用不可";
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            m_skillBottunText.text = "使用不可";
         }
     }
 }

@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class TestFazer : Skill
 {
-    
+    public override void Fazer()
+    {
+        base.Fazer();
+    }
 }

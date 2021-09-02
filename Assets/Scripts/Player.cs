@@ -15,16 +15,12 @@ public class Player : MonoBehaviour
     /// <summary>スライダー</summary>
     public Slider m_pHPSlider;
 
-    void Awake()
-    {
-        m_currentPHp = m_playerHpMax;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
         m_pHPSlider = GameObject.Find("PlayerHpSlider").GetComponent<Slider>();
-
+        m_currentPHp = m_playerHpMax;
+        m_pHPSlider.value = m_currentPHp;
         m_playerHPNum.text = m_currentPHp.ToString();
     }
 
