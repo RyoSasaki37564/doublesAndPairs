@@ -51,12 +51,11 @@ public class DropsGenerater : MonoBehaviour
 
 
         //ランダムドロップ生成  内部構造、原始的手法につき短縮できる式が見つかれば改修を(メソッド化？)
-        if (GameManager.turn == GameManager.Turn.PlayerTurn)
+        if (GameManager.turn == GameManager.Turn.PlayerTurn || GameManager.turn == GameManager.Turn.InputTurn)
         {
-            if (!dropsDestroyFlag) //ドロップを消したら
+            if (!dropsDestroyFlag || Enemy.m_currentEHp <= 0) //ドロップを消したら
             {
                 dropsDestroyFlag = false;
-                m_resetterFlg = false; //リセット処理の準備
 
                 if (GameManager.gameSetFlag)
                 {
@@ -255,13 +254,14 @@ public class DropsGenerater : MonoBehaviour
 
         if (GameManager.turn == GameManager.Turn.ResetTurn) //リセット処理
         {
-            if(m_resetterFlg == false)
+            m_resetterFlg = false; //リセット処理の準備
+            if (m_resetterFlg == false)
             {
                 StartCoroutine(GameStart());
                 dropsDestroyFlag = true;
                 GameManager.turn = GameManager.Turn.InputTurn;
-                m_resetterFlg = true;//1回だけ再生するための即切りフラグ
-
+                Debug.Log("来ました");
+                m_resetterFlg = true;//1回だけ再生するための即切りフラグ;
             }
         }
     }

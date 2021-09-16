@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    int m_playerHpMax = 8000;
+    [SerializeField]int m_playerHpMax = 8000;
     public static float m_currentPHp; //現在のプレイヤーのHP
     public static float m_resultPHp; //前のターンのプレイヤーの最終HP
 
     public Text m_playerHPNum;
+
+    public static int thePMAXHP = 0;
 
     /// <summary>スライダー</summary>
     public Slider m_pHPSlider;
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        thePMAXHP = m_playerHpMax;
         m_pHPSlider = GameObject.Find("PlayerHpSlider").GetComponent<Slider>();
         m_currentPHp = m_playerHpMax;
         m_pHPSlider.value = m_currentPHp;
@@ -27,6 +29,19 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Skill.m_healFlg == true)
+        {
+            m_pHPSlider.value = m_currentPHp;
+            m_playerHPNum.text = m_currentPHp.ToString();
+        }
+
+        if(m_currentPHp > m_playerHpMax)
+        {
+            m_currentPHp = m_playerHpMax;
+            m_pHPSlider.value = m_currentPHp;
+            m_playerHPNum.text = m_currentPHp.ToString();
+        }
+
         if (Enemy.m_currentEHp > 0)
         {
 
@@ -41,16 +56,6 @@ public class Player : MonoBehaviour
 
                 GameManager.turn = GameManager.Turn.CleanUpTurn; // リセットターンに変更
             }
-
-            //if(GameManager.turnFlag == false) //敵の攻撃
-            //{
-            //    Debug.Log("敵の攻撃");
-            //    m_pHPSlider.value = m_currentPHp;
-            //    m_currentPHp -= Enemy.m_enemyAttack;
-            //    GameManager.turnFlag = true;
-            //    GameManager.PlayTimeFlg = true;
-            //}
-
         }
     }
 }

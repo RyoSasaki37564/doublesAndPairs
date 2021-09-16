@@ -8,7 +8,7 @@ public class TestFirstFazer : MonoBehaviour
 
     public void First()
     {
-            Enemy.m_currentEHp -= m_firstFazerAttack;
-            Destroy(gameObject);
+        Enemy.m_currentEHp -= m_firstFazerAttack;
+        Destroy(gameObject);
     }
 }

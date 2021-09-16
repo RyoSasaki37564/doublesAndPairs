@@ -7,6 +7,7 @@ public class GreenDropDestroy : MonoBehaviour
     public static bool woodAttackFlag = false;
     public static bool woodMagicFlag = false;
 
+
     void Start()
     {
         woodAttackFlag = false;
@@ -26,7 +27,6 @@ public class GreenDropDestroy : MonoBehaviour
                     this.gameObject.SetActive(false);
                     DropsGenerater.dropsDestroyFlag = false;
                     woodAttackFlag = true;
-
                     GameManager.SetTurn(GameManager.Turn.PlayerTurn);
                 }
 
@@ -37,7 +37,6 @@ public class GreenDropDestroy : MonoBehaviour
                     this.gameObject.SetActive(false);
                     DropsGenerater.dropsDestroyFlag = false;
                     woodMagicFlag = true;
-
                     GameManager.SetTurn(GameManager.Turn.PlayerTurn);
                 }
             }

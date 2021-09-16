@@ -9,7 +9,8 @@ public class TestSecondFazer : MonoBehaviour
     public void Second()
     {
         Enemy.m_currentEHp -= m_SecondFazerDrain;
-        Player.m_currentPHp += m_SecondFazerDrain / 2;
+        Player.m_currentPHp += m_SecondFazerDrain;
+        Skill.m_healFlg = true;
         Destroy(gameObject);
     }
 }

@@ -6,7 +6,7 @@ public class DropStopper : MonoBehaviour
 {
     private const float c_maxX = 2.3f;
     private const float c_minX = -2.3F;
-    private const float c_maxY = 1.2f;
+    private const float c_maxY = 0f;
     private const float c_minY = -4.8F;
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class DropStopper : MonoBehaviour
             }
             if (c_minX > dropPos.x)
             {
-                dropPos.x = c_maxX;
+                dropPos.x = c_minX;
             }
 
             if (c_maxY < dropPos.y)
@@ -37,7 +37,7 @@ public class DropStopper : MonoBehaviour
             }
             if (c_minY > dropPos.y)
             {
-                dropPos.y = c_maxY;
+                dropPos.y = c_minY;
             }
 
             transform.position = dropPos;

@@ -18,8 +18,6 @@ public class ScreenColorManager : MonoBehaviour
             GetComponent<SpriteRenderer>().material.color = new Color32(255, 0, 0, 255); //敵の攻撃で赤くなる
         }
 
-
-
         if (GameManager.turn == GameManager.Turn.ResetTurn)
         {
             GetComponent<SpriteRenderer>().material.color = new Color32(0, 0, 0, 0); //戻す

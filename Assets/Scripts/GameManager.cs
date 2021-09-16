@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
                 m_resultEHp = Enemy.m_currentEHp;
                 Player.m_resultPHp = Player.m_currentPHp;
                 PlayTimeFlg = true;
+                Debug.Log(turn);
                 break;
             case Turn.PlayerTurn:// プレイヤーが動かしている時の状態
                 if (PlayTimeFlg)
@@ -80,6 +81,7 @@ public class GameManager : MonoBehaviour
                 totalTime -= Time.deltaTime;
                 seconds = (int)totalTime;
                 timerText.text = "操作時間 : " + seconds.ToString();
+                //Debug.Log(turn);
                 break;
             case Turn.EnemyTurn: // 敵が攻撃してる状態
                 PlayTimeFlg = true;
@@ -101,12 +103,14 @@ public class GameManager : MonoBehaviour
                 m_resultEHp = Enemy.m_currentEHp;
                 gst.text = "";
                 timerText.text = "ぷれい！";
+                Debug.Log(turn);
                 break;
 
             case Turn.GameOut:
                 totalTime = iii;
                 seconds = (int)totalTime;
                 timerText.text = "PLAY!";
+                Debug.Log(turn);
                 break;
             case Turn.GameEnd:
                 StartCoroutine(ResultSet());

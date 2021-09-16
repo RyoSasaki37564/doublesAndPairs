@@ -33,16 +33,7 @@ public class DropsResetter : MonoBehaviour
             Instantiate(m_resettingDrops[m_resetPattern],
             m_resetPosition.transform.position,
             m_resetPosition.transform.rotation);
-
-            GameManager.turn = GameManager.Turn.InputTurn;
         }
     }
 
-    ///ジェネレーターで使う///
-    //if (GameManager.turn == GameManager.Turn.ResetTurn)
-      //  {
-        //    StartCoroutine(GameStart());
-   // dropsDestroyFlag = true;
-     //      GameManager.turn = GameManager.Turn.InputTurn;
-       // }
 }
