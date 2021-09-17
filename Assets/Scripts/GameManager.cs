@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
                 m_resultEHp = Enemy.m_currentEHp;
                 Player.m_resultPHp = Player.m_currentPHp;
                 PlayTimeFlg = true;
-                Debug.Log(turn);
+                //Debug.Log(turn);
                 break;
             case Turn.PlayerTurn:// プレイヤーが動かしている時の状態
                 if (PlayTimeFlg)

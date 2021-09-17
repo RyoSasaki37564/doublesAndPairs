@@ -9,6 +9,7 @@ public class TestFazer : Skill
     string[] m_charaName = new string[]{ "ワルキューレの奇行" };
     string[] m_fazeSetu = new string[] { "敵にやや強めの攻撃。", "敵から体力を吸収。", "必殺ワルキューレミサイル。　" +
         "パーティー最大HPの50%のダメージ。" };
+
     public void Update()
     {
         switch (m_faze)

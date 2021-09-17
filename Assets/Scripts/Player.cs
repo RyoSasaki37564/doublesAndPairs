@@ -11,15 +11,17 @@ public class Player : MonoBehaviour
 
     public Text m_playerHPNum;
 
-    public static int thePMAXHP = 0;
-
     /// <summary>スライダー</summary>
     public Slider m_pHPSlider;
+    public int ThePMAXHP()
+    {
+        return m_playerHpMax;
+    
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        thePMAXHP = m_playerHpMax;
         m_pHPSlider = GameObject.Find("PlayerHpSlider").GetComponent<Slider>();
         m_currentPHp = m_playerHpMax;
         m_pHPSlider.value = m_currentPHp;
