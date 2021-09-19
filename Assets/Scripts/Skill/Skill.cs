@@ -21,7 +21,7 @@ public abstract class Skill : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public static bool m_healFlg = false;
 
-    [SerializeField] GameObject m_pannelPos = default;
+    [SerializeField] GameObject m_pannelPos = default;//パネル表示位置
 
     public enum Faze
     {
