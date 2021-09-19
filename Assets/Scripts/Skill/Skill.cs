@@ -11,7 +11,7 @@ public abstract class Skill : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     [SerializeField] GameObject m_SpecialPos = default; //特殊スキル生成位置
 
-    [SerializeField] GameObject m_skillPannel = default; //スキル状態表示
+    [SerializeField] GameObject m_skillPannel = default; //スキル状態表示パネル
     [SerializeField] Text m_charaName = default;
     [SerializeField] Text m_skillFaze = default;
     [SerializeField] Text m_skillSetumei = default;
@@ -35,11 +35,9 @@ public abstract class Skill : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     // Start is called before the first frame update
     private void Start()
     {
-        
         m_skillPannel.SetActive(false);
         m_skillChargeFlg = true;
         m_faze = Faze.First;
-        //m_CanUsing.text = "使用可能";
     }
 
     public virtual void Fazer()

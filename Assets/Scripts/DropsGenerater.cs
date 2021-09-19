@@ -9,7 +9,7 @@ public class DropsGenerater : MonoBehaviour
     [SerializeField]
     private List<GameObject> m_genePosition = new List<GameObject>();      //ドロップ生成位置 通常盤面では6個つくる
     [SerializeField]
-    public List<GameObject> m_startingDrops = new List<GameObject>();   //初期生成ドロップ おいおいパターンを増やす
+    public List<GameObject> m_startingDrops = new List<GameObject>();   //初期生成ドロップ
     [SerializeField]
     public GameObject m_startPosition;
 
@@ -19,7 +19,7 @@ public class DropsGenerater : MonoBehaviour
     //生成位置用の乱数
 
     private int m_caster1;   private int m_caster2;
-    //生成されるドロップを決める乱数 二つずつ消えるルールなので、二つずつ生成のため1と2がある。(2個以上でも消えちゃうのどうしよう)
+    //生成されるドロップを決める乱数 二つずつ消えるルールなので、二つずつ生成のため1と2がある。
 
     private int m_startPattern;
     //初期生成盤面を決める乱。なお現在は１パターンのみ。

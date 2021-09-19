@@ -12,6 +12,7 @@ public class TestFazer : Skill
 
     public void Update()
     {
+
         switch (m_faze)
         {
             case Faze.First:
@@ -31,9 +32,5 @@ public class TestFazer : Skill
     public override void Fazer()
     {
         base.Fazer();
-    }
-    public override void StatusPanneler(string name, string setu)
-    {
-        base.StatusPanneler(name, setu);
     }
 }
