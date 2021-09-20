@@ -45,8 +45,6 @@ public class GameManager : MonoBehaviour
 
         iii = (int)totalTime; //カウントのストッパー
 
-        //Player player = m_player.GetComponent<Player>(); // staticを通さないクラス入手の仕方
-
         gameSetFlag = true;
         turnFlag = true;
         PlayTimeFlg = true;
@@ -156,7 +154,6 @@ public class GameManager : MonoBehaviour
 
     IEnumerator PlayTime()
     {
-        Debug.Log("StartPlayTime");
         yield return new WaitForSeconds(totalTime);
         if (totalTime <= 0)
         {

@@ -22,11 +22,14 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
 
     static int m_parmanentNum = 0;
 
+    Vector2 m_firstParmanentPos;
+
     // Start is called before the first frame update
     private void Start()
     {
         m_skillPannel.SetActive(false);
         m_parmanentChargeFlg = true;
+        m_firstParmanentPos = m_ParmanentPos.transform.position;
     }
 
     public virtual void Parmanent()
@@ -41,8 +44,15 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
                     Instantiate(m_Parmanent, m_ParmanentPos.transform.position, m_ParmanentPos.transform.rotation);
                     m_parmanentNum++;
                     m_parmanentChargeFlg = false;
+                    if (m_parmanentNum < 3)
+                    {
                         m_ParmanentPos.transform.position = new Vector2(m_ParmanentPos.transform.position.x,
-                            m_ParmanentPos.transform.position.y - (m_parmanentNum * 1));
+                            m_ParmanentPos.transform.position.y - 0.8f);
+                    }
+                    else
+                    {
+                        m_ParmanentPos.transform.position = new Vector2(m_firstParmanentPos.x-0.7f, m_firstParmanentPos.y-0.8f*(m_parmanentNum-3));
+                    }
                 }
             }
         }
