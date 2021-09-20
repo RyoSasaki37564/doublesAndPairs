@@ -103,14 +103,14 @@ public class GameManager : MonoBehaviour
                 m_resultEHp = Enemy.m_currentEHp;
                 gst.text = "";
                 timerText.text = "ぷれい！";
-                Debug.Log(turn);
+                //Debug.Log(turn);
                 break;
 
             case Turn.GameOut:
                 totalTime = iii;
                 seconds = (int)totalTime;
                 timerText.text = "PLAY!";
-                Debug.Log(turn);
+                //Debug.Log(turn);
                 break;
             case Turn.GameEnd:
                 StartCoroutine(ResultSet());

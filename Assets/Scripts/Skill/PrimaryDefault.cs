@@ -35,7 +35,6 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
             {
                 if (m_parmanentChargeFlg == true)
                 {
-
                     Instantiate(m_Parmanent, m_ParmanentPos.transform.position, m_ParmanentPos.transform.rotation);
                     m_parmanentChargeFlg = false;
                 }

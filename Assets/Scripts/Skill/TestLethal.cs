@@ -8,7 +8,7 @@ public class TestLethal : MonoBehaviour
 
     public void Lethal()
     {
-        Enemy.m_currentEHp -= m_p.ThePMAXHP();
+        Enemy.m_currentEHp -= m_p.ThePMaxHP()/2;
         Destroy(gameObject);
     }
 }

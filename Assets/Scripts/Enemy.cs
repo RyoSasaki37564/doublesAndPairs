@@ -60,10 +60,12 @@ public class Enemy : MonoBehaviour
                 m_enemyMasterData[i, 2] = m_eStatus[2];
                 m_enemyMasterData[i, 3] = m_eStatus[3];
 
+                /*
                 Debug.Log(m_enemyMasterData[i, 0]);
                 Debug.Log(m_enemyMasterData[i, 1]);
                 Debug.Log(m_enemyMasterData[i, 2]);
                 Debug.Log(m_enemyMasterData[i, 3]);
+                */
             }
         }
 

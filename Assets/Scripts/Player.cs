@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]int m_playerHpMax = 8000;
+    int m_playerHpMax = 10000;
     public static float m_currentPHp; //現在のプレイヤーのHP
     public static float m_resultPHp; //前のターンのプレイヤーの最終HP
 
@@ -13,17 +13,13 @@ public class Player : MonoBehaviour
 
     /// <summary>スライダー</summary>
     public Slider m_pHPSlider;
-    public int ThePMAXHP()
-    {
-        return m_playerHpMax;
-    
-    }
 
     // Start is called before the first frame update
     void Start()
     {
         m_pHPSlider = GameObject.Find("PlayerHpSlider").GetComponent<Slider>();
         m_currentPHp = m_playerHpMax;
+        m_pHPSlider.maxValue = m_playerHpMax;
         m_pHPSlider.value = m_currentPHp;
         m_playerHPNum.text = m_currentPHp.ToString();
     }
@@ -59,5 +55,10 @@ public class Player : MonoBehaviour
                 GameManager.turn = GameManager.Turn.CleanUpTurn; // リセットターンに変更
             }
         }
+    }
+    public int ThePMaxHP()
+    {
+        return m_playerHpMax;
+
     }
 }
