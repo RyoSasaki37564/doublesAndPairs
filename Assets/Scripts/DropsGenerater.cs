@@ -260,7 +260,6 @@ public class DropsGenerater : MonoBehaviour
                 StartCoroutine(GameStart());
                 dropsDestroyFlag = true;
                 GameManager.turn = GameManager.Turn.InputTurn;
-                Debug.Log("来ました");
                 m_resetterFlg = true;//1回だけ再生するための即切りフラグ;
             }
         }

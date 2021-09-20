@@ -20,6 +20,8 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
 
     [SerializeField] GameObject m_pannelPos = default;//パネル表示位置
 
+    static int m_parmanentNum = 0;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -35,8 +37,12 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
             {
                 if (m_parmanentChargeFlg == true)
                 {
+
                     Instantiate(m_Parmanent, m_ParmanentPos.transform.position, m_ParmanentPos.transform.rotation);
+                    m_parmanentNum++;
                     m_parmanentChargeFlg = false;
+                        m_ParmanentPos.transform.position = new Vector2(m_ParmanentPos.transform.position.x,
+                            m_ParmanentPos.transform.position.y - (m_parmanentNum * 1));
                 }
             }
         }
