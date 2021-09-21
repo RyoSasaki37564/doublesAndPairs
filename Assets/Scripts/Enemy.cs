@@ -35,6 +35,18 @@ public class Enemy : MonoBehaviour
 
     private bool m_kamishibai = false; //敵イラストを綺麗に入れ替えるため
 
+    int m_enemyZokusei = 0; //0は火、1は水、2は木
+
+    //属性処理用受け値
+    int m_takenDamageFire1 = 0;
+    int m_takenDamageFire2 = 0;
+
+    int m_takenDamageIce1 = 0;
+    int m_takenDamageIce2 = 0;
+
+    int m_takenDamageWood1 = 0;
+    int m_takenDamageWood2 = 0;
+
     void Awake()
     {
         m_eneSprite = GetComponent<SpriteRenderer>();
@@ -45,7 +57,7 @@ public class Enemy : MonoBehaviour
 
         m_battleCountNum = int.Parse(er.ReadLine()); //最初に読み込むのはそのステージでの戦闘回数
 
-        m_enemyMasterData = new string[m_battleCountNum, 4]; //ID,名前,体力,攻撃力の4つ
+        m_enemyMasterData = new string[m_battleCountNum, 5]; //ID,名前,体力,攻撃力,属性の5つ
 
         if (er != null)
         {
@@ -59,13 +71,8 @@ public class Enemy : MonoBehaviour
                 m_enemyMasterData[i, 1] = m_eStatus[1];
                 m_enemyMasterData[i, 2] = m_eStatus[2];
                 m_enemyMasterData[i, 3] = m_eStatus[3];
+                m_enemyMasterData[i, 4] = m_eStatus[4];
 
-                /*
-                Debug.Log(m_enemyMasterData[i, 0]);
-                Debug.Log(m_enemyMasterData[i, 1]);
-                Debug.Log(m_enemyMasterData[i, 2]);
-                Debug.Log(m_enemyMasterData[i, 3]);
-                */
             }
         }
 
@@ -75,6 +82,8 @@ public class Enemy : MonoBehaviour
         m_eHPSlider.maxValue = m_enemyHpMax;
 
         m_enemyPower = int.Parse(m_enemyMasterData[0, 3]);
+
+        m_enemyZokusei = int.Parse(m_enemyMasterData[0, 4]);
 
         m_currentEHp = m_enemyHpMax;
     }
@@ -96,38 +105,86 @@ public class Enemy : MonoBehaviour
         m_eHPSlider.value = m_currentEHp;
         m_enemyHPNum.text = m_currentEHp.ToString();
 
+        switch (m_enemyZokusei)
+        {
+            //属性によって受け値に倍率をかける。ついでに名前の色も変える
+            case 0:
+
+                m_enemyName.color = new Color(255f, 0f, 0f);
+
+                m_takenDamageFire1 = FireDamage.m_firePower;
+                m_takenDamageFire2 = FireDamage.m_fireMPower;
+
+                m_takenDamageIce1 = IceDamage.m_icePower * 2;
+                m_takenDamageIce2 = IceDamage.m_iceMPower * 2;
+
+                m_takenDamageWood1 = WoodDamage.m_woodPower / 2;
+                m_takenDamageWood2 = WoodDamage.m_woodMPower / 2;
+                break;
+
+            case 1:
+
+                m_enemyName.color = new Color(0f, 0f, 255f);
+
+                m_takenDamageFire1 = FireDamage.m_firePower / 2;
+                m_takenDamageFire2 = FireDamage.m_fireMPower / 2;
+
+                m_takenDamageIce1 = IceDamage.m_icePower;
+                m_takenDamageIce2 = IceDamage.m_iceMPower;
+
+                m_takenDamageWood1 = WoodDamage.m_woodPower * 2;
+                m_takenDamageWood2 = WoodDamage.m_woodMPower * 2;
+                break;
+
+            case 2:
+
+                m_enemyName.color = new Color(0f, 255f, 0f);
+
+                m_takenDamageFire1 = FireDamage.m_firePower * 2;
+                m_takenDamageFire2 = FireDamage.m_fireMPower * 2;
+
+                m_takenDamageIce1 = IceDamage.m_icePower / 2;
+                m_takenDamageIce2 = IceDamage.m_iceMPower / 2;
+
+                m_takenDamageWood1 = WoodDamage.m_woodPower;
+                m_takenDamageWood2 = WoodDamage.m_woodMPower;
+                break;
+
+        }
+
+
         if (RedDropDestroy.fireAttackFlag == true)
         {
-            m_currentEHp -= FireDamage.m_firePower;
+            m_currentEHp -= m_takenDamageFire1;
             RedDropDestroy.fireAttackFlag = false;
         }
         if (RedDropDestroy.fireMagicFlag == true)
         {
-            m_currentEHp -= FireDamage.m_fireMPower;
+            m_currentEHp -= m_takenDamageFire2;
             RedDropDestroy.fireMagicFlag = false;
         }
 
 
         if (BlueDropDestroy.iceAttackFlag == true)
         {
-            m_currentEHp -= IceDamage.m_icePower;
+            m_currentEHp -= m_takenDamageIce1;
             BlueDropDestroy.iceAttackFlag = false;
         }
         if (BlueDropDestroy.iceMagicFlag == true)
         {
-            m_currentEHp -= IceDamage.m_iceMPower;
+            m_currentEHp -= m_takenDamageIce2;
             BlueDropDestroy.iceMagicFlag = false;
         }
 
 
         if (GreenDropDestroy.woodAttackFlag == true)
         {
-            m_currentEHp -= WoodDamage.m_woodPower;
+            m_currentEHp -= m_takenDamageWood1;
             GreenDropDestroy.woodAttackFlag = false;
         }
         if (GreenDropDestroy.woodMagicFlag == true)
         {
-            m_currentEHp -= WoodDamage.m_woodMPower;
+            m_currentEHp -= m_takenDamageWood2;
             GreenDropDestroy.woodMagicFlag = false;
         }
 
@@ -149,6 +206,8 @@ public class Enemy : MonoBehaviour
                 m_eHPSlider.maxValue = m_enemyHpMax;
 
                 m_enemyPower = int.Parse(m_enemyMasterData[m_nextBattleReader, 3]);
+
+                m_enemyZokusei = int.Parse(m_enemyMasterData[m_nextBattleReader, 4]);
 
                 m_currentEHp = m_enemyHpMax;
                 m_enemyHPNum.text = m_currentEHp.ToString();
