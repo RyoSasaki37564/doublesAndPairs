@@ -12,10 +12,11 @@ public class TestCharaBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for(var i = 0; i < 50; i++)
+        for(var i = 0; i < 99; i++)
         {
             var x = Instantiate(m_CHARAICON);
             x.transform.SetParent(m_GL.transform);
+            x.transform.localScale = m_CHARAICON.transform.localScale;
         }
     }
 
