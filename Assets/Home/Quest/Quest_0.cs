@@ -31,7 +31,7 @@ public class Quest_0 : MonoBehaviour
 
     IEnumerator TextReset()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1f);
         m_alart.text = "";
     }
 }
