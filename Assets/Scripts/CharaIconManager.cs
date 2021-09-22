@@ -5,22 +5,23 @@ using UnityEngine.UI;
 
 public class CharaIconManager : MonoBehaviour
 {
-    [SerializeField] const int c_usingCharaCount = 5;
-    [SerializeField] GameObject m_usingChara = default;
-    [SerializeField] GameObject[] party = new GameObject[c_usingCharaCount];
+    [SerializeField] GameObject[] m_usingChara = new GameObject[PartyParamator.m_usingCharaID.Count];
+    [SerializeField] GameObject[] party = new GameObject[PartyParamator.m_usingCharaID.Count];
     [SerializeField] LayoutGroup m_deck = default;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        for(var i = 0; i < c_usingCharaCount; i++)
+        for(var i = 0; i < party.Length; i++)
         {
-            var x = Instantiate(m_usingChara);
+            int id = PartyParamator.m_usingCharaID[i];
+            var x = Instantiate(m_usingChara[id]);
             party[i] = x;
             party[i].SetActive(true);
             party[i].transform.SetParent(m_deck.transform);
             party[i].transform.localScale = new Vector3(1, 1, 0);
+            party[i].SetActive(true);
         }
     }
 

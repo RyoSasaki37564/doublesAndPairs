@@ -617,6 +617,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_QuestPanel: {fileID: 908520130}
   m_alart: {fileID: 755331773}
+--- !u!1 &560750724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 271015291093651163, guid: 359c274a95d2b744b95418b1695a4118,
+    type: 3}
+  m_PrefabInstance: {fileID: 271015290571746911}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &607681892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3129,12 +3135,12 @@ PrefabInstance:
     - target: {fileID: 1742273434796150043, guid: 5152fbb031f1ef6419b10efc35d2820c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 137.80002
+      value: 137.80003
       objectReference: {fileID: 0}
     - target: {fileID: 1742273435340820563, guid: 5152fbb031f1ef6419b10efc35d2820c,
         type: 3}
       propertyPath: m_CHARAICON.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1742273435340820563, guid: 5152fbb031f1ef6419b10efc35d2820c,
         type: 3}
@@ -3146,6 +3152,11 @@ PrefabInstance:
       propertyPath: m_CHARAICON.Array.data[1]
       value: 
       objectReference: {fileID: 1851265387}
+    - target: {fileID: 1742273435340820563, guid: 5152fbb031f1ef6419b10efc35d2820c,
+        type: 3}
+      propertyPath: m_CHARAICON.Array.data[2]
+      value: 
+      objectReference: {fileID: 560750724}
     - target: {fileID: 1742273435340820572, guid: 5152fbb031f1ef6419b10efc35d2820c,
         type: 3}
       propertyPath: m_ScrollSensitivity

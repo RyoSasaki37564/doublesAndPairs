@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
                 //Debug.Log(turn);
                 break;
             case Turn.PlayerTurn:// プレイヤーが動かしている時の状態
+                gst.text = "";
                 if (PlayTimeFlg)
                 {
                     StartCoroutine(PlayTime()); // updateでうごいてたからバグってた
