@@ -14,7 +14,7 @@ public class UserCharaIcon : MonoBehaviour
 
     static int m_partyNum = 0;
 
-    public void PartyIO()
+    public virtual void PartyIO()
     {
         if(m_isInParty == false && m_partyNum < 6)
         {

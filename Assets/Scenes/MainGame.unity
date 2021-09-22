@@ -1693,6 +1693,26 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6460382315747540815, guid: de7ed21aad16d0f4da15931e9b93d0f0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 167.97183
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460382315747540815, guid: de7ed21aad16d0f4da15931e9b93d0f0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 29.994904
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460382315747540815, guid: de7ed21aad16d0f4da15931e9b93d0f0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -68.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460382315747540815, guid: de7ed21aad16d0f4da15931e9b93d0f0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 262.63
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de7ed21aad16d0f4da15931e9b93d0f0, type: 3}
 --- !u!114 &2895773177522854282 stripped
