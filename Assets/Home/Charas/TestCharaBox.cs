@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TestCharaBox : MonoBehaviour
 {
-    [SerializeField] GameObject m_CHARAICON = default;
+    [SerializeField] List<GameObject> m_CHARAICON = new List<GameObject>();
 
     [SerializeField] LayoutGroup m_GL = default;
 
@@ -14,9 +14,10 @@ public class TestCharaBox : MonoBehaviour
     {
         for(var i = 0; i < 10; i++)
         {
-            var x = Instantiate(m_CHARAICON);
+            int rondom = Random.Range(0, m_CHARAICON.Count);
+            var x = Instantiate(m_CHARAICON[rondom]);
             x.transform.SetParent(m_GL.transform);
-            x.transform.localScale = m_CHARAICON.transform.localScale;
+            x.transform.localScale = m_CHARAICON[rondom].transform.localScale;
         }
     }
 
