@@ -12,7 +12,7 @@ public class UserCharaIcon : MonoBehaviour
 
     [SerializeField] LayoutGroup m_party = default; //パーティ
 
-    static int m_partyNum = 0;
+    public static int m_partyNum = 0;
 
     public virtual void PartyIO()
     {

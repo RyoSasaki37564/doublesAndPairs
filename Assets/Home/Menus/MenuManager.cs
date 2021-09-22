@@ -26,6 +26,9 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_menuObj[0].SetActive(false);
+        m_menuObj[1].SetActive(false);
+        m_menuObj[2].SetActive(false);
         menu = HomeMenu.Quest;
         m_MenuHeadText[0].text = menu.ToString();
         m_MenuHeadText[1].text = "所持ソウル: "+ m_soul.ToString();
