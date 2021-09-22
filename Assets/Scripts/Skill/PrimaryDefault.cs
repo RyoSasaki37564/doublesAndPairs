@@ -32,6 +32,14 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
         m_firstParmanentPos = m_ParmanentPos.transform.position;
     }
 
+    private void Update()
+    {
+        if(GameManager.turn == GameManager.Turn.GameEnd)
+        {
+            m_parmanentNum = 0;
+        }
+    }
+
     public virtual void Parmanent()
     {
         if (GameManager.gameSetFlag)

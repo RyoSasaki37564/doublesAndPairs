@@ -112,6 +112,7 @@ public class GameManager : MonoBehaviour
                 //Debug.Log(turn);
                 break;
             case Turn.GameEnd:
+                PartyParamator.m_usingCharaID.Clear();
                 StartCoroutine(ResultSet());
                 break;
             default:
