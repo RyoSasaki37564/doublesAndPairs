@@ -6,7 +6,7 @@ public class CharaID_0 : UserCharaIcon
 {
     bool m_partyIO = false;
 
-    [SerializeField]int[] m_status = { 1700, 10, 12, 8, 8, 12, 9, 0 }; //このキャラのステ
+    [SerializeField]public int[] m_status = { 1700, 10, 12, 8, 8, 12, 9, 0 }; //このキャラのステ
 
     public override void PartyIO()
     {

@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class Hikimasu : MonoBehaviour
 {
     [SerializeField] GameObject m_kakuninPanel = default; //引くかの確認パネル
+    [SerializeField] GameObject m_JuurenKakunin = default;
 
+    [SerializeField] GameObject m_ResultDsp = default; //ガチャ結果表示親
     [SerializeField] GameObject m_gachaResultPanel = default; //ガチャ結果表示パネル
     [SerializeField] LayoutGroup m_results = default;
 
@@ -16,18 +18,24 @@ public class Hikimasu : MonoBehaviour
 
     [SerializeField] LayoutGroup m_userCharaBox = default; //所持キャラボックス
 
+    CharaID_0 m_thisID;
+
     void Start()
     {
-        m_gachaResultPanel.SetActive(false);
+        m_ResultDsp.SetActive(false);
     }
 
     public void Gacha()
     {
         m_kakuninPanel.SetActive(false);
+        m_JuurenKakunin.SetActive(false);
+        m_ResultDsp.SetActive(true);
 
         int rondom = Random.Range(0, 100);
-        if(rondom < 15)
+
+        if (rondom < 15)
         {
+            //当選キャラをリザルトに表示し、ボックスにも送る。
             int ssr = Random.Range(0, m_CanHitCharactors_SSR.Count);
             var x = Instantiate(m_CanHitCharactors_SSR[ssr]);
             var y = Instantiate(x);
@@ -35,8 +43,13 @@ public class Hikimasu : MonoBehaviour
             y.transform.SetParent(m_userCharaBox.transform);
             x.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
             y.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
+
+            //当選キャラIDの保存
+            m_thisID = this.gameObject.GetComponent<CharaID_0>();
+            int ID = m_thisID.m_status[7];
+            CharaBox.m_GetCharaID.Add(ID);
         }
-        else if(rondom < 51)
+        else if (rondom < 51)
         {
             int sr = Random.Range(0, m_CanHitCharactors_SR.Count);
             var x = Instantiate(m_CanHitCharactors_SR[sr]);
@@ -45,6 +58,10 @@ public class Hikimasu : MonoBehaviour
             y.transform.SetParent(m_userCharaBox.transform);
             x.transform.localScale = m_CanHitCharactors_SR[sr].transform.localScale;
             y.transform.localScale = m_CanHitCharactors_SR[sr].transform.localScale;
+
+            m_thisID = this.gameObject.GetComponent<CharaID_0>();
+            int ID = m_thisID.m_status[7];
+            CharaBox.m_GetCharaID.Add(ID);
         }
         else
         {
@@ -55,11 +72,19 @@ public class Hikimasu : MonoBehaviour
             y.transform.SetParent(m_userCharaBox.transform);
             x.transform.localScale = m_CanHitCharactors_R[r].transform.localScale;
             y.transform.localScale = m_CanHitCharactors_R[r].transform.localScale;
+
+            m_thisID = this.gameObject.GetComponent<CharaID_0>();
+            int ID = m_thisID.m_status[7];
+            CharaBox.m_GetCharaID.Add(ID);
+
         }
-
-        m_gachaResultPanel.SetActive(true);
-
     }
 
-    
+    public void JuurenGacha()
+    {
+        for(var i = 0; i < 11; i++)
+        {
+            Gacha();
+        }
+    }
 }

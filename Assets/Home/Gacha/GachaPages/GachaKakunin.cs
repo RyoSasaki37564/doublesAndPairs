@@ -9,7 +9,7 @@ public class GachaKakunin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_kakuninPanel.SetActive(false);
+        //m_kakuninPanel.SetActive(false);
     }
 
     public void Hikukamo()
