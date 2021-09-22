@@ -7,7 +7,7 @@ public class TestCharaBox : MonoBehaviour
 {
     [SerializeField] List<GameObject> m_CHARAICON = new List<GameObject>();
 
-    [SerializeField] LayoutGroup m_GL = default;
+    [SerializeField] LayoutGroup m_GL = default; //所持キャラボックス
 
     // Start is called before the first frame update
     void Start()
