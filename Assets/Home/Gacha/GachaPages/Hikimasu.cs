@@ -84,6 +84,7 @@ public class Hikimasu : MonoBehaviour
     {
         for(var i = 0; i < 11; i++)
         {
+            Debug.Log("juuren");
             Gacha();
         }
     }
