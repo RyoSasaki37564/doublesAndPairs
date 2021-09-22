@@ -25,8 +25,9 @@ public class Hikimasu : MonoBehaviour
         m_ResultDsp.SetActive(false);
     }
 
-    public void Gacha()
+    public virtual void Gacha()
     {
+        
         m_kakuninPanel.SetActive(false);
         m_JuurenKakunin.SetActive(false);
         m_ResultDsp.SetActive(true);
@@ -45,9 +46,9 @@ public class Hikimasu : MonoBehaviour
             y.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
 
             //当選キャラIDの保存
-            m_thisID = this.gameObject.GetComponent<CharaID_0>();
-            int ID = m_thisID.m_status[7];
-            CharaBox.m_GetCharaID.Add(ID);
+            //m_thisID = this.gameObject.GetComponent<CharaID_0>();
+            //int ID = m_thisID.m_status[7];
+            //CharaBox.m_GetCharaID.Add(ID);
         }
         else if (rondom < 51)
         {
@@ -59,9 +60,9 @@ public class Hikimasu : MonoBehaviour
             x.transform.localScale = m_CanHitCharactors_SR[sr].transform.localScale;
             y.transform.localScale = m_CanHitCharactors_SR[sr].transform.localScale;
 
-            m_thisID = this.gameObject.GetComponent<CharaID_0>();
-            int ID = m_thisID.m_status[7];
-            CharaBox.m_GetCharaID.Add(ID);
+            //m_thisID = this.gameObject.GetComponent<CharaID_0>();
+            //int ID = m_thisID.m_status[7];
+            //CharaBox.m_GetCharaID.Add(ID);
         }
         else
         {
@@ -73,19 +74,10 @@ public class Hikimasu : MonoBehaviour
             x.transform.localScale = m_CanHitCharactors_R[r].transform.localScale;
             y.transform.localScale = m_CanHitCharactors_R[r].transform.localScale;
 
-            m_thisID = this.gameObject.GetComponent<CharaID_0>();
-            int ID = m_thisID.m_status[7];
-            CharaBox.m_GetCharaID.Add(ID);
+            //m_thisID = this.gameObject.GetComponent<CharaID_0>();
+            //int ID = m_thisID.m_status[7];
+            //CharaBox.m_GetCharaID.Add(ID);
 
-        }
-    }
-
-    public void JuurenGacha()
-    {
-        for(var i = 0; i < 11; i++)
-        {
-            Debug.Log("juuren");
-            Gacha();
         }
     }
 }
