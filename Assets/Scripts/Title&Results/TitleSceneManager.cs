@@ -7,6 +7,6 @@ public class TitleSceneManager : MonoBehaviour
 {
 	public void OnClick()
 	{
-		SceneManager.LoadScene("MainGame");
+		SceneManager.LoadScene("Home");
 	}
 }

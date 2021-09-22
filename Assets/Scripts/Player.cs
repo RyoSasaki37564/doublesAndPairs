@@ -17,11 +17,13 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_playerHpMax = PlayerPrefs.GetInt("PlayerHp");
         m_pHPSlider = GameObject.Find("PlayerHpSlider").GetComponent<Slider>();
         m_currentPHp = m_playerHpMax;
         m_pHPSlider.maxValue = m_playerHpMax;
         m_pHPSlider.value = m_currentPHp;
         m_playerHPNum.text = m_currentPHp.ToString();
+
     }
 
     // Update is called once per frame
@@ -58,7 +60,7 @@ public class Player : MonoBehaviour
     }
     public int ThePMaxHP()
     {
-        return m_playerHpMax;
+        return PlayerPrefs.GetInt("PlayerHp");
 
     }
 }

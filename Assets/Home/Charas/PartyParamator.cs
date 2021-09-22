@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class PartyParamator : MonoBehaviour
 {
-    public int m_hp { get; set; } //パーティ体力
+    public static int m_hp = 0;//パーティ体力
 
-    public int m_fireButuri { get; set; } //パーティ火属性物理
+    public static int m_fireButuri = 0;//パーティ火属性物理
 
-    public int m_fireMahou { get; set; } //パーティ火属性魔法
+    public static int m_fireMahou = 0;//パーティ火属性魔法
 
-    public int m_iceButuri { get; set; } //パーティ水属性物理
+    public static int m_iceButuri = 0;//パーティ水属性物理
 
-    public int m_iceMahou { get; set; } //パーティ水属性魔法
+    public static int m_iceMahou = 0; //パーティ水属性魔法
 
-    public int m_woodButuri { get; set; } //パーティ木属性物理
+    public static int m_woodButuri = 0;//パーティ木属性物理
 
-    public int m_woodMahou { get; set; } //パーティ木属性魔法
+    public static int m_woodMahou = 0;//パーティ木属性魔法
 
     [SerializeField] Text[] m_PartyStatusPanel = new Text[7];
 

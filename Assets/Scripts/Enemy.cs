@@ -112,42 +112,42 @@ public class Enemy : MonoBehaviour
 
                 m_enemyName.color = new Color(255f, 0f, 0f);
 
-                m_takenDamageFire1 = FireDamage.m_firePower;
-                m_takenDamageFire2 = FireDamage.m_fireMPower;
+                m_takenDamageFire1 = PlayerPrefs.GetInt("RedS");
+                m_takenDamageFire2 = PlayerPrefs.GetInt("RedC");
 
-                m_takenDamageIce1 = IceDamage.m_icePower * 2;
-                m_takenDamageIce2 = IceDamage.m_iceMPower * 2;
+                m_takenDamageIce1 = PlayerPrefs.GetInt("BlueS") * 2;
+                m_takenDamageIce2 = PlayerPrefs.GetInt("BlueC") * 2;
 
-                m_takenDamageWood1 = WoodDamage.m_woodPower / 2;
-                m_takenDamageWood2 = WoodDamage.m_woodMPower / 2;
+                m_takenDamageWood1 = PlayerPrefs.GetInt("GreenS") / 2;
+                m_takenDamageWood2 = PlayerPrefs.GetInt("GreenC") / 2;
                 break;
 
             case 1:
 
                 m_enemyName.color = new Color(0f, 0f, 255f);
 
-                m_takenDamageFire1 = FireDamage.m_firePower / 2;
-                m_takenDamageFire2 = FireDamage.m_fireMPower / 2;
+                m_takenDamageFire1 = PlayerPrefs.GetInt("RedS") / 2;
+                m_takenDamageFire2 = PlayerPrefs.GetInt("RedC") / 2;
 
-                m_takenDamageIce1 = IceDamage.m_icePower;
-                m_takenDamageIce2 = IceDamage.m_iceMPower;
+                m_takenDamageIce1 = PlayerPrefs.GetInt("BlueS");
+                m_takenDamageIce2 = PlayerPrefs.GetInt("BlueC");
 
-                m_takenDamageWood1 = WoodDamage.m_woodPower * 2;
-                m_takenDamageWood2 = WoodDamage.m_woodMPower * 2;
+                m_takenDamageWood1 = PlayerPrefs.GetInt("GreenS") * 2;
+                m_takenDamageWood2 = PlayerPrefs.GetInt("GreenC") * 2;
                 break;
 
             case 2:
 
                 m_enemyName.color = new Color(0f, 255f, 0f);
 
-                m_takenDamageFire1 = FireDamage.m_firePower * 2;
-                m_takenDamageFire2 = FireDamage.m_fireMPower * 2;
+                m_takenDamageFire1 = PlayerPrefs.GetInt("RedS") * 2;
+                m_takenDamageFire2 = PlayerPrefs.GetInt("RedC") * 2;
 
-                m_takenDamageIce1 = IceDamage.m_icePower / 2;
-                m_takenDamageIce2 = IceDamage.m_iceMPower / 2;
+                m_takenDamageIce1 = PlayerPrefs.GetInt("BlueS") / 2;
+                m_takenDamageIce2 = PlayerPrefs.GetInt("BlueC") / 2;
 
-                m_takenDamageWood1 = WoodDamage.m_woodPower;
-                m_takenDamageWood2 = WoodDamage.m_woodMPower;
+                m_takenDamageWood1 = PlayerPrefs.GetInt("GreenS");
+                m_takenDamageWood2 = PlayerPrefs.GetInt("GreenC");
                 break;
 
         }
