@@ -2301,6 +2301,7 @@ MonoBehaviour:
   m_CanHitCharactors_R:
   - {fileID: 560750724}
   m_userCharaBox: {fileID: 158068626}
+  m_MenuHeadText: {fileID: 1225007815}
 --- !u!114 &785148522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3694,6 +3695,7 @@ MonoBehaviour:
   m_CanHitCharactors_R:
   - {fileID: 266530306}
   m_userCharaBox: {fileID: 158068626}
+  m_MenuHeadText: {fileID: 1225007815}
 --- !u!1 &1213273952
 GameObject:
   m_ObjectHideFlags: 0
@@ -5745,7 +5747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00014950507}
+  m_AnchoredPosition: {x: 0, y: 0.000222716}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2070245245

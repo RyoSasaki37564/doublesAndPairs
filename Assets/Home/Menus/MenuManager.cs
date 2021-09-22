@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour
     }
     public static HomeMenu menu;
 
-    int m_soul = 100; //疑似ゲーム内通貨。いわゆる「石」。
+    public static int m_soul = 100; //疑似ゲーム内通貨。いわゆる「石」。
 
     [SerializeField] Text[] m_MenuHeadText = new Text[2]; //今いるメニューと石の数を表記
 

@@ -18,6 +18,8 @@ public class Hikimasu : MonoBehaviour
 
     [SerializeField] LayoutGroup m_userCharaBox = default; //所持キャラボックス
 
+    [SerializeField] Text m_MenuHeadText = default; //ソウル数の表示
+
     CharaID_0 m_thisID;
 
     void Start()
@@ -27,57 +29,61 @@ public class Hikimasu : MonoBehaviour
 
     public virtual void Gacha()
     {
-        
-        m_kakuninPanel.SetActive(false);
-        m_JuurenKakunin.SetActive(false);
-        m_ResultDsp.SetActive(true);
-
-        int rondom = Random.Range(0, 100);
-
-        if (rondom < 15)
+        if (MenuManager.m_soul >= 3)
         {
-            //当選キャラをリザルトに表示し、ボックスにも送る。
-            int ssr = Random.Range(0, m_CanHitCharactors_SSR.Count);
-            var x = Instantiate(m_CanHitCharactors_SSR[ssr]);
-            var y = Instantiate(x);
-            x.transform.SetParent(m_results.transform);
-            y.transform.SetParent(m_userCharaBox.transform);
-            x.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
-            y.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
+            m_kakuninPanel.SetActive(false);
+            m_JuurenKakunin.SetActive(false);
+            m_ResultDsp.SetActive(true);
 
-            //当選キャラIDの保存
-            //m_thisID = this.gameObject.GetComponent<CharaID_0>();
-            //int ID = m_thisID.m_status[7];
-            //CharaBox.m_GetCharaID.Add(ID);
-        }
-        else if (rondom < 51)
-        {
-            int sr = Random.Range(0, m_CanHitCharactors_SR.Count);
-            var x = Instantiate(m_CanHitCharactors_SR[sr]);
-            var y = Instantiate(x);
-            x.transform.SetParent(m_gachaResultPanel.transform);
-            y.transform.SetParent(m_userCharaBox.transform);
-            x.transform.localScale = m_CanHitCharactors_SR[sr].transform.localScale;
-            y.transform.localScale = m_CanHitCharactors_SR[sr].transform.localScale;
+            int rondom = Random.Range(0, 100);
 
-            //m_thisID = this.gameObject.GetComponent<CharaID_0>();
-            //int ID = m_thisID.m_status[7];
-            //CharaBox.m_GetCharaID.Add(ID);
-        }
-        else
-        {
-            int r = Random.Range(0, m_CanHitCharactors_R.Count);
-            var x = Instantiate(m_CanHitCharactors_R[r]);
-            var y = Instantiate(x);
-            x.transform.SetParent(m_gachaResultPanel.transform);
-            y.transform.SetParent(m_userCharaBox.transform);
-            x.transform.localScale = m_CanHitCharactors_R[r].transform.localScale;
-            y.transform.localScale = m_CanHitCharactors_R[r].transform.localScale;
+            if (rondom < 15)
+            {
+                //当選キャラをリザルトに表示し、ボックスにも送る。
+                int ssr = Random.Range(0, m_CanHitCharactors_SSR.Count);
+                var x = Instantiate(m_CanHitCharactors_SSR[ssr]);
+                var y = Instantiate(x);
+                x.transform.SetParent(m_results.transform);
+                y.transform.SetParent(m_userCharaBox.transform);
+                x.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
+                y.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
 
-            //m_thisID = this.gameObject.GetComponent<CharaID_0>();
-            //int ID = m_thisID.m_status[7];
-            //CharaBox.m_GetCharaID.Add(ID);
+                //当選キャラIDの保存
+                //m_thisID = this.gameObject.GetComponent<CharaID_0>();
+                //int ID = m_thisID.m_status[7];
+                //CharaBox.m_GetCharaID.Add(ID);
+            }
+            else if (rondom < 51)
+            {
+                int sr = Random.Range(0, m_CanHitCharactors_SR.Count);
+                var x = Instantiate(m_CanHitCharactors_SR[sr]);
+                var y = Instantiate(x);
+                x.transform.SetParent(m_gachaResultPanel.transform);
+                y.transform.SetParent(m_userCharaBox.transform);
+                x.transform.localScale = m_CanHitCharactors_SR[sr].transform.localScale;
+                y.transform.localScale = m_CanHitCharactors_SR[sr].transform.localScale;
 
+                //m_thisID = this.gameObject.GetComponent<CharaID_0>();
+                //int ID = m_thisID.m_status[7];
+                //CharaBox.m_GetCharaID.Add(ID);
+            }
+            else
+            {
+                int r = Random.Range(0, m_CanHitCharactors_R.Count);
+                var x = Instantiate(m_CanHitCharactors_R[r]);
+                var y = Instantiate(x);
+                x.transform.SetParent(m_gachaResultPanel.transform);
+                y.transform.SetParent(m_userCharaBox.transform);
+                x.transform.localScale = m_CanHitCharactors_R[r].transform.localScale;
+                y.transform.localScale = m_CanHitCharactors_R[r].transform.localScale;
+
+                //m_thisID = this.gameObject.GetComponent<CharaID_0>();
+                //int ID = m_thisID.m_status[7];
+                //CharaBox.m_GetCharaID.Add(ID);
+
+            }
+            MenuManager.m_soul -= 3;
+            m_MenuHeadText.text = "所持ソウル: " + MenuManager.m_soul.ToString();
         }
     }
 }
