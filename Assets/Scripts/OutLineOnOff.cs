@@ -15,7 +15,7 @@ public class OutLineOnOff : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(GameManager.turn == GameManager.Turn.CleanUpTurn)
+        if(GameManager.turn == GameManager.Turn.CleanUpTurn )
         {
             if (m_outLineFlg == false)
             {
@@ -25,6 +25,10 @@ public class OutLineOnOff : MonoBehaviour
             }
         }
 
+        if(GameManager.gameSetFlag == false)
+        {
+            GetComponent<Collider2D>().enabled = false;
+        }
         
     }
     IEnumerator OutLineSet()

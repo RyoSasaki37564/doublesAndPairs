@@ -11,7 +11,7 @@ public class CharaIconManager : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         for(var i = 0; i < party.Length; i++)
         {

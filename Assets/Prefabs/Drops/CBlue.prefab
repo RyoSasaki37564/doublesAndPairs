@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3910570793448580538}
   - component: {fileID: 3226931155070840474}
   - component: {fileID: 1548522152942830493}
+  - component: {fileID: 5020648900033484998}
   m_Layer: 0
   m_Name: CBlue
   m_TagString: CBlue
@@ -157,5 +158,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75ca076a1a05b8841b21d294ae49327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5020648900033484998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940058343657969599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0454fb0d71070449b396b78b2ddf1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

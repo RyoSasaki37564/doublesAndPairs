@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public static bool PlayTimeFlg = true; //操作時間カウントダウン用コルーチンを単発呼びするためのフラグ シーンのはじめか敵ターンにtrueを返す
     public static bool turnFlag = true; //　操作の可否
 
-    //[SerializeField] GameObject m_player;
+    [SerializeField] GameObject m_goalPanel = default; //リザルトの代わりにこのパネルを出す。
 
     /// <summary>前のターンの敵の最終体力</summary>
     public int m_resultEHp;
@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        m_goalPanel.SetActive(false);
+
         m_enemyMastarObj = GameObject.Find("EnemyObj"); //エネミーマスターデータを扱うためにエネミーを取得
 
         iii = (int)totalTime; //カウントのストッパー
@@ -113,7 +115,7 @@ public class GameManager : MonoBehaviour
                 break;
             case Turn.GameEnd:
                 PartyParamator.m_usingCharaID.Clear();
-                StartCoroutine(ResultSet());
+                m_goalPanel.SetActive(true);
                 break;
             default:
                 break;
@@ -131,7 +133,7 @@ public class GameManager : MonoBehaviour
             gameSetFlag = false;
             gst.text = "ぶちころされました☆";
             timerText.text = "ぐぇえ！";
-            StartCoroutine(ResultSet());
+            m_goalPanel.SetActive(true);
             turn = Turn.GameOut;
         }
 
@@ -168,9 +170,4 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator ResultSet()
-    {
-        yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene("Result");
-    }
 }

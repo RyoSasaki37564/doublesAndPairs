@@ -9,6 +9,7 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
     [SerializeField] GameObject m_Parmanent = default; //パーマネントを格納
 
     [SerializeField] GameObject m_ParmanentPos = default; //パーマネントマーク展開の位置
+    Transform m_defaultPos; //初期配置
 
     [SerializeField] GameObject m_skillPannel = default; //スキル状態表示パネル
     [SerializeField] Text m_charaName = default;
@@ -27,16 +28,18 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
     // Start is called before the first frame update
     private void Start()
     {
+        m_parmanentNum = 0;
         m_skillPannel.SetActive(false);
         m_parmanentChargeFlg = true;
         m_firstParmanentPos = m_ParmanentPos.transform.position;
+        Debug.Log(m_parmanentNum);
     }
 
     private void Update()
     {
-        if(GameManager.turn == GameManager.Turn.GameEnd)
+        if (GameManager.turn == GameManager.Turn.GameEnd)
         {
-            m_parmanentNum = 0;
+            m_ParmanentPos.transform.position = new Vector2(m_firstParmanentPos.x, m_firstParmanentPos.y);
         }
     }
 

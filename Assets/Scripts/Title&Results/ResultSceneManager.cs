@@ -7,6 +7,6 @@ public class ResultSceneManager : MonoBehaviour
 {
 	public void OnClick()
 	{
-		SceneManager.LoadScene("Title");
+		SceneManager.LoadScene("Title" , LoadSceneMode.Additive);
 	}
 }

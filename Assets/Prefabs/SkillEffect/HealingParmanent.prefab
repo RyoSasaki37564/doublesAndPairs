@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1718040588399619957}
   - component: {fileID: 1718040588399619956}
   - component: {fileID: 1718040588399619915}
+  - component: {fileID: 3753205083692285189}
   m_Layer: 0
   m_Name: HealingParmanent
   m_TagString: Untagged
@@ -211,3 +212,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3753205083692285189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718040588399619952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0454fb0d71070449b396b78b2ddf1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

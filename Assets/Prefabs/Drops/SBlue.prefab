@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7247580239980395440}
   - component: {fileID: 4533406863567900234}
   - component: {fileID: -5389757998075186561}
+  - component: {fileID: 8980414510155375474}
   m_Layer: 0
   m_Name: SBlue
   m_TagString: SBlue
@@ -157,5 +158,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75ca076a1a05b8841b21d294ae49327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8980414510155375474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8085276725213475560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0454fb0d71070449b396b78b2ddf1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
