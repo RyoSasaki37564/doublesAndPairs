@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
                 //Debug.Log(turn);
                 break;
             case Turn.GameEnd:
-                PartyParamator.m_usingCharaID.Clear();
+                //CharaID_0.m_usingCharaID.Clear();
                 m_goalPanel.SetActive(true);
                 break;
             default:

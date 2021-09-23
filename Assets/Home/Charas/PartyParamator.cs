@@ -25,8 +25,6 @@ public class PartyParamator : MonoBehaviour
 
     [SerializeField]GameObject m_PartyStatusPanelObj = default;
 
-    public static List<int> m_usingCharaID = new List<int>(); //使用するキャラのIDを保管する場所
-
     // Start is called before the first frame update
     void Start()
     {
@@ -70,11 +68,6 @@ public class PartyParamator : MonoBehaviour
 
             m_panelOnOff = true;
 
-            foreach(var x in m_usingCharaID) 
-            {
-                Debug.Log(x);
-            }
-            
         }
         else
         {

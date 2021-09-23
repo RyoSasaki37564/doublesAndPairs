@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharaID_0 : UserCharaIcon
 {
+    public static List<int> m_usingCharaID = new List<int>(); //使用するキャラのIDを保管する場所
+
     bool m_partyIO = false;
 
     [SerializeField]public int[] m_status = { 1700, 10, 12, 8, 8, 12, 9, 0 }; //このキャラのステ
@@ -36,7 +38,7 @@ public class CharaID_0 : UserCharaIcon
 
             PlayerPrefs.Save();
 
-            PartyParamator.m_usingCharaID.Add(m_status[7]);
+            m_usingCharaID.Add(m_status[7]);
 
             m_partyIO = true;
             base.PartyIO();
@@ -66,7 +68,7 @@ public class CharaID_0 : UserCharaIcon
 
             PlayerPrefs.Save();
 
-            PartyParamator.m_usingCharaID.Remove(m_status[7]);
+            m_usingCharaID.Remove(m_status[7]);
 
             m_partyIO = false;
             base.PartyIO();
