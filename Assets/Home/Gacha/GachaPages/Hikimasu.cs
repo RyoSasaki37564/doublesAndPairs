@@ -48,10 +48,6 @@ public class Hikimasu : MonoBehaviour
                 x.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
                 y.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
 
-                //当選キャラIDの保存
-                //m_thisID = this.gameObject.GetComponent<CharaID_0>();
-                //int ID = m_thisID.m_status[7];
-                //CharaBox.m_GetCharaID.Add(ID);
             }
             else if (rondom < 51)
             {
@@ -63,9 +59,6 @@ public class Hikimasu : MonoBehaviour
                 x.transform.localScale = m_CanHitCharactors_SR[sr].transform.localScale;
                 y.transform.localScale = m_CanHitCharactors_SR[sr].transform.localScale;
 
-                //m_thisID = this.gameObject.GetComponent<CharaID_0>();
-                //int ID = m_thisID.m_status[7];
-                //CharaBox.m_GetCharaID.Add(ID);
             }
             else
             {
@@ -77,13 +70,24 @@ public class Hikimasu : MonoBehaviour
                 x.transform.localScale = m_CanHitCharactors_R[r].transform.localScale;
                 y.transform.localScale = m_CanHitCharactors_R[r].transform.localScale;
 
-                //m_thisID = this.gameObject.GetComponent<CharaID_0>();
-                //int ID = m_thisID.m_status[7];
-                //CharaBox.m_GetCharaID.Add(ID);
-
             }
             MenuManager.m_soul -= 3;
             m_MenuHeadText.text = "所持ソウル: " + MenuManager.m_soul.ToString();
         }
+    }
+
+    public void SSRKakutei()
+    {
+        //当選キャラをリザルトに表示し、ボックスにも送る。
+        int ssr = Random.Range(0, m_CanHitCharactors_SSR.Count);
+        var x = Instantiate(m_CanHitCharactors_SSR[ssr]);
+        var y = Instantiate(x);
+        x.transform.SetParent(m_results.transform);
+        y.transform.SetParent(m_userCharaBox.transform);
+        x.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
+        y.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
+
+        MenuManager.m_soul -= 3;
+        m_MenuHeadText.text = "所持ソウル: " + MenuManager.m_soul.ToString();
     }
 }
