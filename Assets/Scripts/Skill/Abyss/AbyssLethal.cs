@@ -12,7 +12,6 @@ public class AbyssLethal : EnergyMatrix
     {
         m_DoubleDamageIce1 = PlayerPrefs.GetInt("BlueS");
         m_DoubleDamageIce2 = PlayerPrefs.GetFloat("BlueC");
-        Debug.Log("ディープブループレデター召喚！");
         Generate();
     }
 
