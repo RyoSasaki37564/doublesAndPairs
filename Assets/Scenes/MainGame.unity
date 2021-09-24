@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_fazerSkills:
   - {fileID: 1486036833537488425, guid: 4e3787b3b1e24a041995a9a9f8221e3b, type: 3}
   - {fileID: 3684651969993438439, guid: 21b4069a51f906649b095d01aed147d6, type: 3}
-  - {fileID: 0}
+  - {fileID: 6942827589581675323, guid: 8a38daa30bc1eea49bfcd9ee8f031caa, type: 3}
   m_skillEffectPosition: {fileID: 1922581548}
   m_SpecialPos: {fileID: 6666187440007169198}
   m_skillPannel: {fileID: 1357380253}
@@ -1541,11 +1541,6 @@ MonoBehaviour:
   m_CanUsing: {fileID: 989424140}
   m_pannelPos: {fileID: 391376107}
   m_faze: 0
-  m_fazeSetu:
-  - "\u6B21\u306B\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u3092\u534A\u6E1B\u3002"
-  - "\u30EA\u30FC\u30B5\u30EB\u30D5\u30A7\u30A4\u30B6\u30FC\u3092\u4F7F\u3046\u307E\u3067\u306E\u9593\u3001\u6C34\u5C5E\u6027\u306E\u5A01\u529B\u304C2\u500D\u306B\u306A\u308B\u3002"
-  - "\u300C\u30C7\u30A3\u30FC\u30D7\u30D6\u30EB\u30FC\u30D7\u30EC\u30C7\u30BF\u30FC\u300D
-    \u767A\u52D5\u3057\u305F\u30BF\u30FC\u30F3\u4E2D\u30011\u79D2\u3054\u3068\u306B\u6C34\u5C5E\u6027\u30A8\u30CA\u30B8\u30FC\u30921\u500B\u751F\u6210\u3059\u308B\u3002"
 --- !u!114 &1694861030 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1694861030, guid: de7ed21aad16d0f4da15931e9b93d0f0,
@@ -2526,7 +2521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 509931670, guid: de7ed21aad16d0f4da15931e9b93d0f0, type: 3}
       propertyPath: m_usingChara.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 509931670, guid: de7ed21aad16d0f4da15931e9b93d0f0, type: 3}
       propertyPath: m_usingChara.Array.data[0]
@@ -2540,6 +2535,10 @@ PrefabInstance:
       propertyPath: m_usingChara.Array.data[2]
       value: 
       objectReference: {fileID: 326463468}
+    - target: {fileID: 509931670, guid: de7ed21aad16d0f4da15931e9b93d0f0, type: 3}
+      propertyPath: m_usingChara.Array.data[3]
+      value: 
+      objectReference: {fileID: 1602022710}
     - target: {fileID: 511851396, guid: de7ed21aad16d0f4da15931e9b93d0f0, type: 3}
       propertyPath: m_Name
       value: isCanUse

@@ -12,7 +12,7 @@ public class EnergyMatrix : MonoBehaviour
 
     int m_tama; //生成ドロップ決定用乱数
 
-    void Generate()
+    public virtual void Generate()
     {
         if (GameManager.turn == GameManager.Turn.PlayerTurn)
         {
