@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 
 public class TestFazer : Skill
 {
-    string[] m_charaName = new string[]{ "ワルキューレの奇行" };
-    string[] m_fazeSetu = new string[] { "敵にやや強めの攻撃。", "敵から体力を吸収。", "「必殺ワルキューレミサイル」 " +
-        "パーティー最大HPの50%のダメージ。" };
+    string[] m_charaName = new string[]{ "ワルキューレの奇行", "ヴァルハラの騎士"};
+    string[] m_fazeSetu = new string[] { "敵に1000の固定ダメージ。", "敵から体力を1500吸収。", "「ワルキューレ砲」 " +
+        "敵にパーティー最大HP50%のダメージ。" };
 
     public void Update()
     {
@@ -22,7 +22,7 @@ public class TestFazer : Skill
                 StatusPanneler(m_charaName[0], m_fazeSetu[1]);
                 break;
             case Faze.Lethal:
-                StatusPanneler(m_charaName[0], m_fazeSetu[2]);
+                StatusPanneler(m_charaName[1], m_fazeSetu[2]);
                 break;
 
         }
