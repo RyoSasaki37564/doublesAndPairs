@@ -7,8 +7,8 @@ public class AbyssLethal : EnergyMatrix
     int m_DoubleDamageIce1; //水物理元値
     int m_DoubleDamageIce2; //水魔法元値
 
-    static bool m_isStack = false; //同一スキルの使用状態
-    bool m_pioneerFlag = false; //このスキルがそのターンに使われた同一スキル内で最初に使われたかどうか
+    public static bool m_isStack = false; //バフスキルの使用状態
+    bool m_pioneerFlag = false; //このスキルがそのターンに使われたバフスキル内で最初かどうか
 
     // Start is called before the first frame update
     void Start()

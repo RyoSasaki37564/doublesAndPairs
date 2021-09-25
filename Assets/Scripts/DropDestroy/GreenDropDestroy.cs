@@ -7,7 +7,6 @@ public class GreenDropDestroy : MonoBehaviour
     public static bool woodAttackFlag = false;
     public static bool woodMagicFlag = false;
 
-
     void Start()
     {
         woodAttackFlag = false;
@@ -41,6 +40,5 @@ public class GreenDropDestroy : MonoBehaviour
                 }
             }
         }
-
     }
 }

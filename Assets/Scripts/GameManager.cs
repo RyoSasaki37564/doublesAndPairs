@@ -108,7 +108,6 @@ public class GameManager : MonoBehaviour
                 //Debug.Log(turn);
                 break;
             case Turn.GameEnd:
-                //CharaID_0.m_usingCharaID.Clear();
                 m_goalPanel.SetActive(true);
                 break;
             default:
@@ -164,4 +163,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void TimePlus(int num) //操作時間延長
+    {
+        totalTime += num;
+    }
 }
