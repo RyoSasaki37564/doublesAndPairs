@@ -5,9 +5,11 @@ using UnityEngine;
 public class AbyssFazer : Skill
 {
     string[] m_charaName = new string[] { "アビスの魚影" , "深海を喰らうもの"};
-    string[] m_fazeSetu = new string[] { "発動したターン、受けるダメージを半減。", "リーサルフェイザーを使うまでの間、水属性の威力が1.2倍になる。",
+    string[] m_fazeSetu = new string[] { "発動したターン、受けるダメージを半減。", "リーサルフェイザーを使うまでの間、水属性攻撃時20%の追加ダメージ。",
         "「ディープブループレデター」 " +
         "1ターンの間、水属性の威力2倍、1秒ごとに水属性エナジーを1個生成する。" };
+
+    public static bool m_AbyssCanUse = false;
 
     public void Update()
     {
@@ -30,6 +32,17 @@ public class AbyssFazer : Skill
 
     public override void Fazer()
     {
-        base.Fazer();
+        if(m_faze == Faze.First)
+        {
+            if (m_AbyssCanUse == false)
+            {
+                base.Fazer();
+                m_AbyssCanUse = true;
+            }
+        }
+        else
+        {
+            base.Fazer();
+        }
     }
 }

@@ -339,6 +339,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Abyss Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2348247301386476163, guid: 2015ef798f408c64e9b8aa4cf698d86d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fish
+      objectReference: {fileID: 0}
     - target: {fileID: 2348247301386476164, guid: 2015ef798f408c64e9b8aa4cf698d86d,
         type: 3}
       propertyPath: m_Type

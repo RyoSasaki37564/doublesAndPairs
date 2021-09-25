@@ -85,14 +85,19 @@ public abstract class Skill : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         m_skillPannel.SetActive(true);
         m_skillPannel.transform.position = m_pannelPos.transform.position;
         m_skillFaze.text = "フェイズ : " + m_faze.ToString();
-        if (m_skillChargeFlg == true)
-        {
-            m_CanUsing.text = "使用可能";
-        }
-        else
+        if (this.gameObject.tag == "Fish" && m_faze == Faze.First && AbyssFazer.m_AbyssCanUse == true)
         {
             m_CanUsing.text = "現在使用不可";
         }
+        else if(m_skillChargeFlg == false)
+        {
+            m_CanUsing.text = "現在使用不可";
+        }
+        else
+        {
+            m_CanUsing.text = "使用可能";
+        }
+
     }
 
     public void OnPointerExit(PointerEventData eventData)

@@ -5,11 +5,12 @@ using UnityEngine;
 public class AbyssFirstFazer : MonoBehaviour
 {
     int m_enemyPowerDefault = 0; //敵攻撃力の元の値
+    Enemy m_e = new Enemy();
 
     // Start is called before the first frame update
     void Start()
     {
-        m_enemyPowerDefault = Enemy.m_enemyAttack;
+        m_enemyPowerDefault = m_e.EnemyCurrentAttack();
         Enemy.m_enemyAttack = m_enemyPowerDefault / 2;
     }
 
@@ -17,9 +18,10 @@ public class AbyssFirstFazer : MonoBehaviour
     void Update()
     {
 
-        if (GameManager.turn == GameManager.Turn.CleanUpTurn)
+        if (GameManager.turn == GameManager.Turn.CleanUpTurn && AbyssFazer.m_AbyssCanUse == true)
         {
             Enemy.m_enemyAttack = m_enemyPowerDefault;
+            AbyssFazer.m_AbyssCanUse = false;
         }
     }
 }

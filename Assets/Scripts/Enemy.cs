@@ -88,6 +88,7 @@ public class Enemy : MonoBehaviour
         m_eHPSlider.maxValue = m_enemyHpMax;
 
         m_enemyPower = int.Parse(m_enemyMasterData[0, 3]);
+        m_enemyAttack = m_enemyPower;
 
         m_enemyZokusei = int.Parse(m_enemyMasterData[0, 4]);
 
@@ -104,7 +105,6 @@ public class Enemy : MonoBehaviour
 
         m_enemyHPNum.text = m_currentEHp.ToString();
 
-        m_enemyAttack = m_enemyPower;
     }
 
     // Update is called once per frame
@@ -231,6 +231,12 @@ public class Enemy : MonoBehaviour
             }
         }
 
+    }
+
+    public int EnemyCurrentAttack()
+    {
+        int x = m_enemyAttack;
+        return x;
     }
 
     IEnumerator NextBattleSet()
