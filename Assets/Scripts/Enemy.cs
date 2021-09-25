@@ -7,7 +7,9 @@ using System.IO;
 public class Enemy : MonoBehaviour
 {
     //シリアライズでCSVファイルをドラッグアンドドロップ。そしてこれを入れたオブジェクトをボタンの窓に持ってって簡単読み込み。
-    [SerializeField] TextAsset m_csv = default;
+    [SerializeField] List<TextAsset> m_csv = new List<TextAsset>();
+
+    public static int m_QuestMasterID; //クエスト番号
 
     [SerializeField] List<Sprite> m_enemySprites = new List<Sprite>(); //敵の画像リスト
     SpriteRenderer m_eneSprite = default; //
@@ -36,6 +38,8 @@ public class Enemy : MonoBehaviour
 
     int m_enemyZokusei = 0; //0は火、1は水、2は木
 
+    int m_enemyIllast = 0; //敵の画像番号
+
     //属性処理用受け値
     int m_takenDamageFire1 = 0;
     int m_takenDamageFire2 = 0;
@@ -48,15 +52,18 @@ public class Enemy : MonoBehaviour
 
     void Awake()
     {
+        m_QuestMasterID = PlayerPrefs.GetInt("Quest");
+        PlayerPrefs.Save()
+;
         m_eneSprite = GetComponent<SpriteRenderer>();
 
         m_kamishibai = false;
 
-        er = new StringReader(m_csv.text);//今回のみそ。CVSを1次元配列として読み込んだ後、さらに２次元配列に落とし込む。
+        er = new StringReader(m_csv[m_QuestMasterID].text);//今回のみそ。CVSを1次元配列として読み込んだ後、さらに２次元配列に落とし込む。
 
         m_battleCountNum = int.Parse(er.ReadLine()); //最初に読み込むのはそのステージでの戦闘回数
 
-        m_enemyMasterData = new string[m_battleCountNum, 5]; //ID,名前,体力,攻撃力,属性の5つ
+        m_enemyMasterData = new string[m_battleCountNum, 5]; //ID,名前,体力,攻撃力,属性,画像
 
         if (er != null)
         {
@@ -71,7 +78,7 @@ public class Enemy : MonoBehaviour
                 m_enemyMasterData[i, 2] = m_eStatus[2];
                 m_enemyMasterData[i, 3] = m_eStatus[3];
                 m_enemyMasterData[i, 4] = m_eStatus[4];
-
+                m_enemyMasterData[i, 5] = m_eStatus[5];
             }
         }
 
@@ -83,6 +90,8 @@ public class Enemy : MonoBehaviour
         m_enemyPower = int.Parse(m_enemyMasterData[0, 3]);
 
         m_enemyZokusei = int.Parse(m_enemyMasterData[0, 4]);
+
+        m_enemyIllast = int.Parse(m_enemyMasterData[0, 5]);
 
         m_currentEHp = m_enemyHpMax;
     }
@@ -197,8 +206,6 @@ public class Enemy : MonoBehaviour
         {
             if (m_nextBattleReader < m_battleCountNum)
             {
-                m_eneSprite.sprite = m_enemySprites[m_nextBattleReader];
-
                 m_enemyName.text = m_enemyMasterData[m_nextBattleReader, 1];
 
                 m_enemyHpMax = int.Parse(m_enemyMasterData[m_nextBattleReader, 2]);
@@ -207,6 +214,8 @@ public class Enemy : MonoBehaviour
                 m_enemyPower = int.Parse(m_enemyMasterData[m_nextBattleReader, 3]);
 
                 m_enemyZokusei = int.Parse(m_enemyMasterData[m_nextBattleReader, 4]);
+
+                m_eneSprite.sprite = m_enemySprites[int.Parse(m_enemyMasterData[m_nextBattleReader, 5])];
 
                 m_currentEHp = m_enemyHpMax;
                 m_enemyHPNum.text = m_currentEHp.ToString();

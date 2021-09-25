@@ -9,6 +9,8 @@ public class Quest_0 : MonoBehaviour
 
     [SerializeField] Text m_alart = default;
 
+    [SerializeField] int m_QuestID = 0; //そのクエストのID
+
     private void Start()
     {
         m_QuestPanel.SetActive(false);
@@ -20,6 +22,8 @@ public class Quest_0 : MonoBehaviour
         if(UserCharaIcon.m_partyNum != 0)
         {
             m_alart.text = "";
+            PlayerPrefs.SetInt("Quest", m_QuestID);
+            PlayerPrefs.Save();
             m_QuestPanel.SetActive(true);
         }
         else
