@@ -39,7 +39,7 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
     {
         if (GameManager.turn == GameManager.Turn.GameEnd)
         {
-            m_ParmanentPos.transform.position = new Vector2(m_firstParmanentPos.x, m_firstParmanentPos.y);
+            m_ParmanentPos.transform.position = m_firstParmanentPos;
         }
     }
 

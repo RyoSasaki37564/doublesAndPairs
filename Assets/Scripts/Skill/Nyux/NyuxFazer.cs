@@ -11,7 +11,6 @@ public class NyuxFazer : Skill
 
     public void Update()
     {
-
         switch (m_faze)
         {
             case Faze.First:
