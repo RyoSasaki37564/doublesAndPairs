@@ -15,12 +15,17 @@ public class SEMDropDestroy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!DropsGenerater.dropsDestroyFlag)
+        if (GameManager.turn != GameManager.Turn.EnemyTurn ||
+            GameManager.turn != GameManager.Turn.GameEnd ||
+            GameManager.turn != GameManager.Turn.GameOut ||
+            GameManager.turn != GameManager.Turn.NextBattleTurn)
         {
-            //Debug.Log("鳴った");
-            m_dropsDestroySE.PlayOneShot(m_dropsDestroySE.clip);
+            if (!DropsGenerater.dropsDestroyFlag)
+            {
+                //Debug.Log("鳴った");
+                m_dropsDestroySE.PlayOneShot(m_dropsDestroySE.clip);
 
+            }
         }
-
     }
 }

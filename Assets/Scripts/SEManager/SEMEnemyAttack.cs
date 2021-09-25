@@ -13,7 +13,7 @@ public class SEMEnemyAttack : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         if (GameManager.turn == GameManager.Turn.EnemyTurn)

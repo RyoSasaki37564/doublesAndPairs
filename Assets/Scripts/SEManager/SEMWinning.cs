@@ -14,7 +14,7 @@ public class SEMWinning : MonoBehaviour
         m_wSEFlg = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Enemy.m_currentEHp <= 0 && m_wSEFlg == false)
         {
