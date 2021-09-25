@@ -1728,6 +1728,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1384666511}
     m_Modifications:
+    - target: {fileID: 574485590, guid: bc35b8a155c488a4692eea4a539a87d2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.45999
+      objectReference: {fileID: 0}
+    - target: {fileID: 574485590, guid: bc35b8a155c488a4692eea4a539a87d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50.227
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658219014, guid: bc35b8a155c488a4692eea4a539a87d2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 212.2594
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658219014, guid: bc35b8a155c488a4692eea4a539a87d2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 66.068726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658219014, guid: bc35b8a155c488a4692eea4a539a87d2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658219014, guid: bc35b8a155c488a4692eea4a539a87d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26.464
+      objectReference: {fileID: 0}
     - target: {fileID: 7788478020447899396, guid: bc35b8a155c488a4692eea4a539a87d2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1771,7 +1795,7 @@ PrefabInstance:
     - target: {fileID: 7788478020447899396, guid: bc35b8a155c488a4692eea4a539a87d2,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 118.99614
       objectReference: {fileID: 0}
     - target: {fileID: 7788478020447899396, guid: bc35b8a155c488a4692eea4a539a87d2,
         type: 3}
@@ -1816,7 +1840,7 @@ PrefabInstance:
     - target: {fileID: 7788478020447899396, guid: bc35b8a155c488a4692eea4a539a87d2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 80
+      value: 89.5
       objectReference: {fileID: 0}
     - target: {fileID: 7788478020447899396, guid: bc35b8a155c488a4692eea4a539a87d2,
         type: 3}
@@ -2037,6 +2061,7 @@ MonoBehaviour:
   m_backGroundSprite:
   - {fileID: 21300000, guid: efdfe5fc4ba827347bf31d791ca783b7, type: 3}
   - {fileID: 21300000, guid: 3e9e572a9f29ccf4ea52d10de044e283, type: 3}
+  - {fileID: 21300000, guid: db15939228144ae48b64c835e6c1eae5, type: 3}
 --- !u!114 &1998979716 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1998979716, guid: de7ed21aad16d0f4da15931e9b93d0f0,
@@ -2236,7 +2261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_csv.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_csv.Array.data[0]
@@ -2247,8 +2272,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: 40523d2011c4187478d71b3972d51ac2, type: 3}
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_csv.Array.data[2]
+      value: 
+      objectReference: {fileID: 4900000, guid: 4fbab5a418880014f8c9e28c7a038de9, type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_enemySprites.Array.size
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_enemySprites.Array.data[0]
@@ -2304,6 +2333,21 @@ PrefabInstance:
       propertyPath: m_enemySprites.Array.data[10]
       value: 
       objectReference: {fileID: 21300000, guid: 6e80c3975222cec4daf2fdfd7b69e533,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: ff7417999c65a524d99e6e48b8e1f763,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[12]
+      value: 
+      objectReference: {fileID: 21300000, guid: c8c05cc4f9bbbaa4eb5c2971ac49f6ab,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[13]
+      value: 
+      objectReference: {fileID: 21300000, guid: 984c853f64208ca42a11c40bbc6bd192,
         type: 3}
     - target: {fileID: 182051606980798688, guid: 40cc8cfe20668a744b58209e9bd7d8bf,
         type: 3}

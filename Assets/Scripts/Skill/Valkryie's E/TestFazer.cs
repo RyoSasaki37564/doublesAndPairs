@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 
 public class TestFazer : Skill
 {
-    string[] m_charaName = new string[]{ "ワルキューレの奇行", "ヴァルハラの騎士"};
+    string[] m_charaName = new string[]{ "ワルキューレの奇行", "ヴァルハラの騎士・ワルキューレ"};
     string[] m_fazeSetu = new string[] { "敵に1000の固定ダメージ。", "敵から体力を1500吸収。", "「ワルキューレ砲」 " +
-        "敵の現在HPを35%減らす。" };
+        "敵の現在HPを30%減らす。" };
 
     public void Update()
     {

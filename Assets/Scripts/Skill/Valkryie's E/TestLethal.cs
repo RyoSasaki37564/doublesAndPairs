@@ -8,7 +8,7 @@ public class TestLethal : MonoBehaviour
     
     public void Lethal()
     {
-        Enemy.m_currentEHp -= (Enemy.m_currentEHp*35)/100;
+        Enemy.m_currentEHp -= (Enemy.m_currentEHp*30)/100;
         Destroy(gameObject);
     }
 }
