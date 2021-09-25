@@ -5,7 +5,7 @@ using UnityEngine;
 public class TestRegeneration : PrimaryDefault
 {
     string m_name = "エヴァーグリーン";
-    string m_setumay = "「リジェネ」" + "操作時間中、3秒ごとに最大体力の2%を回復。";
+    string m_setumay = "「リジェネ」" + "操作時間中、3秒ごとに最大体力の1%を回復。";
 
     private void Awake()
     {

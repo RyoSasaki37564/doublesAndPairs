@@ -7,7 +7,7 @@ public class AbyssFazer : Skill
     string[] m_charaName = new string[] { "アビスの魚影" , "深海を喰らうもの"};
     string[] m_fazeSetu = new string[] { "発動したターン、受けるダメージを半減。", "リーサルフェイザーを使うまでの間、水属性の威力が1.2倍になる。",
         "「ディープブループレデター」 " +
-        "発動したターン中、1秒ごとに水属性エナジーを1個生成する。" };
+        "1ターンの間、水属性の威力2倍、1秒ごとに水属性エナジーを1個生成する。" };
 
     public void Update()
     {

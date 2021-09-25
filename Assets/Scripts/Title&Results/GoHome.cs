@@ -27,7 +27,7 @@ public class GoHome : MonoBehaviour
     public void BattleEnded()
     {
         SceneManager.UnloadSceneAsync("MainGame");
-
+        Debug.Log("foo");
         //ヒエラルキーからホームの始祖オブジェクトを持ってきてアクティブ化
         foreach(var home in m_Obj)
         {

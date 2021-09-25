@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
 
     GameObject m_enemyMastarObj; //エネミーマスターデータを扱うためにエネミーを取得
 
-
     public enum Turn
     {
         InputTurn, //入力待ち

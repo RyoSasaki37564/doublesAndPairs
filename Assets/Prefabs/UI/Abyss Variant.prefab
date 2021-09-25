@@ -32,6 +32,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7171058850008348395}
     m_Modifications:
+    - target: {fileID: 574485590, guid: bc35b8a155c488a4692eea4a539a87d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -53.71
+      objectReference: {fileID: 0}
     - target: {fileID: 7788478020447899396, guid: bc35b8a155c488a4692eea4a539a87d2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -70,12 +74,12 @@ PrefabInstance:
     - target: {fileID: 7788478020447899396, guid: bc35b8a155c488a4692eea4a539a87d2,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 216.31253
+      value: 238.4
       objectReference: {fileID: 0}
     - target: {fileID: 7788478020447899396, guid: bc35b8a155c488a4692eea4a539a87d2,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 7788478020447899396, guid: bc35b8a155c488a4692eea4a539a87d2,
         type: 3}
@@ -333,7 +337,7 @@ PrefabInstance:
     - target: {fileID: 2348247301386476163, guid: 2015ef798f408c64e9b8aa4cf698d86d,
         type: 3}
       propertyPath: m_Name
-      value: ShadowFishOfAbyss
+      value: Abyss Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2348247301386476164, guid: 2015ef798f408c64e9b8aa4cf698d86d,
         type: 3}
