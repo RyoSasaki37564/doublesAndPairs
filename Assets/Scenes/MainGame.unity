@@ -2016,6 +2016,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2981231985222440264}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1975190308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8982819364223118943, guid: 44c95dfce9ae19745a99c120a065521a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8982819363971847674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1975190309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975190308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91545f87939c96e4aab2a2fd487b2679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_backGroundSprite:
+  - {fileID: 21300000, guid: efdfe5fc4ba827347bf31d791ca783b7, type: 3}
+  - {fileID: 21300000, guid: 3e9e572a9f29ccf4ea52d10de044e283, type: 3}
 --- !u!114 &1998979716 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1998979716, guid: de7ed21aad16d0f4da15931e9b93d0f0,
@@ -2262,7 +2283,7 @@ PrefabInstance:
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_enemySprites.Array.data[6]
       value: 
-      objectReference: {fileID: 21300000, guid: a3d8f1ec7f8a44c429e5d5ea8566057e,
+      objectReference: {fileID: 21300000, guid: 2526e0839c98f2b458cfcd43257a06c7,
         type: 3}
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_enemySprites.Array.data[7]
@@ -2277,12 +2298,12 @@ PrefabInstance:
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_enemySprites.Array.data[9]
       value: 
-      objectReference: {fileID: 21300000, guid: fab3f5cc5cccabf4d88b6595da00ca34,
+      objectReference: {fileID: 21300000, guid: 38f795b234a9bd74bab3ddba296b27df,
         type: 3}
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_enemySprites.Array.data[10]
       value: 
-      objectReference: {fileID: 21300000, guid: f4c50a5ad29624d4aa803aae0c392b04,
+      objectReference: {fileID: 21300000, guid: 6e80c3975222cec4daf2fdfd7b69e533,
         type: 3}
     - target: {fileID: 182051606980798688, guid: 40cc8cfe20668a744b58209e9bd7d8bf,
         type: 3}
@@ -4025,17 +4046,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8731344302223303596, guid: c2bc3eb55e42d494aa89372861ee94ae,
-        type: 3}
-      propertyPath: m_startingDrops.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8731344302223303596, guid: c2bc3eb55e42d494aa89372861ee94ae,
-        type: 3}
-      propertyPath: m_startingDrops.Array.data[1]
-      value: 
-      objectReference: {fileID: 7355267809307668473, guid: 584187ff51dba6446bec3928647ce76a,
-        type: 3}
     - target: {fileID: 8731344302223303597, guid: c2bc3eb55e42d494aa89372861ee94ae,
         type: 3}
       propertyPath: m_RootOrder
@@ -4173,7 +4183,7 @@ PrefabInstance:
     - target: {fileID: 8982819364223118943, guid: 44c95dfce9ae19745a99c120a065521a,
         type: 3}
       propertyPath: m_Name
-      value: "\u90FD\u4F1A\u306E\u8857\u4E26\u307F"
+      value: "\u80CC\u666F"
       objectReference: {fileID: 0}
     - target: {fileID: 8982819364223118943, guid: 44c95dfce9ae19745a99c120a065521a,
         type: 3}

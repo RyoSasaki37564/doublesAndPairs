@@ -8,7 +8,7 @@ public class TestFazer : Skill
 {
     string[] m_charaName = new string[]{ "ワルキューレの奇行", "ヴァルハラの騎士"};
     string[] m_fazeSetu = new string[] { "敵に1000の固定ダメージ。", "敵から体力を1500吸収。", "「ワルキューレ砲」 " +
-        "敵にパーティー最大HP50%のダメージ。" };
+        "敵の現在HPを35%減らす。" };
 
     public void Update()
     {

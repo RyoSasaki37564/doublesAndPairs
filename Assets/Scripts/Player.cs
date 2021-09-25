@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     int m_playerHpMax = 10000;
-    public static float m_currentPHp; //現在のプレイヤーのHP
-    public static float m_resultPHp; //前のターンのプレイヤーの最終HP
+    public static int m_currentPHp; //現在のプレイヤーのHP
+    public static int m_resultPHp; //前のターンのプレイヤーの最終HP
 
     public Text m_playerHPNum;
 

@@ -12,9 +12,9 @@ public class Enemy : MonoBehaviour
     public static int m_QuestMasterID; //クエスト番号
 
     [SerializeField] List<Sprite> m_enemySprites = new List<Sprite>(); //敵の画像リスト
-    SpriteRenderer m_eneSprite = default; //
+    SpriteRenderer m_eneSprite = default; //敵画像
     public int m_enemyHpMax; //敵最大体力
-    public float m_enemyPower; //敵攻撃力
+    public int m_enemyPower; //敵攻撃力
     [SerializeField]
     Text m_enemyName; //敵の名前
 
@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
 
     public Slider m_eHPSlider; //敵体力のバー
 
-    public static float m_enemyAttack; //敵攻撃力
+    public static int m_enemyAttack; //敵攻撃力
 
     public string[,] m_enemyMasterData; //そのクエストの敵データを二次元配列化
 
@@ -53,8 +53,8 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         m_QuestMasterID = PlayerPrefs.GetInt("Quest");
-        PlayerPrefs.Save()
-;
+        PlayerPrefs.Save();
+
         m_eneSprite = GetComponent<SpriteRenderer>();
 
         m_kamishibai = false;
@@ -213,6 +213,7 @@ public class Enemy : MonoBehaviour
                 m_eHPSlider.maxValue = m_enemyHpMax;
 
                 m_enemyPower = int.Parse(m_enemyMasterData[m_nextBattleReader, 3]);
+                m_enemyAttack = m_enemyPower;
 
                 m_enemyZokusei = int.Parse(m_enemyMasterData[m_nextBattleReader, 4]);
 

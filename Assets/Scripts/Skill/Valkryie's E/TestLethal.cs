@@ -5,10 +5,10 @@ using UnityEngine;
 public class TestLethal : MonoBehaviour
 {
     Player m_p = new Player();
-
+    
     public void Lethal()
     {
-        Enemy.m_currentEHp -= m_p.ThePMaxHP()/2;
+        Enemy.m_currentEHp -= (Enemy.m_currentEHp*35)/100;
         Destroy(gameObject);
     }
 }

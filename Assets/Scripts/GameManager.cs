@@ -12,8 +12,6 @@ public class GameManager : MonoBehaviour
     int iii; //操作時間の打ち止め。－秒の表記封じ
     int seconds;
 
-    GameObject m_enemyMastarObj; //エネミーマスターデータを扱うためにエネミーを取得
-
     public enum Turn
     {
         InputTurn, //入力待ち
@@ -41,8 +39,6 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         m_goalPanel.SetActive(false);
-
-        m_enemyMastarObj = GameObject.Find("EnemyObj"); //エネミーマスターデータを扱うためにエネミーを取得
 
         iii = (int)totalTime; //カウントのストッパー
 
