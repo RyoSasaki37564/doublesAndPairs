@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour
 
         m_battleCountNum = int.Parse(er.ReadLine()); //最初に読み込むのはそのステージでの戦闘回数
 
-        m_enemyMasterData = new string[m_battleCountNum, 5]; //ID,名前,体力,攻撃力,属性,画像
+        m_enemyMasterData = new string[m_battleCountNum, 6]; // ID, 名前 ,体力 ,攻撃力 ,属性 ,画像
 
         if (er != null)
         {
@@ -92,6 +92,7 @@ public class Enemy : MonoBehaviour
         m_enemyZokusei = int.Parse(m_enemyMasterData[0, 4]);
 
         m_enemyIllast = int.Parse(m_enemyMasterData[0, 5]);
+        m_eneSprite.sprite = m_enemySprites[m_enemyIllast];
 
         m_currentEHp = m_enemyHpMax;
     }

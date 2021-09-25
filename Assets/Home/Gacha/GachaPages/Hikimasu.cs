@@ -20,7 +20,7 @@ public class Hikimasu : MonoBehaviour
 
     [SerializeField] Text m_MenuHeadText = default; //ソウル数の表示
 
-    CharaID_0 m_thisID;
+    CharaID m_thisID;
 
     void Start()
     {

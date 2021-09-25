@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class CharaIconManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] m_usingChara = new GameObject[CharaID_0.m_usingCharaID.Count];
-    [SerializeField] GameObject[] party = new GameObject[CharaID_0.m_usingCharaID.Count];
+    [SerializeField] GameObject[] m_usingChara = new GameObject[CharaID.m_usingCharaID.Count];
+    [SerializeField] GameObject[] party = new GameObject[CharaID.m_usingCharaID.Count];
     [SerializeField] LayoutGroup m_deck = default;
 
 
@@ -15,7 +15,7 @@ public class CharaIconManager : MonoBehaviour
     {
         for(var i = 0; i < party.Length; i++)
         {
-            int id = CharaID_0.m_usingCharaID[i];
+            int id = CharaID.m_usingCharaID[i];
             var x = Instantiate(m_usingChara[id]);
             party[i] = x;
             party[i].SetActive(true);
