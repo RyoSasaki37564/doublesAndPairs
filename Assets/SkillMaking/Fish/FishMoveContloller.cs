@@ -5,7 +5,7 @@ using UnityEngine;
 public class FishMoveContloller : MonoBehaviour
 {
     Rigidbody2D m_fishBody;
-    SpriteRenderer m_fishSpr;
+    //SpriteRenderer m_fishSpr;
     [SerializeField]float m_speed = -0.001f;
     float rondom;
 
@@ -13,7 +13,7 @@ public class FishMoveContloller : MonoBehaviour
     void Start()
     {
         m_fishBody = this.gameObject.GetComponent<Rigidbody2D>();
-        m_fishSpr = this.gameObject.GetComponent<SpriteRenderer>();
+        //m_fishSpr = this.gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame

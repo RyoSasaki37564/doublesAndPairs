@@ -10,10 +10,10 @@ public class SEMEnemyAttack : MonoBehaviour
     void Start()
     {
         m_enemyAttackSE = GetComponent<AudioSource>();
-}
+    }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
 
         if (GameManager.turn == GameManager.Turn.EnemyTurn)
