@@ -35,6 +35,7 @@ public class NyuxFazer : Skill
         {
             if(GameManager.turn == GameManager.Turn.InputTurn && m_NyuxCanUse == false)
             {
+                NyuxLethalFazer.m_timePlus = true;
                 base.Fazer();
                 m_NyuxCanUse = true;
             }

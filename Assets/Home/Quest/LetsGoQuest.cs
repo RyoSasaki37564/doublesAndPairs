@@ -17,9 +17,6 @@ public class LetsGoQuest : MonoBehaviour
         m_NowLoading.SetActive(true);
         m_kakuninPanel.SetActive(false);
         m_HomeScene.SetActive(false); 
-        //使用制限系スキル状態はここで初期化
-        AbyssFazer.m_AbyssCanUse = false;
-        NyuxFazer.m_NyuxCanUse = false;
         SceneManager.LoadScene("MainGame", LoadSceneMode.Additive);
     }
 

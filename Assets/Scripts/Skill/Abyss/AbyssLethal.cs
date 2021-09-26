@@ -32,7 +32,8 @@ public class AbyssLethal : EnergyMatrix
     void Update()
     {
         //ターンの終わりに効果終了
-        if (GameManager.turn == GameManager.Turn.CleanUpTurn)
+        if (GameManager.turn == GameManager.Turn.CleanUpTurn || GameManager.turn == GameManager.Turn.GameEnd ||
+            GameManager.turn == GameManager.Turn.GameOut)
         {
             //最初の一体のみ、最初の威力に戻す
             if (m_pioneerFlag == true)

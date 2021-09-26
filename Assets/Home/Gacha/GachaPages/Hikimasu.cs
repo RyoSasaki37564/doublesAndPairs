@@ -42,7 +42,9 @@ public class Hikimasu : MonoBehaviour
                 //当選キャラをリザルトに表示し、ボックスにも送る。
                 int ssr = Random.Range(0, m_CanHitCharactors_SSR.Count);
                 var x = Instantiate(m_CanHitCharactors_SSR[ssr]);
+                x.SetActive(true);
                 var y = Instantiate(x);
+                y.SetActive(true);
                 x.transform.SetParent(m_results.transform);
                 y.transform.SetParent(m_userCharaBox.transform);
                 x.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;
@@ -53,7 +55,9 @@ public class Hikimasu : MonoBehaviour
             {
                 int sr = Random.Range(0, m_CanHitCharactors_SR.Count);
                 var x = Instantiate(m_CanHitCharactors_SR[sr]);
+                x.SetActive(true);
                 var y = Instantiate(x);
+                y.SetActive(true);
                 x.transform.SetParent(m_gachaResultPanel.transform);
                 y.transform.SetParent(m_userCharaBox.transform);
                 x.transform.localScale = m_CanHitCharactors_SR[sr].transform.localScale;
@@ -64,7 +68,9 @@ public class Hikimasu : MonoBehaviour
             {
                 int r = Random.Range(0, m_CanHitCharactors_R.Count);
                 var x = Instantiate(m_CanHitCharactors_R[r]);
+                x.SetActive(true);
                 var y = Instantiate(x);
+                y.SetActive(true);
                 x.transform.SetParent(m_gachaResultPanel.transform);
                 y.transform.SetParent(m_userCharaBox.transform);
                 x.transform.localScale = m_CanHitCharactors_R[r].transform.localScale;
@@ -81,7 +87,9 @@ public class Hikimasu : MonoBehaviour
         //当選キャラをリザルトに表示し、ボックスにも送る。
         int ssr = Random.Range(0, m_CanHitCharactors_SSR.Count);
         var x = Instantiate(m_CanHitCharactors_SSR[ssr]);
+        x.SetActive(true);
         var y = Instantiate(x);
+        y.SetActive(true);
         x.transform.SetParent(m_results.transform);
         y.transform.SetParent(m_userCharaBox.transform);
         x.transform.localScale = m_CanHitCharactors_SSR[ssr].transform.localScale;

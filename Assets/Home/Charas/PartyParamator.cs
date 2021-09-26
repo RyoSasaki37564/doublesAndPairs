@@ -25,6 +25,8 @@ public class PartyParamator : MonoBehaviour
 
     [SerializeField]GameObject m_PartyStatusPanelObj = default;
 
+    [SerializeField] GameObject m_party = default;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +75,33 @@ public class PartyParamator : MonoBehaviour
         {
             m_panelOnOff = false;
             m_PartyStatusPanelObj.SetActive(false);
+        }
+
+    }
+    private void Update()
+    {
+        if (m_party.transform.childCount == 1)
+        {
+            //パーティステータス初期化
+            PlayerPrefs.SetInt("PlayerHp", 0);
+            m_hp = PlayerPrefs.GetInt("PlayerHp");
+
+            PlayerPrefs.SetInt("RedS", 0);
+            m_fireButuri = PlayerPrefs.GetInt("RedS", 0);
+            PlayerPrefs.SetInt("RedC", 0);
+            m_fireMahou = PlayerPrefs.GetInt("RedC", 0);
+
+            PlayerPrefs.SetInt("BlueS", 0);
+            m_iceButuri = PlayerPrefs.GetInt("BlueS", 0);
+            PlayerPrefs.SetInt("BlueC", 0);
+            m_iceMahou = PlayerPrefs.GetInt("BlueC", 0);
+
+            PlayerPrefs.SetInt("GreenS", 0);
+            m_woodButuri = PlayerPrefs.GetInt("GreenS", 0);
+            PlayerPrefs.SetInt("GreenC", 0);
+            m_woodMahou = PlayerPrefs.GetInt("GreenC", 0);
+
+            PlayerPrefs.Save();
         }
     }
 }

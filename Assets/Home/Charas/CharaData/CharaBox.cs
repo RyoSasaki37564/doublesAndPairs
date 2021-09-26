@@ -33,9 +33,9 @@ public class CharaBox : MonoBehaviour
             if (m_Drop[n] != null)
             {
                 var x = Instantiate(m_Drop[n]);
+                x.SetActive(true);
                 x.transform.SetParent(m_GL.transform);
                 x.transform.localScale = m_Zukan[0].transform.localScale;
-                x.SetActive(true);
             }
             GoHome.m_isBossDrop = false;
         }

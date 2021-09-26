@@ -6,6 +6,9 @@ public class NowLoadingBreak : MonoBehaviour
 {
     private void Bye()
     {
-       Destroy (this.gameObject);
+        //使用制限系スキル状態はここで初期化
+        AbyssFazer.m_AbyssCanUse = false;
+        NyuxFazer.m_NyuxCanUse = false;
+        Destroy (this.gameObject);
     }
 }

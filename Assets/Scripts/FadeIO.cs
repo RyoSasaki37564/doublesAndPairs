@@ -11,7 +11,7 @@ public class FadeIO : MonoBehaviour
 
     bool m_stopper = false;
 
-    public static bool m_isNight = false;
+    public static bool m_isNight = false; //背景に作用 BackGroundManager.cs
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +43,10 @@ public class FadeIO : MonoBehaviour
         if (GameManager.turn == GameManager.Turn.CleanUpTurn)
         {
             m_isNight = false;
+            m_stopper = false;
+            m_image.enabled = true;
+            m_a = 0;
+            Coloring();
         }
     }
 

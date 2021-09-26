@@ -17,8 +17,7 @@ public class AbyssFirstFazer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (GameManager.turn == GameManager.Turn.CleanUpTurn && AbyssFazer.m_AbyssCanUse == true)
+        if (GameManager.turn == GameManager.Turn.CleanUpTurn)
         {
             Enemy.m_enemyAttack = m_enemyPowerDefault;
             AbyssFazer.m_AbyssCanUse = false;
