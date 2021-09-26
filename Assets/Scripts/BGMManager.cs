@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BGMManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] m_jukeBoxes = new GameObject[4]; //ノーマル、ボス、クリア×２。
+    [SerializeField] GameObject[] m_jukeBoxes = new GameObject[5]; //ノーマル、ボス、クリア×3(ひとつはパーティクル)。
 
     public enum Ongen
     {
@@ -39,11 +39,13 @@ public class BGMManager : MonoBehaviour
                 m_jukeBoxes[1].SetActive(false);
                 m_jukeBoxes[2].SetActive(false);
                 m_jukeBoxes[3].SetActive(false);
+                m_jukeBoxes[4].SetActive(false);
                 break;
             case Ongen.Boss:
                 m_jukeBoxes[0].SetActive(false);
                 m_jukeBoxes[2].SetActive(false);
                 m_jukeBoxes[3].SetActive(false);
+                m_jukeBoxes[4].SetActive(false);
                 StartCoroutine(SetBossBGM());
                 break;
             case Ongen.Clear:
@@ -51,6 +53,7 @@ public class BGMManager : MonoBehaviour
                 m_jukeBoxes[1].SetActive(false);
                 m_jukeBoxes[2].SetActive(true);
                 m_jukeBoxes[3].SetActive(true);
+                m_jukeBoxes[4].SetActive(true);
                 break;
         }
 
