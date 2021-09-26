@@ -4725,6 +4725,10 @@ MonoBehaviour:
   - {fileID: 266530306}
   - {fileID: 1851265387}
   - {fileID: 560750724}
+  m_Drop:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 904885257}
   m_GL: {fileID: 158068626}
 --- !u!1 &1473249831
 GameObject:
@@ -6597,7 +6601,7 @@ PrefabInstance:
     - target: {fileID: 1742273434796150043, guid: 5152fbb031f1ef6419b10efc35d2820c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 137.80003
+      value: 137.80002
       objectReference: {fileID: 0}
     - target: {fileID: 1742273435340820563, guid: 5152fbb031f1ef6419b10efc35d2820c,
         type: 3}

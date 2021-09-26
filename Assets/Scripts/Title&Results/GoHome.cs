@@ -14,6 +14,8 @@ public class GoHome : MonoBehaviour
 
     GameObject[] m_Obj; //戦闘開始時の全オブジェクト取得
 
+    public static bool m_isBossDrop = false;
+
     [SerializeField] GameObject m_dustBox = default; //戦闘終了時廃棄したいオブジェクトはこれを親にする。
 
     private void Start()
@@ -40,8 +42,18 @@ public class GoHome : MonoBehaviour
             if(home.name == "Home")
             {
                 home.SetActive(true);
-                Destroy(m_dustBox);
             }
         }
+        Destroy(m_dustBox);
+
+        if(Player.m_currentPHp > 0)
+        {
+            m_isBossDrop = true;
+        }
+        else
+        {
+            m_isBossDrop = false;
+        }
+
     }
 }
