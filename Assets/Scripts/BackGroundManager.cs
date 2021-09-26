@@ -26,5 +26,9 @@ public class BackGroundManager : MonoBehaviour
         {
             m_Sprite.sprite = m_backGroundSprite[3];
         }
+        if(GameManager.turn == GameManager.Turn.CleanUpTurn)
+        {
+            m_Sprite.sprite = m_backGroundSprite[m_QuestMasterID];
+        }
     }
 }

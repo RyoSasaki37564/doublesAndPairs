@@ -52,6 +52,7 @@ public class NyuxLethalFazer : MonoBehaviour
 
             }
             m_timePlus = false;
+            NyuxFazer.m_NyuxCanUse = false;
             Destroy(this.gameObject);
         }
     }

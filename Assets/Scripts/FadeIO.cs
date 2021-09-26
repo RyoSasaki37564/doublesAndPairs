@@ -27,9 +27,9 @@ public class FadeIO : MonoBehaviour
     void Update()
     {
         //黒くなるまで染めこむ
-        if(NyuxLethalFazer.m_timePlus == true)
+        if (NyuxLethalFazer.m_timePlus == true)
         {
-            if(m_stopper == false)
+            if (m_stopper == false)
             {
                 Tobari();
                 Coloring();
@@ -39,6 +39,10 @@ public class FadeIO : MonoBehaviour
                 m_image.enabled = false;
                 m_isNight = true;
             }
+        }
+        if (GameManager.turn == GameManager.Turn.CleanUpTurn)
+        {
+            m_isNight = false;
         }
     }
 

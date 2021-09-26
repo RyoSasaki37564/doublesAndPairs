@@ -9,6 +9,8 @@ public class NyuxFazer : Skill
         "体力を全回復。", "「闇夜」 " +
         "1ターンの間魔法攻撃力1.5倍、操作時間を7秒増やす。(エナジー操作前のみ発動可能)(時間増加は重複不可)" };
 
+    public static bool m_NyuxCanUse = false;
+
     public void Update()
     {
         switch (m_faze)
@@ -31,9 +33,10 @@ public class NyuxFazer : Skill
     {
         if (m_faze == Faze.Lethal)
         {
-            if(GameManager.turn == GameManager.Turn.InputTurn)
+            if(GameManager.turn == GameManager.Turn.InputTurn && m_NyuxCanUse == false)
             {
                 base.Fazer();
+                m_NyuxCanUse = true;
             }
         }
         else
