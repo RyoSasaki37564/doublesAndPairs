@@ -8,6 +8,7 @@ public class GoToDustBox : MonoBehaviour
     void Start()
     {
         transform.parent = GameObject.Find("DustBox").transform;
+        //GoHome.csと連携しとるよん
     }
 
 }

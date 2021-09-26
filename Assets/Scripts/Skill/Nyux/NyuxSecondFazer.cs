@@ -6,7 +6,7 @@ public class NyuxSecondFazer : MonoBehaviour
 {
     Player m_p = new Player();
 
-    void Resurrection()
+    void Start()
     {
         if (Player.m_currentPHp < m_p.ThePMaxHP() &&
             GameManager.turn == GameManager.Turn.PlayerTurn || GameManager.turn == GameManager.Turn.InputTurn)
@@ -14,5 +14,6 @@ public class NyuxSecondFazer : MonoBehaviour
             Player.m_currentPHp = m_p.ThePMaxHP();
             Skill.m_healFlg = true;
         }
+
     }
 }

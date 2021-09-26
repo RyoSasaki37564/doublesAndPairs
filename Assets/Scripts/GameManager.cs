@@ -70,8 +70,17 @@ public class GameManager : MonoBehaviour
                 gst.text = "";
                 if (PlayTimeFlg)
                 {
-                    StartCoroutine(PlayTime()); // updateでうごいてたからバグってた
-                    PlayTimeFlg = false;
+                    if (NyuxLethalFazer.m_timePlus == false)
+                    {
+                        StartCoroutine(PlayTime()); // updateでうごいてたからバグってた
+                        PlayTimeFlg = false;
+                    }
+                    else
+                    {
+                        StartCoroutine(PlayTimePlus());
+                        totalTime += 7;
+                        PlayTimeFlg = false;
+                    }
                 }
                 totalTime -= Time.deltaTime;
                 seconds = (int)totalTime;
@@ -163,8 +172,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void TimePlus(int num) //操作時間延長
+    IEnumerator PlayTimePlus()
     {
-        totalTime += num;
+        yield return new WaitForSeconds(totalTime + 7);
+        if (totalTime <= 0)
+        {
+            turnFlag = false;
+            turn = Turn.EnemyTurn;
+        }
+        else
+        {
+            yield break;
+        }
     }
 }

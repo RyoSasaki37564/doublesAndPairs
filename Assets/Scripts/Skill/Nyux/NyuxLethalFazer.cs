@@ -10,6 +10,8 @@ public class NyuxLethalFazer : MonoBehaviour
 
     bool m_pioneerFlag = false; //このスキルがそのターンに使われたバフスキル内で最初かどうか
 
+    public static bool m_timePlus = false;
+
     GameManager m_g = new GameManager();
 
     // Start is called before the first frame update
@@ -22,12 +24,14 @@ public class NyuxLethalFazer : MonoBehaviour
         PlayerPrefs.SetInt("BlueC", (m_MagicDamageIce * 3) / 2);
         PlayerPrefs.SetInt("Green", (m_MagicDamageWood * 3) / 2);
         PlayerPrefs.Save();
-        m_g.TimePlus(7);
-
         if (AbyssLethal.m_isStack == false)
         {
             AbyssLethal.m_isStack = true;
             m_pioneerFlag = true;
+        }
+        if(m_timePlus == false)
+        {
+            m_timePlus = true;
         }
     }
 
@@ -47,7 +51,7 @@ public class NyuxLethalFazer : MonoBehaviour
                 AbyssLethal.m_isStack = false;
 
             }
-
+            m_timePlus = false;
             Destroy(this.gameObject);
         }
     }
