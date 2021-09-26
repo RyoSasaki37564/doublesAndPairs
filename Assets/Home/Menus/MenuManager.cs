@@ -21,7 +21,9 @@ public class MenuManager : MonoBehaviour
     /// 各メニューの実体化、隠蔽をスムーズにするために、それぞれのメニューに親オブジェクトを設定。それにSetActiveをかける。
     /// 要素は0からクエスト、キャラ、ガチャ。
     /// </summary>
-    [SerializeField] GameObject[] m_menuObj = new GameObject[3]; 
+    [SerializeField] GameObject[] m_menuObj = new GameObject[3];
+
+    [SerializeField] Color[] m_color = new Color[3];
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,7 @@ public class MenuManager : MonoBehaviour
                 m_menuObj[1].SetActive(false);
                 m_menuObj[2].SetActive(false);
                 m_MenuHeadText[0].text = menu.ToString();
+                m_MenuHeadText[0].color = m_color[0];
                 break;
 
             case HomeMenu.Chara:
@@ -51,6 +54,7 @@ public class MenuManager : MonoBehaviour
                 m_menuObj[1].SetActive(true);
                 m_menuObj[2].SetActive(false);
                 m_MenuHeadText[0].text = menu.ToString();
+                m_MenuHeadText[0].color = m_color[1];
                 break;
 
             case HomeMenu.Gacha:
@@ -58,6 +62,7 @@ public class MenuManager : MonoBehaviour
                 m_menuObj[1].SetActive(false);
                 m_menuObj[2].SetActive(true);
                 m_MenuHeadText[0].text = menu.ToString();
+                m_MenuHeadText[0].color = m_color[2];
                 break;
         }
     }

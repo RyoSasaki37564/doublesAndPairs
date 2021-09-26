@@ -9,6 +9,7 @@ public class CharaBox : MonoBehaviour
     [SerializeField] GameObject[] m_Zukan = new GameObject[3]; //プレイアブルキャラのオブジェクト型マスター
     [SerializeField] List<GameObject> m_Drop = new List<GameObject>(); //プレイアブルキャラのオブジェクト型マスター
     [SerializeField] LayoutGroup m_GL = default; //キャラボックス
+    [SerializeField] Text m_MenuHeadText = default; //クリア時のソウル加算を表記するために
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class CharaBox : MonoBehaviour
                 x.transform.SetParent(m_GL.transform);
                 x.transform.localScale = m_Zukan[0].transform.localScale;
             }
+            m_MenuHeadText.text = "所持ソウル: " + MenuManager.m_soul.ToString();
             GoHome.m_isBossDrop = false;
         }
     }

@@ -49,7 +49,6 @@ public class NyuxLethalFazer : MonoBehaviour
                 PlayerPrefs.Save();
 
                 AbyssLethal.m_isStack = false;
-
             }
             m_timePlus = false;
             NyuxFazer.m_NyuxCanUse = false;

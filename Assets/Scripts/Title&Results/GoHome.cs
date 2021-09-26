@@ -49,6 +49,7 @@ public class GoHome : MonoBehaviour
         if(Player.m_currentPHp > 0)
         {
             m_isBossDrop = true;
+            MenuManager.m_soul += 10;
         }
         else
         {
