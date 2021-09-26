@@ -15,6 +15,7 @@ TagManager:
   - Green
   - OutLine
   - Fish
+  - Nyux
   layers:
   - Default
   - TransparentFX

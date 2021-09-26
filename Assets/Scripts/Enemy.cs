@@ -50,8 +50,12 @@ public class Enemy : MonoBehaviour
     int m_takenDamageWood1 = 0;
     int m_takenDamageWood2 = 0;
 
+    public static bool m_isBoss = false;
+
     void Awake()
     {
+        m_isBoss = false;
+
         m_QuestMasterID = PlayerPrefs.GetInt("Quest");
         PlayerPrefs.Save();
 
@@ -228,6 +232,11 @@ public class Enemy : MonoBehaviour
             else
             {
                 GameManager.turn = GameManager.Turn.GameEnd;
+            }
+
+            if(m_nextBattleReader == m_battleCountNum-1)
+            {
+                m_isBoss = true;
             }
         }
 
