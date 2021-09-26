@@ -10,6 +10,8 @@ public class BackGroundManager : MonoBehaviour
 
     public static int m_QuestMasterID; //クエスト番号
 
+    FadeIO m_f = new FadeIO();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +19,12 @@ public class BackGroundManager : MonoBehaviour
         m_QuestMasterID = PlayerPrefs.GetInt("Quest");
         m_Sprite = GetComponent<SpriteRenderer>();
         m_Sprite.sprite = m_backGroundSprite[m_QuestMasterID];
+    }
+    private void Update()
+    {
+        if(FadeIO.m_isNight == true)
+        {
+            m_Sprite.sprite = m_backGroundSprite[3];
+        }
     }
 }
