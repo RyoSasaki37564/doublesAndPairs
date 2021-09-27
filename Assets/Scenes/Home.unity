@@ -1797,6 +1797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Zukan: {fileID: 729243993}
+  m_charasStats: {fileID: 623715150}
 --- !u!1 &556620283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,7 +2201,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626722184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -7208,7 +7209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1692646632
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7232,8 +7233,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 75.8, y: -241.5}
-  m_SizeDelta: {x: 163.75626, y: 286.95474}
+  m_AnchoredPosition: {x: 76, y: -241.5}
+  m_SizeDelta: {x: 152.04984, y: 286.95474}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1692646633
 MonoBehaviour:

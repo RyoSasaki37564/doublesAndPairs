@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class PartyParamator : MonoBehaviour
+public class PartyParamator : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public static int m_hp = 0;//パーティ体力
 
@@ -103,5 +104,15 @@ public class PartyParamator : MonoBehaviour
 
             PlayerPrefs.Save();
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        PartyStatusView();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        PartyStatusView();
     }
 }
