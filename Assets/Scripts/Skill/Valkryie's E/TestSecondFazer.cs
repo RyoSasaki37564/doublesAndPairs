@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestSecondFazer : MonoBehaviour
 {
-    [SerializeField] int m_SecondFazerDrain = 1500;
+    [SerializeField] int m_SecondFazerDrain = 2500;
 
     public void Second()
     {

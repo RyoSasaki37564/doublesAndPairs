@@ -3,22 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ZukansParamator : MonoBehaviour
+public abstract class ZukansParamator : MonoBehaviour
 {
     [SerializeField] CharaID m_thisCharasStatus = default; //そのキャラのパラメーター
 
-    //各パラメータのテキスト。 name, hp, fa. fm, ia, im. wa, wm, skill.
-    [SerializeField] Text[] m_paramatorText = new Text[9];
-
-    [SerializeField] GameObject m_charaStats = default; //キャラステ表示パネル
+    //各パラメータのテキスト。 name, hp, fa. fm, ia, im. wa, wm スキル説明は継承したscriptから書き込む
+    [SerializeField] Text[] m_paramatorText = new Text[8];
 
     string m_statsType; //すてーたすしゅべつ
 
     [SerializeField] string m_onamae = default;
 
-
-
-   public void DataPanneling()
+   public virtual void DataPanneling() //setumeiはスキル説明
     {
         m_paramatorText[0].text = m_onamae;
 
@@ -56,6 +52,5 @@ public class ZukansParamator : MonoBehaviour
 
             m_paramatorText[i].text =  m_statsType + " : " +  m_thisCharasStatus.m_status[i - 1].ToString();
         }
-        m_charaStats.SetActive(true);
     }
 }

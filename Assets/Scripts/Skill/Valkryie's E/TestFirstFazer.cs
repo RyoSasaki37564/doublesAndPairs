@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestFirstFazer : MonoBehaviour
 {
-    [SerializeField] int m_firstFazerAttack = 1000;
+    [SerializeField] int m_firstFazerAttack = 10000;
 
     public void First()
     {

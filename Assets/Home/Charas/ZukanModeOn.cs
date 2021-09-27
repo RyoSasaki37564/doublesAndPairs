@@ -5,6 +5,7 @@ using UnityEngine;
 public class ZukanModeOn : MonoBehaviour
 {
     [SerializeField] GameObject m_Zukan = default; //図鑑
+
     bool m_flg = false;
 
     [SerializeField] GameObject m_charasStats = default; //キャラステ表
