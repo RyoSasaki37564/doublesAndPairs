@@ -907,7 +907,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 199407290}
     - target: {fileID: 7171058850008348396, guid: a5db7da5838bdd240bf092412f3390bd,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -943,6 +943,61 @@ MonoBehaviour:
   m_charaBox: {fileID: 729243991}
   m_party: {fileID: 821096851}
   m_status: 6207000009000000be00000005000000a000000004000000a000000004000000
+--- !u!114 &199407290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199407287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d06888df66d0b84998c640ff092ea31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_thisCharasStatus: {fileID: 199407288}
+  m_paramatorText:
+  - {fileID: 1372359343}
+  - {fileID: 1725027329}
+  - {fileID: 625445842}
+  - {fileID: 2080478510}
+  - {fileID: 1996137662}
+  - {fileID: 925988942}
+  - {fileID: 1106852710}
+  - {fileID: 1513048401}
+  m_onamae: "\u591C\u306E\u9B54\u5973\u30FB\u30CB\u30E5\u30AF\u30B9"
+  m_skillSetumei: {fileID: 1147302124}
+  m_thisFazer: {fileID: 199407294}
+  m_charaStats: {fileID: 623715150}
+--- !u!114 &199407294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199407287}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c999a80fd141ed47bfc3eb8c1dfbbd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fazerSkills:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_skillEffectPosition: {fileID: 0}
+  m_SpecialPos: {fileID: 0}
+  m_skillPannel: {fileID: 0}
+  m_charaName: {fileID: 0}
+  m_skillFaze: {fileID: 0}
+  m_skillSetumei: {fileID: 0}
+  m_CanUsing: {fileID: 0}
+  m_pannelPos: {fileID: 0}
+  m_faze: 0
+  m_fazeSetu:
+  - "\u300C\u30A8\u30CA\u30B8\u30FC\u30DE\u30C8\u30EA\u30C3\u30AF\u30B9\u30FB\u8853\u300D\n\u30D7\u30EC\u30A4\u30E4\u30FC\u30BF\u30FC\u30F3\u4E2D\u30015\u79D2\u3054\u3068\u306B\u9B54\u6CD5\u30A8\u30CA\u30B8\u30FC\u30921\u500B\u751F\u6210\u3059\u308B\u3002"
+  - "\u6700\u5927\u4F53\u529B\u306E30%\u3092\u56DE\u5FA9\u3002"
+  - "\u300C\u95C7\u591C\u300D\n 1\u30BF\u30FC\u30F3\u306E\u9593\u9B54\u6CD5\u653B\u6483\u529B1.5\u500D\u3001\u64CD\u4F5C\u6642\u9593\u30927\u79D2\u5897\u3084\u3059\u3002(\u30A8\u30CA\u30B8\u30FC\u64CD\u4F5C\u524D\u306E\u307F\u767A\u52D5\u53EF\u80FD)(\u6642\u9593\u5897\u52A0\u306F\u91CD\u8907\u4E0D\u53EF)"
 --- !u!1 &214727224
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,7 +3383,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 804523128}
     - target: {fileID: 7171058850008348396, guid: a5db7da5838bdd240bf092412f3390bd,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -3358,32 +3413,6 @@ MonoBehaviour:
   m_charaBox: {fileID: 729243991}
   m_party: {fileID: 821096851}
   m_status: 340800001e00000014000000dc000000d20000001e0000003200000003000000
---- !u!114 &804523123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804523121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1451685089a882046bd114560bdec5aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_thisCharasStatus: {fileID: 804523122}
-  m_paramatorText:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_onamae: 
-  m_skillSetumei: {fileID: 0}
-  m_thisFazer: {fileID: 0}
-  m_charaStats: {fileID: 0}
 --- !u!114 &804523124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3413,6 +3442,32 @@ MonoBehaviour:
   - "\u767A\u52D5\u3057\u305F\u30BF\u30FC\u30F3\u3001\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u3092\u534A\u6E1B\u3002(\u91CD\u8907\u4E0D\u53EF)"
   - "\u30EA\u30FC\u30B5\u30EB\u30D5\u30A7\u30A4\u30B6\u30FC\u3092\u4F7F\u3046\u307E\u3067\u306E\u9593\u3001\u6C34\u5C5E\u6027\u653B\u6483\u664220%\u306E\u8FFD\u52A0\u30C0\u30E1\u30FC\u30B8\u3002"
   - "\u300C\u30C7\u30A3\u30FC\u30D7\u30D6\u30EB\u30FC\u30D7\u30EC\u30C7\u30BF\u30FC\u300D\n1\u30BF\u30FC\u30F3\u306E\u9593\u3001\u6C34\u5C5E\u6027\u306E\u5A01\u529B2\u500D\u30011\u79D2\u3054\u3068\u306B\u6C34\u5C5E\u6027\u30A8\u30CA\u30B8\u30FC\u30921\u500B\u751F\u6210\u3059\u308B\u3002"
+--- !u!114 &804523128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804523121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1451685089a882046bd114560bdec5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_thisCharasStatus: {fileID: 804523122}
+  m_paramatorText:
+  - {fileID: 1372359343}
+  - {fileID: 1725027329}
+  - {fileID: 625445842}
+  - {fileID: 2080478510}
+  - {fileID: 1996137662}
+  - {fileID: 925988942}
+  - {fileID: 1106852710}
+  - {fileID: 1513048401}
+  m_onamae: "\u30A2\u30D3\u30B9\u306E\u9B5A\u5F71"
+  m_skillSetumei: {fileID: 1147302124}
+  m_thisFazer: {fileID: 804523124}
+  m_charaStats: {fileID: 623715150}
 --- !u!114 &821096851 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2846323152093562209, guid: f5c8266826338b343a3043cc6350ffb0,
