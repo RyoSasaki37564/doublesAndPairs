@@ -5,7 +5,7 @@ using UnityEngine;
 public class AbyssFazer : Skill
 {
     string[] m_charaName = new string[] { "アビスの魚影" , "深海を喰らうもの"};
-    string[] m_fazeSetu = new string[] { "発動したターン、受けるダメージを半減。(重複不可)", "リーサルフェイザーを使うまでの間、水属性攻撃時20%の追加ダメージ。",
+    public string[] m_fazeSetu = new string[] { "発動したターン、受けるダメージを半減。(重複不可)", "リーサルフェイザーを使うまでの間、水属性攻撃時20%の追加ダメージ。",
         "「ディープブループレデター」\n" +
         "1ターンの間、水属性の威力2倍、1秒ごとに水属性エナジーを1個生成する。" };
 
