@@ -19,7 +19,9 @@ public class Zukan_4 : ZukansParamator
         m_faze2 = m_thisFazer.m_fazeSetu[1];
         m_lethal = m_thisFazer.m_fazeSetu[2];
 
-        m_skillSetumei.text = m_faze1 + "\n" + m_faze2 + "\n" + m_lethal;
+        m_skillSetumei.text = "ファーストフェイザー : " + m_faze1 + "\n" + "\n" +
+            "セカンドフェイザー : " + m_faze2 + "\n" + "\n" +
+            "リーサルフェイザー : " + m_lethal;
 
         base.DataPanneling();
 

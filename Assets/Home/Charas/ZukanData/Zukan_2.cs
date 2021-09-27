@@ -17,7 +17,7 @@ public class Zukan_2 : ZukansParamator
     {
         m_setu = m_thisPD.m_setumay;
 
-        m_skillSetumei.text = m_setu;
+        m_skillSetumei.text = "プライマリーデフォルト : " + m_setu;
 
         base.DataPanneling();
 
