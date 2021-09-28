@@ -24,7 +24,7 @@ public class BackGroundManager : MonoBehaviour
     {
         if(FadeIO.m_isNight == true)
         {
-            m_Sprite.sprite = m_backGroundSprite[3];
+            m_Sprite.sprite = m_backGroundSprite[m_backGroundSprite.Count-1];
         }
         if(GameManager.turn == GameManager.Turn.CleanUpTurn)
         {

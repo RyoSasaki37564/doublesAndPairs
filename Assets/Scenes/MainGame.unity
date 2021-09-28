@@ -8000,6 +8000,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: efdfe5fc4ba827347bf31d791ca783b7, type: 3}
   - {fileID: 21300000, guid: 3e9e572a9f29ccf4ea52d10de044e283, type: 3}
   - {fileID: 21300000, guid: db15939228144ae48b64c835e6c1eae5, type: 3}
+  - {fileID: 21300000, guid: 16f9c0aecb79def4a8ae9983cfe00f49, type: 3}
   - {fileID: 21300000, guid: 9e85b5a003c56924cac34a6a6812ac79, type: 3}
 --- !u!114 &1998979716 stripped
 MonoBehaviour:
@@ -8327,7 +8328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_csv.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_csv.Array.data[0]
@@ -8342,8 +8343,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: 4fbab5a418880014f8c9e28c7a038de9, type: 3}
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_csv.Array.data[3]
+      value: 
+      objectReference: {fileID: 4900000, guid: 6d3c1a49bda160a4b953c716d1edf9a1, type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_enemySprites.Array.size
-      value: 14
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
       propertyPath: m_enemySprites.Array.data[0]
@@ -8414,6 +8419,56 @@ PrefabInstance:
       propertyPath: m_enemySprites.Array.data[13]
       value: 
       objectReference: {fileID: 21300000, guid: 73693175993773e41abe69a12f21ce92,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[14]
+      value: 
+      objectReference: {fileID: 21300000, guid: 18447a005e38ac84db4836b8b1fc3f47,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[15]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c5d3248e3d416140b44310ab087a023,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[16]
+      value: 
+      objectReference: {fileID: 21300000, guid: 79ca78dd21ed32746b4bce8bd516cf2d,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[17]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5778d43f3a5a46948ba4477ba576e80b,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[18]
+      value: 
+      objectReference: {fileID: 21300000, guid: 26023cf8a9e74834d8489a9dab5502a8,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[19]
+      value: 
+      objectReference: {fileID: 21300000, guid: 59d592dc2e18fcb4e823c7e61e956c50,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[20]
+      value: 
+      objectReference: {fileID: 21300000, guid: 70af2c8aa0bc6504eb231cad3e444b30,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[21]
+      value: 
+      objectReference: {fileID: 21300000, guid: b39d333446fae01488716d362ba4c8d8,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[22]
+      value: 
+      objectReference: {fileID: 21300000, guid: 11ee2bcf8f8a81043807e95f606a6960,
+        type: 3}
+    - target: {fileID: 810590129, guid: 40cc8cfe20668a744b58209e9bd7d8bf, type: 3}
+      propertyPath: m_enemySprites.Array.data[23]
+      value: 
+      objectReference: {fileID: 21300000, guid: d91744c07bcefbb44b88316eaf966fbc,
         type: 3}
     - target: {fileID: 182051606980798688, guid: 40cc8cfe20668a744b58209e9bd7d8bf,
         type: 3}
