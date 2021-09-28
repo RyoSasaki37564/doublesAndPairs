@@ -21,7 +21,7 @@ public class Zukan_4 : ZukansParamator
 
         m_skillSetumei.text = "ファーストフェイザー : " + m_faze1 + "\n" + "\n" +
             "セカンドフェイザー : " + m_faze2 + "\n" + "\n" +
-            "リーサルフェイザー : " + m_lethal;
+            "リーサルフェイザー : " + m_lethal + "\n" + "\n" + "[ドロップ報酬のみ] BossQuest ～戦場からの挑戦状～";
 
         base.DataPanneling();
 

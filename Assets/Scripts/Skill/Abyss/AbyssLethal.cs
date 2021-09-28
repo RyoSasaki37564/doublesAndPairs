@@ -22,7 +22,8 @@ public class AbyssLethal : EnergyMatrix
 
         Generate();
 
-        if(m_isStack == false)
+        //バフスキルの初動を判定。攻撃力を戻すときに「最初の攻撃力」がどれなのかを記憶する処理。
+        if (m_isStack == false)
         {
             m_isStack = true;
             m_pioneerFlag = true;

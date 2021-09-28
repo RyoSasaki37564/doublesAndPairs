@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
 
     private bool m_kamishibai = false; //敵イラストを綺麗に入れ替えるため
 
-    int m_enemyZokusei = 0; //0は火、1は水、2は木
+    public static int m_enemyZokusei = 0; //0は火、1は水、2は木
 
     int m_enemyIllast = 0; //敵の画像番号
 

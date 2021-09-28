@@ -87,7 +87,7 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
         }
         else
         {
-            m_CanUsing.text = "使用中";
+            m_CanUsing.text = "使用済み";
         }
     }
 
