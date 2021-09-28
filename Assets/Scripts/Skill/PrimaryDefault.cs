@@ -86,13 +86,14 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
         if (m_parmanentChargeFlg == true)
         {
             m_CanUsing.text = "使用可能";
+            m_CanUsing.color = Color.black;
         }
         else
         {
             if(m_ParmaOrDispo == true)
             {
                 m_CanUsing.text = "使用不可";
-                m_CanUsing.color = Color.gray;
+                m_CanUsing.color = Color.red;
             }
             else
             {

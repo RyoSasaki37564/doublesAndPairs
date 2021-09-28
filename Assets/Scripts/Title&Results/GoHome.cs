@@ -12,7 +12,7 @@ public class GoHome : MonoBehaviour
         "お風呂上りに爪切りすると少し柔らかいぞ。", "佐々木は朝でもカップラーメンとか食べちゃう派", "エナジードリンクはモンスターの緑が世界一美味なんだ。", 
     "パズ〇ラではない。", "エナジーマトリックスは効果のわりに見た目がちょっと怖いのを気にしているぞ。"};
 
-    GameObject[] m_Obj; //戦闘開始時の全オブジェクト取得
+    public GameObject[] m_Obj; //戦闘開始時の全オブジェクト取得
 
     public static bool m_isBossDrop = false;
 
@@ -28,23 +28,7 @@ public class GoHome : MonoBehaviour
 
     public void BattleEnded()
     {
-        SceneManager.UnloadSceneAsync("MainGame");
-        Debug.Log("foo");
-        //ヒエラルキーからホームの始祖オブジェクトを持ってきてアクティブ化
-        foreach(var home in m_Obj)
-        {
-#if UNITY_EDITOR
-            if(!AssetDatabase.GetAssetOrScenePath(home).Contains(".unity"))
-            {
-                continue;
-            }
-#endif
-            if(home.name == "Home")
-            {
-                home.SetActive(true);
-            }
-        }
-        Destroy(m_dustBox);
+        GettingAllAndDestroy();
 
         if(Player.m_currentPHp > 0)
         {
@@ -56,5 +40,26 @@ public class GoHome : MonoBehaviour
             m_isBossDrop = false;
         }
 
+    }
+
+    public void GettingAllAndDestroy()
+    {
+        SceneManager.UnloadSceneAsync("MainGame");
+        Debug.Log("foo");
+        //ヒエラルキーからホームの始祖オブジェクトを持ってきてアクティブ化
+        foreach (var home in m_Obj)
+        {
+#if UNITY_EDITOR
+            if (!AssetDatabase.GetAssetOrScenePath(home).Contains(".unity"))
+            {
+                continue;
+            }
+#endif
+            if (home.name == "Home")
+            {
+                home.SetActive(true);
+            }
+        }
+        Destroy(m_dustBox);
     }
 }
