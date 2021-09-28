@@ -93,9 +93,8 @@ public class LokiTheTrickStar : MonoBehaviour
                 }
 
                 AbyssLethal.m_isStack = false;
-
-                Destroy(this.gameObject);
             }
+            Destroy(this.gameObject);
         }
     }
 }
