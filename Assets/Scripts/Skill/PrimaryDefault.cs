@@ -25,6 +25,8 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
 
     Vector2 m_firstParmanentPos;
 
+    [SerializeField] bool m_ParmaOrDispo = false; //永続か使い捨て。false = 永続。
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -87,7 +89,16 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
         }
         else
         {
-            m_CanUsing.text = "使用済み";
+            if(m_ParmaOrDispo == true)
+            {
+                m_CanUsing.text = "使用不可";
+                m_CanUsing.color = Color.gray;
+            }
+            else
+            {
+                m_CanUsing.text = "使用中";
+                m_CanUsing.color = Color.green;
+            }
         }
     }
 

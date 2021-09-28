@@ -767,6 +767,7 @@ MonoBehaviour:
   m_skillSetumei: {fileID: 397566351}
   m_CanUsing: {fileID: 297271999}
   m_pannelPos: {fileID: 391376107}
+  m_ParmaOrDispo: 0
   m_setumay: "\u300C\u30EA\u30B8\u30A7\u30CD\u300D\n\u64CD\u4F5C\u6642\u9593\u4E2D\u30013\u79D2\u3054\u3068\u306B\u6700\u5927\u4F53\u529B\u306E1%\u3092\u56DE\u5FA9\u3002"
 --- !u!224 &326463470 stripped
 RectTransform:
@@ -8270,6 +8271,7 @@ MonoBehaviour:
   m_skillSetumei: {fileID: 361555170}
   m_CanUsing: {fileID: 1481132301}
   m_pannelPos: {fileID: 391376107}
+  m_ParmaOrDispo: 1
   m_setumei: "\u300C\u30B4\u30C3\u30C9\u30AA\u30D6\u30C8\u30EA\u30C3\u30AF\u30B9\u30BF\u30FC\u300D\n1\u30BF\u30FC\u30F3\u306E\u9593\u3001\u6575\u3068\u540C\u3058\u5C5E\u6027\u306E\u5A01\u529B\u304C2\u500D\u3001\u6575\u306E\u5C5E\u6027\u3092\u300C\u6575\u306E\u73FE\u5728\u306E\u6709\u5229\u5C5E\u6027\uFF08\u4F8B\uFF1A\u5143\u304C\u706B\u306A\u3089\u6728\u3078\uFF09\u300D\u306B\u5909\u3048\u308B\u3002"
 --- !u!1 &1975190308 stripped
 GameObject:
@@ -9143,7 +9145,7 @@ PrefabInstance:
     - target: {fileID: 300231355148245019, guid: 44304c2b4880f4e42b3779c36de201af,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 300231355148245019, guid: 44304c2b4880f4e42b3779c36de201af,
         type: 3}

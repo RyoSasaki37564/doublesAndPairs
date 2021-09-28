@@ -88,10 +88,12 @@ public abstract class Skill : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         if (this.gameObject.tag == "Fish" && m_faze == Faze.First && AbyssFazer.m_AbyssCanUse == true)
         {
             m_CanUsing.text = "現在使用不可";
+            m_CanUsing.color = Color.gray;
         }
         else if(m_skillChargeFlg == false)
         {
             m_CanUsing.text = "現在使用不可";
+            m_CanUsing.color = Color.gray;
         }
         else
         {
