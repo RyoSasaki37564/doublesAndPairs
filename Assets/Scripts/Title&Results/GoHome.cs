@@ -54,11 +54,14 @@ public class GoHome : MonoBehaviour
             {
                 continue;
             }
+
 #endif
+
             if (home.name == "Home")
             {
                 home.SetActive(true);
             }
+
         }
         Destroy(m_dustBox);
     }

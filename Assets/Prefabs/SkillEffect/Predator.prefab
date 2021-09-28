@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8318313657030283089}
   - component: {fileID: 6107089958736436530}
   - component: {fileID: 786061207202261706}
-  - component: {fileID: -3111453036269391017}
+  - component: {fileID: 1684308737660138255}
   m_Layer: 0
   m_Name: Predator
   m_TagString: Untagged
@@ -250,7 +250,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-3111453036269391017
+--- !u!114 &1684308737660138255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,3 +262,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0454fb0d71070449b396b78b2ddf1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_isNotStartSetting: 1

@@ -483,4 +483,12 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 1.25
+    functionName: Duster
+    data: 
+    objectReferenceParameter: {fileID: 6942827589581675323, guid: 8a38daa30bc1eea49bfcd9ee8f031caa,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

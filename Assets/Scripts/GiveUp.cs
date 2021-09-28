@@ -34,6 +34,7 @@ public class GiveUp : MonoBehaviour
             {
                 home.SetActive(true);
             }
+
         }
         m_goHome.GettingAllAndDestroy();
     }
