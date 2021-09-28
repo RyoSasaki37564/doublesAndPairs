@@ -7,7 +7,7 @@ public class CharaBox : MonoBehaviour
 {
     public static List<int> m_GetCharaID = new List<int>(); //所持キャラのIDを保管する場所
     [SerializeField] GameObject[] m_Zukan = new GameObject[3]; //プレイアブルキャラのオブジェクト型マスター
-    [SerializeField] List<GameObject> m_Drop = new List<GameObject>(); //プレイアブルキャラのオブジェクト型マスター
+    [SerializeField] List<GameObject> m_Drop = new List<GameObject>(); //泥キャラの取得元
     [SerializeField] LayoutGroup m_GL = default; //キャラボックス
     [SerializeField] Text m_MenuHeadText = default; //クリア時のソウル加算を表記するために
 

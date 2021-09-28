@@ -1958,7 +1958,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2583,6 +2583,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9b3efbadb226fd640a5782adafda6ea7, type: 3}
   - {fileID: 21300000, guid: f9488ba2363de68418b057e572dd2d12, type: 3}
   - {fileID: 21300000, guid: d1663091c688aaa4381c5aa698c63de3, type: 3}
+  - {fileID: 21300000, guid: dfd9899d87db74e46bfc45d545567674, type: 3}
   m_dropImage: {fileID: 713067051}
 --- !u!114 &1716370781 stripped
 MonoBehaviour:

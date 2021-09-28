@@ -10,12 +10,18 @@ public abstract class ZukansParamator : MonoBehaviour
     //各パラメータのテキスト。 name, hp, fa. fm, ia, im. wa, wm スキル説明は継承したscriptから書き込む
     [SerializeField] Text[] m_paramatorText = new Text[8];
 
+    [SerializeField] Image m_paraPannelImage = default; //そのキャラのページのキャライメージ
+
+    [SerializeField] Image m_thisImage = default;//このボタンの画像
+
     string m_statsType; //すてーたすしゅべつ
 
     [SerializeField] string m_onamae = default;
 
    public virtual void DataPanneling() //setumeiはスキル説明
     {
+        m_paraPannelImage.sprite = m_thisImage.sprite;
+
         m_paramatorText[0].text = m_onamae;
 
         // ステータス表示
