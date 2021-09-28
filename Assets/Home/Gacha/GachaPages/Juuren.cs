@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Juuren : Hikimasu
 {
-
+    //10+1連ガチャの基本形。
     public override void Gacha()
     {
         if (MenuManager.m_soul >= 30)

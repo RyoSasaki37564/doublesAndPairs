@@ -48,22 +48,28 @@ public class GoHome : MonoBehaviour
         SceneManager.UnloadSceneAsync("MainGame");
         Debug.Log("foo");
         //ヒエラルキーからホームの始祖オブジェクトを持ってきてアクティブ化
-        foreach (var home in m_Obj)
+        if (m_Obj != null)
         {
-#if UNITY_EDITOR
-            if (!AssetDatabase.GetAssetOrScenePath(home).Contains(".unity"))
+            foreach (var home in m_Obj)
             {
-                continue;
-            }
+#if UNITY_EDITOR
+                if (!AssetDatabase.GetAssetOrScenePath(home).Contains(".unity"))
+                {
+                    continue;
+                }
 
 #endif
 
-            if (home.name == "Home")
-            {
-                home.SetActive(true);
-            }
+                if (home.name == "Home")
+                {
+                    home.SetActive(true);
+                }
 
+            }
+            if (m_dustBox != null)
+            {
+                Destroy(m_dustBox);
+            }
         }
-        Destroy(m_dustBox);
     }
 }

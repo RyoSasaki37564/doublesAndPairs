@@ -39,7 +39,7 @@ public class Hikimasu : MonoBehaviour
 
             if (rondom < 15)
             {
-                //当選キャラをリザルトに表示し、ボックスにも送る。
+                //当選キャラをリザルトに表示し、ボックスにも同じものを送る。
                 int ssr = Random.Range(0, m_CanHitCharactors_SSR.Count);
                 var x = Instantiate(m_CanHitCharactors_SSR[ssr]);
                 x.SetActive(true);
