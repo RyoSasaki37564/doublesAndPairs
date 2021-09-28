@@ -429,18 +429,6 @@ MonoBehaviour:
   m_pannelPos: {fileID: 0}
   m_ParmaOrDispo: 0
   m_setumay: "\u300C\u30EA\u30B8\u30A7\u30CD\u300D\n\u64CD\u4F5C\u6642\u9593\u4E2D\u30013\u79D2\u3054\u3068\u306B\u6700\u5927\u4F53\u529B\u306E1%\u3092\u56DE\u5FA9\u3002"
---- !u!114 &64286268 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 271015291093651159, guid: 359c274a95d2b744b95418b1695a4118,
-    type: 3}
-  m_PrefabInstance: {fileID: 64286262}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64286263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &64286269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,7 +452,7 @@ MonoBehaviour:
   - {fileID: 1106852710}
   - {fileID: 1513048401}
   m_paraPannelImage: {fileID: 2068087550}
-  m_thisImage: {fileID: 64286268}
+  m_thisImage: {fileID: 666112888}
   m_onamae: "\u30A8\u30F4\u30A1\u30FC\u30B0\u30EA\u30FC\u30F3"
   m_skillSetumei: {fileID: 1147302124}
   m_thisPD: {fileID: 64286266}
@@ -2765,6 +2753,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665613231}
   m_CullTransparentMesh: 0
+--- !u!114 &666112888 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 271015290978966137, guid: 359c274a95d2b744b95418b1695a4118,
+    type: 3}
+  m_PrefabInstance: {fileID: 64286262}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &670451938
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,7 +3236,7 @@ PrefabInstance:
     - target: {fileID: 1742273434796150043, guid: 5152fbb031f1ef6419b10efc35d2820c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 170.42877
+      value: 170.42574
       objectReference: {fileID: 0}
     - target: {fileID: 1742273435340820563, guid: 5152fbb031f1ef6419b10efc35d2820c,
         type: 3}
@@ -5067,6 +5067,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7172125984012840529}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1023392995 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5705261694775224291, guid: 71c5131261281c04d9474beea1ae1fc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2138729501}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1035223107
 GameObject:
   m_ObjectHideFlags: 0
@@ -10274,18 +10286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b3998f92b93ce4f914a6a59efbb9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2138729506 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5705261695203941618, guid: 71c5131261281c04d9474beea1ae1fc7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2138729501}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138729502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2138729508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10309,7 +10309,7 @@ MonoBehaviour:
   - {fileID: 1106852710}
   - {fileID: 1513048401}
   m_paraPannelImage: {fileID: 2068087550}
-  m_thisImage: {fileID: 2138729506}
+  m_thisImage: {fileID: 1023392995}
   m_onamae: "\u30B2\u30D8\u30CA"
   m_skillSetumei: {fileID: 1147302124}
   m_thisPD: {fileID: 2138729509}
@@ -10701,7 +10701,7 @@ PrefabInstance:
     - target: {fileID: 1742273434796150043, guid: 5152fbb031f1ef6419b10efc35d2820c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 137.80002
+      value: 137.80003
       objectReference: {fileID: 0}
     - target: {fileID: 1742273435340820563, guid: 5152fbb031f1ef6419b10efc35d2820c,
         type: 3}
