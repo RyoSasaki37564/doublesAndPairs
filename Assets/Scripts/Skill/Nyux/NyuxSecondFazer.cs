@@ -11,7 +11,7 @@ public class NyuxSecondFazer : MonoBehaviour
         if (Player.m_currentPHp < m_p.ThePMaxHP() &&
             GameManager.turn == GameManager.Turn.PlayerTurn || GameManager.turn == GameManager.Turn.InputTurn)
         {
-            Player.m_currentPHp += m_p.ThePMaxHP()/2;
+            Player.m_currentPHp += (m_p.ThePMaxHP()*30)/100;
             Skill.m_healFlg = true;
         }
 
