@@ -26,6 +26,7 @@ public class GiveUp : MonoBehaviour
     public void Backer()
     {
         m_akirame = true;
+        AbyssFazer.m_AbyssCanUse = false;
         foreach (var home in m_Obj)
         {
 #if UNITY_EDITOR
