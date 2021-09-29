@@ -66,7 +66,7 @@ public class LokiTheTrickStar : MonoBehaviour
     {
         //ターンの終わりに効果破棄
 
-        if (GameManager.turn == GameManager.Turn.CleanUpTurn)
+        if (GameManager.turn == GameManager.Turn.CleanUpTurn || GiveUp.m_akirame == true)
         {
             //最初の一体のみ、最初の威力に戻す
             if (m_pioneerFlag == true)

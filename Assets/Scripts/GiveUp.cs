@@ -11,17 +11,21 @@ public class GiveUp : MonoBehaviour
 
     GoHome m_goHome = new GoHome();
 
+    public static bool m_akirame = false; //スキルのリセッター
+
     public GameObject[] m_Obj; //戦闘開始時の全オブジェクト取得
 
     [SerializeField] GameObject m_dustBox = default; //戦闘終了時廃棄したいオブジェクトはこれを親にする。
 
     private void Start()
     {
+        m_akirame = false;
         m_Obj = Resources.FindObjectsOfTypeAll<GameObject>();
     }
 
     public void Backer()
     {
+        m_akirame = true;
         foreach (var home in m_Obj)
         {
 #if UNITY_EDITOR
