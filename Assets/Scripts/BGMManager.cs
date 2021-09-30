@@ -6,6 +6,8 @@ public class BGMManager : MonoBehaviour
 {
     [SerializeField] GameObject[] m_jukeBoxes = new GameObject[5]; //ノーマル、ボス、クリア×3(ひとつはパーティクル)。
 
+    Enemy m_e = new Enemy();
+
     public enum Ongen
     {
         Nomal,
@@ -17,7 +19,7 @@ public class BGMManager : MonoBehaviour
 
     private void Start()
     {
-        m_sounds = Ongen.Nomal;
+         m_sounds = Ongen.Nomal;
     }
 
     // Update is called once per frame

@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
 
     public string[,] m_enemyMasterData; //そのクエストの敵データを二次元配列化
 
-    public int m_battleCountNum; //そのクエストにおける戦闘回数
+    public int m_battleCountNum { get; set;  } //そのクエストにおける戦闘回数
 
     private int m_nextBattleReader = 0;
 
@@ -54,8 +54,6 @@ public class Enemy : MonoBehaviour
 
     void Awake()
     {
-        m_isBoss = false;
-
         m_QuestMasterID = PlayerPrefs.GetInt("Quest");
         PlayerPrefs.Save();
 
@@ -66,6 +64,15 @@ public class Enemy : MonoBehaviour
         er = new StringReader(m_csv[m_QuestMasterID].text);//今回のみそ。CVSを1次元配列として読み込んだ後、さらに２次元配列に落とし込む。
 
         m_battleCountNum = int.Parse(er.ReadLine()); //最初に読み込むのはそのステージでの戦闘回数
+
+        if(m_battleCountNum == 1)
+        {
+            m_isBoss = true;
+        }
+        else
+        {
+            m_isBoss = false;
+        }
 
         m_enemyMasterData = new string[m_battleCountNum, 6]; // ID, 名前 ,体力 ,攻撃力 ,属性 ,画像
 

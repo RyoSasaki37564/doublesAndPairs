@@ -75,8 +75,15 @@ public abstract class PrimaryDefault : MonoBehaviour, IPointerEnterHandler, IPoi
 
     public virtual void StatusPanneler(string name, string setu)
     {
-        m_charaName.text = name;
-        m_skillSetumei.text = setu;
+        if(m_charaName != null)
+        {
+            m_charaName.text = name;
+
+        }
+        if(m_skillSetumei != null)
+        {
+            m_skillSetumei.text = setu;
+        }
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
