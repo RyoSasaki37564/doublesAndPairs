@@ -47,6 +47,7 @@ public class MenuManager : MonoBehaviour
                 m_menuObj[2].SetActive(false);
                 m_MenuHeadText[0].text = menu.ToString();
                 m_MenuHeadText[0].color = m_color[0];
+                m_MenuHeadText[1].text = "所持ソウル: " + m_soul.ToString();
                 break;
 
             case HomeMenu.Chara:
@@ -55,6 +56,7 @@ public class MenuManager : MonoBehaviour
                 m_menuObj[2].SetActive(false);
                 m_MenuHeadText[0].text = menu.ToString();
                 m_MenuHeadText[0].color = m_color[1];
+                m_MenuHeadText[1].text = "所持ソウル: " + m_soul.ToString();
                 break;
 
             case HomeMenu.Gacha:
@@ -63,6 +65,7 @@ public class MenuManager : MonoBehaviour
                 m_menuObj[2].SetActive(true);
                 m_MenuHeadText[0].text = menu.ToString();
                 m_MenuHeadText[0].color = m_color[2];
+                m_MenuHeadText[1].text = "所持ソウル: " + m_soul.ToString();
                 break;
         }
     }
