@@ -28,9 +28,9 @@ public class Enemy : MonoBehaviour
 
     public string[,] m_enemyMasterData; //そのクエストの敵データを二次元配列化
 
-    public int m_battleCountNum { get; set;  } //そのクエストにおける戦闘回数
+    public static int m_battleCountNum; //そのクエストにおける戦闘回数
 
-    private int m_nextBattleReader = 0;
+    public int m_nextBattleReader; //現在の階層
 
     StringReader er;
 
@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
     int m_takenDamageWood1 = 0;
     int m_takenDamageWood2 = 0;
 
-    public static bool m_isBoss = false;
+    public static bool m_isBoss = false; //ボスフラグ
 
     void Awake()
     {
@@ -65,7 +65,8 @@ public class Enemy : MonoBehaviour
 
         m_battleCountNum = int.Parse(er.ReadLine()); //最初に読み込むのはそのステージでの戦闘回数
 
-        if(m_battleCountNum == 1)
+
+        if (m_battleCountNum == 1)
         {
             m_isBoss = true;
         }

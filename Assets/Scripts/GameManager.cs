@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     int iii; //操作時間の打ち止め。－秒の表記封じ
     int seconds;
 
+    int m_questBattleNowNum = 1; //現在の戦闘回数
+
     public enum Turn
     {
         InputTurn, //入力待ち
@@ -44,11 +46,15 @@ public class GameManager : MonoBehaviour
         gameSetFlag = true;
         turnFlag = true;
         PlayTimeFlg = true;
-        gst.text = "はじめい！";
         StartCoroutine(GstUI());
 
         turn = Turn.GameOut;
 
+    }
+
+    private void Start()
+    {
+        gst.text = "バトル" + m_questBattleNowNum + "/" + Enemy.m_battleCountNum;
     }
 
     // Update is called once per frame
@@ -94,6 +100,10 @@ public class GameManager : MonoBehaviour
 
             case Turn.NextBattleTurn:
                 PlayTimeFlg = false;
+                if(turnFlag == true)
+                {
+                    m_questBattleNowNum++; //戦闘回数を1増やす。このフラグに包んでいるのはこのターンがアップデートで動いている間フレーム数分増えてしまうから。
+                }
                 turnFlag = false;
                 gst.text = "ぶっとばし☆";
                 seconds = iii;
@@ -101,6 +111,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case Turn.CleanUpTurn:
+                gst.text = "バトル" + m_questBattleNowNum + "/" + Enemy.m_battleCountNum;
                 break;
             case Turn.ResetTurn:
                 Player.m_resultPHp = Player.m_currentPHp;
