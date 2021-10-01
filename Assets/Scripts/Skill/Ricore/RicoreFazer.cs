@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RicoreFazer : Skill
 {
-    string[] m_charaName = new string[] { "プラズマボルト・リコア" };
-    public string[] m_fazeSetu = new string[] { "木属性攻撃時20%の追加ダメージ。", "1ターンの間、相手の弱点属性で攻撃するたび、最大体力の1%を回復。",
+    string[] m_charaName = new string[] { "プラズマボルト・リコア", "超光速の電撃・リコア" };
+    public string[] m_fazeSetu = new string[] { "木属性攻撃時15%の追加ダメージ。", "「ライフスティール」\n" + "1ターンの間、相手の弱点属性で攻撃するたび、最大体力の2.5%を回復。",
         "「アクセラレーション」\n" +
-        "1ターンの間、操作時間を10秒にし、0.5秒ごとにランダムなエナジーを1個生成する。(エナジー操作前のみ発動可能、時間効果は重複不可)" };
+        "1ターンの間、操作時間を10秒にし、0.3秒ごとにランダムなエナジーを1個生成する。(エナジー操作前のみ発動可能、時間効果は重複不可)" };
 
     public static bool m_RicoreCanUse = false; //最終フェイザーは発動条件あり
 
@@ -23,7 +23,7 @@ public class RicoreFazer : Skill
                 StatusPanneler(m_charaName[0], m_fazeSetu[1]);
                 break;
             case Faze.Lethal:
-                StatusPanneler(m_charaName[0], m_fazeSetu[2]);
+                StatusPanneler(m_charaName[1], m_fazeSetu[2]);
                 break;
 
         }

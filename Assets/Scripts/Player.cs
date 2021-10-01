@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
         {
             m_pHPSlider.value = m_currentPHp;
             m_playerHPNum.text = m_currentPHp.ToString();
+            Skill.m_healFlg = false;
         }
 
         if(m_currentPHp > m_playerHpMax)
@@ -61,6 +62,5 @@ public class Player : MonoBehaviour
     public int ThePMaxHP()
     {
         return PlayerPrefs.GetInt("PlayerHp");
-
     }
 }

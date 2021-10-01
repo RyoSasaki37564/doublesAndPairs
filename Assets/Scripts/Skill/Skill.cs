@@ -54,12 +54,10 @@ public abstract class Skill : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                             Instantiate(m_fazerSkills[0], m_skillEffectPosition.transform.position, m_skillEffectPosition.transform.rotation);
                             m_faze = Faze.Second;
                             m_skillFaze.text = m_faze.ToString();
-                            //m_skillChargeFlg = false;
                             break;
                         case Faze.Second:
                             Instantiate(m_fazerSkills[1], m_skillEffectPosition.transform.position, m_skillEffectPosition.transform.rotation);
                             m_faze = Faze.Lethal;
-                            //m_skillChargeFlg = false;
                             break;
                         case Faze.Lethal:
                             Instantiate(m_fazerSkills[2], m_SpecialPos.transform.position, m_SpecialPos.transform.rotation);

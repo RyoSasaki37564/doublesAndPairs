@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GoToDustBox : MonoBehaviour
 {
-    [SerializeField] bool m_isNotStartSetting = false;
+    [SerializeField] bool m_isNotStartSetting = false; //親を別のオブジェクトにしておきたいときにチェック。アビスリーサルなどがそう
 
     // Start is called before the first frame update
     void Start()

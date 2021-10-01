@@ -35,7 +35,7 @@ public class RicoreLethalFazer : EnergyMatrix
     IEnumerator AccelarationGene()
     {
         //エナジーマトリックスの再帰
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         Generate();
     }
 }
