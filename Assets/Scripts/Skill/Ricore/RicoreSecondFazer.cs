@@ -43,12 +43,12 @@ public class RicoreSecondFazer : MonoBehaviour
                     Skill.m_healFlg = true;
                 }
             }
+        }
 
-            //ターンの終わりに効果破棄
-            if (GameManager.turn == GameManager.Turn.CleanUpTurn || GiveUp.m_akirame == true)
-            {
-                Destroy(this.gameObject);
-            }
+        //ターンの終わりに効果破棄
+        if (GameManager.turn == GameManager.Turn.CleanUpTurn || GiveUp.m_akirame == true)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
