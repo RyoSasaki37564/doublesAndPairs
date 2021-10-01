@@ -12,7 +12,7 @@ public class NyuxLethalFazer : MonoBehaviour
 
     public static bool m_timePlus = false;
 
-    GameManager m_g = new GameManager();
+    //GameManager m_g = new GameManager();
 
     // Start is called before the first frame update
     void Start()

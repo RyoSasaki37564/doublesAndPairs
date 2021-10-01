@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
                 totalTime = iii;
                 seconds = (int)totalTime;
                 timerText.text = "Play!";
+                gst.color = Color.black;
                 m_resultEHp = Enemy.m_currentEHp;
                 Player.m_resultPHp = Player.m_currentPHp;
                 PlayTimeFlg = true;
@@ -76,15 +77,21 @@ public class GameManager : MonoBehaviour
                 gst.text = "";
                 if (PlayTimeFlg)
                 {
-                    if (NyuxLethalFazer.m_timePlus == false)
+                    if (NyuxLethalFazer.m_timePlus == true)
                     {
-                        StartCoroutine(PlayTime()); // updateでうごいてたからバグってた
+                        StartCoroutine(PlayTimePlus7());
+                        totalTime += 7;
+                        PlayTimeFlg = false;
+                    }
+                    else if(RicoreLethalFazer.m_timeMinus == true)
+                    {
+                        StartCoroutine(PlayTime10());
+                        totalTime = 10;
                         PlayTimeFlg = false;
                     }
                     else
                     {
-                        StartCoroutine(PlayTimePlus());
-                        totalTime += 7;
+                        StartCoroutine(PlayTime()); // updateでうごいてたからバグってた
                         PlayTimeFlg = false;
                     }
                 }
@@ -105,12 +112,14 @@ public class GameManager : MonoBehaviour
                     m_questBattleNowNum++; //戦闘回数を1増やす。このフラグに包んでいるのはこのターンがアップデートで動いている間フレーム数分増えてしまうから。
                 }
                 turnFlag = false;
+                gst.color = Color.black;
                 gst.text = "ぶっとばし☆";
                 seconds = iii;
                 timerText.text = "操作時間 : " + seconds.ToString();
                 break;
 
             case Turn.CleanUpTurn:
+                gst.color = Color.white;
                 gst.text = "バトル" + m_questBattleNowNum + "/" + Enemy.m_battleCountNum;
                 break;
             case Turn.ResetTurn:
@@ -183,9 +192,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator PlayTimePlus()
+    IEnumerator PlayTimePlus7()
     {
         yield return new WaitForSeconds(totalTime + 7);
+        if (totalTime <= 0)
+        {
+            turnFlag = false;
+            turn = Turn.EnemyTurn;
+        }
+        else
+        {
+            yield break;
+        }
+    }
+
+    IEnumerator PlayTime10()
+    {
+        yield return new WaitForSeconds(10f);
         if (totalTime <= 0)
         {
             turnFlag = false;

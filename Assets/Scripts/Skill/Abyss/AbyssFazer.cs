@@ -34,7 +34,8 @@ public class AbyssFazer : Skill
     {
         if(m_faze == Faze.First)
         {
-            if (m_AbyssCanUse == false && GameManager.turn == GameManager.Turn.InputTurn || GameManager.turn == GameManager.Turn.PlayerTurn)
+            if (m_AbyssCanUse == false && GameManager.turn == GameManager.Turn.InputTurn ||
+                m_AbyssCanUse == false && GameManager.turn == GameManager.Turn.PlayerTurn)
             {
                 base.Fazer();
                 m_AbyssCanUse = true;

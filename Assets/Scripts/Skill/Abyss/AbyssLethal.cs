@@ -32,7 +32,7 @@ public class AbyssLethal : EnergyMatrix
 
     void Update()
     {
-        //ターンの終わりに効果終了
+        //ターンの終わり、退却時に効果終了
         if (GameManager.turn == GameManager.Turn.CleanUpTurn || GameManager.turn == GameManager.Turn.GameEnd ||
             GameManager.turn == GameManager.Turn.GameOut || GiveUp.m_akirame == true)
         {
