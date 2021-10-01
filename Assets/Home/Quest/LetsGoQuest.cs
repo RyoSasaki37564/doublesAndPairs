@@ -17,6 +17,8 @@ public class LetsGoQuest : MonoBehaviour
 
     public void GoQuest()
     {
+        //戦闘画面起動にて各種初期処理
+        GiveUp.m_akirame = false;
         m_NowLoadingBack.SetActive(true);
         var x =  Instantiate(m_NowLosdingCanvas);
         x.transform.parent = m_NowLoadingBack.transform;
