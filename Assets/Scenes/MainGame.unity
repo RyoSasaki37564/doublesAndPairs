@@ -9360,6 +9360,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1597887992202226786, guid: 98337de6f48ba2d48b724cda485bfbc7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bit
+      objectReference: {fileID: 0}
     - target: {fileID: 1597887992202226787, guid: 98337de6f48ba2d48b724cda485bfbc7,
         type: 3}
       propertyPath: m_Pivot.x

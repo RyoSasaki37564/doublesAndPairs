@@ -7,7 +7,7 @@ public class RicoreSecondFazer : MonoBehaviour
     Player m_p = new Player();
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //敵の弱点を突くと回復
         if (Player.m_currentPHp < m_p.ThePMaxHP() &&
@@ -18,6 +18,7 @@ public class RicoreSecondFazer : MonoBehaviour
                 if (BlueDropDestroy.iceAttackFlag == true || BlueDropDestroy.iceMagicFlag == true)
                 {
                     Player.m_currentPHp += m_p.ThePMaxHP() * 25 / 100;
+                    Debug.LogError(Player.m_currentPHp);
                     Skill.m_healFlg = true;
                 }
             }
@@ -26,6 +27,7 @@ public class RicoreSecondFazer : MonoBehaviour
                 if (GreenDropDestroy.woodAttackFlag == true || GreenDropDestroy.woodMagicFlag == true)
                 {
                     Player.m_currentPHp += m_p.ThePMaxHP() * 25 / 100;
+                    Debug.LogError(Player.m_currentPHp);
                     Skill.m_healFlg = true;
                 }
             }
@@ -34,6 +36,7 @@ public class RicoreSecondFazer : MonoBehaviour
                 if (RedDropDestroy.fireAttackFlag == true || RedDropDestroy.fireMagicFlag == true)
                 {
                     Player.m_currentPHp += m_p.ThePMaxHP() * 25 / 100;
+                    Debug.LogError(Player.m_currentPHp);
                     Skill.m_healFlg = true;
                 }
             }

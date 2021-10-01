@@ -88,6 +88,11 @@ public abstract class Skill : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             m_CanUsing.text = "現在使用不可";
             m_CanUsing.color = Color.red;
         }
+        else if (this.gameObject.tag == "Bit" && m_faze == Faze.Lethal && RicoreFazer.m_RicoreCanUse == true)
+        {
+            m_CanUsing.text = "現在使用不可";
+            m_CanUsing.color = Color.red;
+        }
         else if(m_skillChargeFlg == false)
         {
             m_CanUsing.text = "現在使用不可";
