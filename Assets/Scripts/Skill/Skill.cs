@@ -83,12 +83,9 @@ public abstract class Skill : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         m_skillPannel.SetActive(true);
         m_skillPannel.transform.position = m_pannelPos.transform.position;
         m_skillFaze.text = "フェイズ : " + m_faze.ToString();
-        if (this.gameObject.tag == "Fish" && m_faze == Faze.First && AbyssFazer.m_AbyssCanUse == true)
-        {
-            m_CanUsing.text = "現在使用不可";
-            m_CanUsing.color = Color.red;
-        }
-        else if (this.gameObject.tag == "Bit" && m_faze == Faze.Lethal && RicoreFazer.m_RicoreCanUse == true)
+        if (this.gameObject.tag == "Fish" && m_faze == Faze.First && AbyssFazer.m_AbyssCanUse == true ||
+            this.gameObject.tag == "Bit" && m_faze == Faze.Lethal && RicoreFazer.m_RicoreCanUse == true || 
+            this.gameObject.tag == "Nyux" && m_faze == Faze.Lethal && NyuxFazer.m_NyuxCanUse == true)
         {
             m_CanUsing.text = "現在使用不可";
             m_CanUsing.color = Color.red;

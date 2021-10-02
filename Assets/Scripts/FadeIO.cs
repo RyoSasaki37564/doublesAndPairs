@@ -27,7 +27,7 @@ public class FadeIO : MonoBehaviour
     void Update()
     {
         //黒くなるまで染めこむ
-        if (NyuxLethalFazer.m_timePlus == true)
+        if (GameManager.m_timeLange == GameManager.TimeLange.Plus7)
         {
             if (m_stopper == false)
             {

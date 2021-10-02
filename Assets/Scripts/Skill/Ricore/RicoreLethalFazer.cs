@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class RicoreLethalFazer : EnergyMatrix
 {
-
-    public static bool m_timeMinus = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +17,7 @@ public class RicoreLethalFazer : EnergyMatrix
         if (GameManager.turn == GameManager.Turn.CleanUpTurn || GameManager.turn == GameManager.Turn.GameEnd ||
             GameManager.turn == GameManager.Turn.GameOut || GiveUp.m_akirame == true)
         {
-            m_timeMinus = false;
+            GameManager.m_timeLange = GameManager.TimeLange.Normal;
             RicoreFazer.m_RicoreCanUse = false;
             Destroy(this.gameObject);
         }

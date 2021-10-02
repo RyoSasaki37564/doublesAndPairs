@@ -19,11 +19,11 @@ public class RicoreFirstFazer : MonoBehaviour
     {
         if (GameManager.turn == GameManager.Turn.InputTurn || GameManager.turn == GameManager.Turn.PlayerTurn)
         {
-            if (BlueDropDestroy.iceAttackFlag == true)
+            if (GreenDropDestroy.woodAttackFlag == true)
             {
                 Enemy.m_currentEHp -= m_takenDamageWood1;
             }
-            if (BlueDropDestroy.iceMagicFlag == true)
+            if (GreenDropDestroy.woodMagicFlag == true)
             {
                 Enemy.m_currentEHp -= m_takenDamageWood2;
             }

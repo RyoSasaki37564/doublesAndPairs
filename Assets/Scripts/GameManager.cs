@@ -26,6 +26,15 @@ public class GameManager : MonoBehaviour
     }
     public static Turn turn;
 
+    public enum TimeLange //操作時間状態用enum
+    {
+        Normal, // 標準20秒
+        Plus7, // 27秒(7秒延長状態)
+        Fixed10, // 10秒固定
+    }
+    public static TimeLange m_timeLange = TimeLange.Normal; //標準適用
+
+
     public Text gst; //ゲームの始めと終わりを告げる。デフォではスタンバイとか書かれてる。
     public static bool gameSetFlag = true; //  ゲーム終了判定
     public static bool PlayTimeFlg = true; //操作時間カウントダウン用コルーチンを単発呼びするためのフラグ シーンのはじめか敵ターンにtrueを返す
@@ -49,7 +58,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GstUI());
 
         turn = Turn.GameOut;
-
+        m_timeLange = TimeLange.Normal;
     }
 
     private void Start()
@@ -77,22 +86,23 @@ public class GameManager : MonoBehaviour
                 gst.text = "";
                 if (PlayTimeFlg)
                 {
-                    if (NyuxLethalFazer.m_timePlus == true)
+                    switch(m_timeLange)
                     {
-                        StartCoroutine(PlayTimePlus7());
-                        totalTime += 7;
-                        PlayTimeFlg = false;
-                    }
-                    else if(RicoreLethalFazer.m_timeMinus == true)
-                    {
-                        StartCoroutine(PlayTime10());
-                        totalTime = 10;
-                        PlayTimeFlg = false;
-                    }
-                    else
-                    {
-                        StartCoroutine(PlayTime()); // updateでうごいてたからバグってた
-                        PlayTimeFlg = false;
+                        //時間状態スイッチ
+                        case TimeLange.Normal:
+                            StartCoroutine(PlayTime());
+                            PlayTimeFlg = false;
+                            break;
+                        case TimeLange.Plus7:
+                            StartCoroutine(PlayTimePlus7());
+                            totalTime += 7;
+                            PlayTimeFlg = false;
+                            break;
+                        case TimeLange.Fixed10:
+                            StartCoroutine(PlayTime10());
+                            totalTime = 10;
+                            PlayTimeFlg = false;
+                            break;
                     }
                 }
                 totalTime -= Time.deltaTime;

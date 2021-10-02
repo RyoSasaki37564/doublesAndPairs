@@ -10,8 +10,6 @@ public class NyuxLethalFazer : MonoBehaviour
 
     bool m_pioneerFlag = false; //このスキルがそのターンに使われたバフスキル内で最初かどうか
 
-    public static bool m_timePlus = false;
-
     //GameManager m_g = new GameManager();
 
     // Start is called before the first frame update
@@ -29,10 +27,7 @@ public class NyuxLethalFazer : MonoBehaviour
             AbyssLethal.m_isStack = true;
             m_pioneerFlag = true;
         }
-        if(m_timePlus == false)
-        {
-            m_timePlus = true;
-        }
+        GameManager.m_timeLange = GameManager.TimeLange.Plus7;
     }
 
     // Update is called once per frame
@@ -51,7 +46,7 @@ public class NyuxLethalFazer : MonoBehaviour
 
                 AbyssLethal.m_isStack = false;
             }
-            m_timePlus = false;
+            GameManager.m_timeLange = GameManager.TimeLange.Normal;
             NyuxFazer.m_NyuxCanUse = false;
             Destroy(this.gameObject);
         }
