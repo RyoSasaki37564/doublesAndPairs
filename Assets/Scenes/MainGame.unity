@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 251625110}
   - component: {fileID: 251625111}
   m_Layer: 0
-  m_Name: BGMSys
+  m_Name: BGM&ClearEffSys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

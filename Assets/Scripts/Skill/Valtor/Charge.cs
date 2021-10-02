@@ -55,7 +55,6 @@ public class Charge : MonoBehaviour
         if (m_chargeState == ChargeEnsyutu.EndState)
         {
             Enemy.m_currentEHp -= m_chargePower * m_bairitu / 10;
-            Debug.LogError("アタック！" + m_chargePower);
             m_chargePower = 0;
             m_canAttack = false;
         }
@@ -86,6 +85,7 @@ public class Charge : MonoBehaviour
         {
             //ターン終了時、カウントを進める。
             m_turnCount++;
+
             //Debug.LogError("ターン" + m_turnCount);
             
             //チャージ開放

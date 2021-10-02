@@ -9,7 +9,8 @@ public class FadeIO : MonoBehaviour
     float m_r, m_g, m_b, m_a; //色彩
     [SerializeField]Image m_image; //画像
 
-    bool m_stopper = false;
+    bool m_blackStopper = false;
+    bool m_whiteStopper = false;
 
     public static bool m_isNight = false; //背景に作用 BackGroundManager.cs
 
@@ -29,28 +30,28 @@ public class FadeIO : MonoBehaviour
         //黒くなるまで染めこむ
         if (GameManager.m_timeLange == GameManager.TimeLange.Plus7)
         {
-            if (m_stopper == false)
+            if (m_blackStopper == false)
             {
                 Tobari();
                 Coloring();
             }
             else
             {
-                m_image.enabled = false;
+                Clearing();
                 m_isNight = true;
             }
         }
 
-        if(Charge.m_chargeState == Charge.ChargeEnsyutu.AttackState)
+        if (Charge.m_chargeState == Charge.ChargeEnsyutu.AttackState)
         {
-            if (m_stopper == false)
+            if (m_whiteStopper == false)
             {
                 Byakkoh();
                 Coloring();
             }
             else
             {
-                m_image.enabled = false;
+                Clearing();
                 Charge.m_chargeState = Charge.ChargeEnsyutu.EndState;
             }
         }
@@ -58,11 +59,13 @@ public class FadeIO : MonoBehaviour
         if (GameManager.turn == GameManager.Turn.CleanUpTurn)
         {
             m_isNight = false;
-            m_stopper = false;
+            m_blackStopper = false;
+            m_whiteStopper = false;
             m_image.enabled = true;
             m_a = 0;
             Coloring();
         }
+
     }
 
     void Tobari()
@@ -72,9 +75,9 @@ public class FadeIO : MonoBehaviour
         m_g = 0;
         m_b = 0;
         m_a += m_speed;
-        if(m_a >= 1)
+        if (m_a >= 1)
         {
-            m_stopper = true;
+            m_blackStopper = true;
         }
     }
 
@@ -84,11 +87,20 @@ public class FadeIO : MonoBehaviour
         m_r = 255;
         m_g = 255;
         m_b = 255;
-        m_a += m_speed*0.8f;
+        m_a += m_speed * 0.8f;
         if (m_a >= 1)
         {
-            m_stopper = true;
+            m_whiteStopper = true;
         }
+    }
+
+    void Clearing() //透明化
+    {
+        m_r = 0;
+        m_g = 0;
+        m_b = 0;
+        m_a = 0;
+        Coloring();
     }
 
     void Coloring()

@@ -31,7 +31,7 @@ public class NyuxFirstFazer : EnergyMatrix
     private void Update()
     {
         if (GameManager.turn == GameManager.Turn.GameOut || GameManager.turn == GameManager.Turn.GameEnd
-            || GiveUp.m_akirame == true)
+            || GiveUp.m_akirame == true || Player.m_currentPHp <= 0)
         {
             m_num = 0;
         }
