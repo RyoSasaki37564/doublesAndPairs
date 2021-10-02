@@ -86,7 +86,7 @@ public class Charge : MonoBehaviour
         {
             //ターン終了時、カウントを進める。
             m_turnCount++;
-            Debug.LogError("ターン" + m_turnCount);
+            //Debug.LogError("ターン" + m_turnCount);
             
             //チャージ開放
             if (m_turnCount % m_liberationTurn == 0 && m_canAttack == true)
