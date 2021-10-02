@@ -52,10 +52,9 @@ public class Charge : MonoBehaviour
     void FixedUpdate()
     {
         //解放演出完了時攻撃
-        if (m_chargeState == ChargeEnsyutu.EndState)
+        if (m_chargeState == ChargeEnsyutu.EndState && m_canAttack == true)
         {
             Enemy.m_currentEHp -= m_chargePower * m_bairitu / 10;
-            m_chargePower = 0;
             m_canAttack = false;
         }
 
