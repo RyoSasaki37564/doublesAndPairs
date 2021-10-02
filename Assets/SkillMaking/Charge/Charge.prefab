@@ -48,6 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_liberationTurn: 3
   m_bairitu: 14
+  m_AttackEffect: {fileID: 1260001474909929246, guid: de23ebd1e8255d24a8306bfe080c480d,
+    type: 3}
+  m_effectPos: {fileID: 2981231987142889828, guid: 81cd4eef44eb2a7499a09ca899cbda5d,
+    type: 3}
 --- !u!212 &-9094098547323544779
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -40,6 +40,21 @@ public class FadeIO : MonoBehaviour
                 m_isNight = true;
             }
         }
+
+        if(Charge.m_chargeState == Charge.ChargeEnsyutu.AttackState)
+        {
+            if (m_stopper == false)
+            {
+                Byakkoh();
+                Coloring();
+            }
+            else
+            {
+                m_image.enabled = false;
+                Charge.m_chargeState = Charge.ChargeEnsyutu.EndState;
+            }
+        }
+
         if (GameManager.turn == GameManager.Turn.CleanUpTurn)
         {
             m_isNight = false;
@@ -58,6 +73,19 @@ public class FadeIO : MonoBehaviour
         m_b = 0;
         m_a += m_speed;
         if(m_a >= 1)
+        {
+            m_stopper = true;
+        }
+    }
+
+    void Byakkoh()
+    {
+        m_image.enabled = true;
+        m_r = 255;
+        m_g = 255;
+        m_b = 255;
+        m_a += m_speed;
+        if (m_a >= 1)
         {
             m_stopper = true;
         }
