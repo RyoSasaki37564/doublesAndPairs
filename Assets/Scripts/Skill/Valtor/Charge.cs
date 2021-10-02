@@ -6,8 +6,7 @@ public class Charge : MonoBehaviour
 {
     int m_chargePower = 0; //チャージ威力
 
-    int m_turnCount = 0; //解放カウント
-
+    int m_turnCount = -1; //解放カウント。-1からなのはバトルの始めにインクリメントして0にするため
     bool m_countOnOff = false; //カウントの制御。
 
     [SerializeField] int m_liberationTurn = 3; //チャージ攻撃を実行するターン間隔。
@@ -17,9 +16,10 @@ public class Charge : MonoBehaviour
     int m_takenDamageIce;
     int m_takenDamageWood;
 
-    [SerializeField] int m_bairitu = 14; //解放時倍率。10で割るよ。
+    [Tooltip("この値は10で割られる。")] 
+    [SerializeField] int m_bairitu = 14;
 
-    GameManager m_game = new GameManager(); //操作時間を監視するのに使う
+    bool m_canAttack = false; //1ターン目にいはおりてるが、にターン目以降は上がるフラグ。
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +29,10 @@ public class Charge : MonoBehaviour
         m_takenDamageIce = PlayerPrefs.GetInt("BlueS");
         m_takenDamageWood = PlayerPrefs.GetInt("GreenS");
 
-        m_turnCount = 0;
+        m_turnCount = -1;
         m_chargePower = 0;
+
+        m_canAttack = false;
     }
 
     // Update is called once per frame
@@ -60,12 +62,7 @@ public class Charge : MonoBehaviour
                 Debug.LogError(m_chargePower);
             }
 
-            //チャージ開放
-            if(m_turnCount % m_liberationTurn+1 == 0) //はじめのターンにも1増えるため+1。
-            {
-                Enemy.m_currentEHp -= m_chargePower*m_bairitu/10;
-                m_chargePower = 0;
-            }
+            
         }
 
         if(GameManager.turn == GameManager.Turn.PlayerTurn && m_countOnOff == false)
@@ -73,12 +70,23 @@ public class Charge : MonoBehaviour
             //ターン終了時、カウントを進める。
             m_turnCount++;
             Debug.LogError("ターン" + m_turnCount);
+            
+            //チャージ開放
+            if (m_turnCount % m_liberationTurn == 0 && m_canAttack == true)
+            {
+                Enemy.m_currentEHp -= m_chargePower * m_bairitu / 10;
+                Debug.LogError("アタック！" + m_chargePower);
+                m_chargePower = 0;
+                m_canAttack = false;
+            }
+
             m_countOnOff = true;
         }
 
         if (GameManager.turn == GameManager.Turn.CleanUpTurn)
         {
             m_countOnOff = false;
+            m_canAttack = true;
         }
 
         if (GameManager.turn == GameManager.Turn.GameOut || GameManager.turn == GameManager.Turn.GameEnd
