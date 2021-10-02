@@ -35,7 +35,7 @@ public class CharaBox : MonoBehaviour
             {
                 var x = Instantiate(m_Drop[n]);
                 x.SetActive(true);
-                x.transform.SetParent(m_GL.transform);
+                x.transform.parent = m_GL.transform;
                 x.transform.localScale = m_Zukan[0].transform.localScale;
             }
             m_MenuHeadText.text = "所持ソウル: " + MenuManager.m_soul.ToString();

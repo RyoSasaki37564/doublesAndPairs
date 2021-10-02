@@ -37,7 +37,10 @@ public class FadeIO : MonoBehaviour
             }
             else
             {
-                Clearing();
+                if(m_isNight == false)
+                {
+                    Clearing();
+                }
                 m_isNight = true;
             }
         }
@@ -51,7 +54,10 @@ public class FadeIO : MonoBehaviour
             }
             else
             {
-                Clearing();
+                if(Charge.m_chargeState != Charge.ChargeEnsyutu.EndState)
+                {
+                    Clearing();
+                }
                 Charge.m_chargeState = Charge.ChargeEnsyutu.EndState;
             }
         }
