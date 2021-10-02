@@ -84,7 +84,7 @@ public class FadeIO : MonoBehaviour
         m_r = 255;
         m_g = 255;
         m_b = 255;
-        m_a += m_speed;
+        m_a += m_speed*0.8f;
         if (m_a >= 1)
         {
             m_stopper = true;
