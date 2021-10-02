@@ -8,7 +8,7 @@ public class Regene : MonoBehaviour
 
     void Regeneration()
     {
-        if(Player.m_currentPHp < m_p.ThePMaxHP() && GameManager.turn == GameManager.Turn.PlayerTurn)
+        if(Player.m_currentPHp < m_p.ThePMaxHP() && GameManager.turn == GameManager.Turn.PlayerTurn && GameManager.gameSetFlag == true)
         {
             Player.m_currentPHp += m_p.ThePMaxHP() / 50;
             Skill.m_healFlg = true;
