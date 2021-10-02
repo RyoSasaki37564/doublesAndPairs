@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ValtorPrimalyDefult : PrimaryDefault
+public class ValtorPrimaryDefault : PrimaryDefault
 {
-    string m_name = "極大剣の復讐者・ヴァルター";
+    string m_name = "極大の剛剣・ヴァルター";
     public string m_setumei = "「一刀両断」\n" +
         "【チャージ攻撃】発生させた物理攻撃力を「チャージ」し、3ターンごとの操作時間開始直後に1.4倍にして攻撃する。";
 
