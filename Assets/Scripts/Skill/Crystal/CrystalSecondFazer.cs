@@ -21,7 +21,7 @@ public class CrystalSecondFazer : NyuxFirstFazer
             Debug.LogError(m_turnCount);
             m_turnCount++;
             m_flg = true;
-            if (m_turnCount == 2)
+            if (m_turnCount == 3)
             {
                 Destroy(this.gameObject);
             }
