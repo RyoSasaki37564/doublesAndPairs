@@ -7,7 +7,7 @@ public abstract class ZukansParamator : MonoBehaviour
 {
     [SerializeField] CharaID m_thisCharasStatus = default; //そのキャラのパラメーター
 
-    //各パラメータのテキスト。 name, hp, fa. fm, ia, im. wa, wm スキル説明は継承したscriptから書き込む
+    //各パラメータのテキスト。 name, hp, fa. fm, ia, im. wa, wm. スキル説明は継承したscriptから書き込む
     [SerializeField] Text[] m_paramatorText = new Text[8];
 
     [SerializeField] Image m_paraPannelImage = default; //そのキャラのページのキャライメージ
