@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestRegeneration : PrimaryDefault
 {
-    string m_name = "エヴァーグリーン";
+    [SerializeField]string m_name = "エヴァーグリーン";
     public string m_setumay = "「リジェネ」\n" + "操作時間中、3秒ごとに最大体力の2%を回復。";
 
     private void Awake()

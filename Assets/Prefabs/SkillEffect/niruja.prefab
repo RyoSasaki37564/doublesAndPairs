@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8642555483361537688
+--- !u!1 &8886031959406149490
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8311689020189944374}
-  - component: {fileID: 1792294943935895020}
-  - component: {fileID: 5876112853133728668}
-  - component: {fileID: 2560789192463550939}
-  - component: {fileID: 8421325757463287972}
+  - component: {fileID: 8886031959406149488}
+  - component: {fileID: 8886031959406149491}
+  - component: {fileID: 8934835535247440313}
+  - component: {fileID: 4519144260118901205}
+  - component: {fileID: 6792669796729690218}
   m_Layer: 0
-  m_Name: blueheart
+  m_Name: niruja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8311689020189944374
+--- !u!4 &8886031959406149488
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8642555483361537688}
+  m_GameObject: {fileID: 8886031959406149490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.065, y: 4, z: 0}
-  m_LocalScale: {x: 0.135, y: 0.135, z: 1}
+  m_LocalPosition: {x: -2.204, y: 4.351, z: 0}
+  m_LocalScale: {x: 0.123, y: 0.123, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1792294943935895020
+--- !u!212 &8886031959406149491
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8642555483361537688}
+  m_GameObject: {fileID: 8886031959406149490}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eb47d85e557ed9540a13b742e7419bba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ffc9d2369cf4c28408074e599abbd553, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,17 +84,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5876112853133728668
+--- !u!95 &8934835535247440313
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8642555483361537688}
+  m_GameObject: {fileID: 8886031959406149490}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 15e03026be287bf4890dc24146981434, type: 2}
+  m_Controller: {fileID: 9100000, guid: d3179281fa3a34f4f99946ae26503223, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -103,29 +103,39 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2560789192463550939
+--- !u!114 &4519144260118901205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8642555483361537688}
+  m_GameObject: {fileID: 8886031959406149490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e1dc92c8021e6f4ca512cf5b5646701, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c4b81318eda7914c86893b0dd34e393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &8421325757463287972
+  m_energys:
+  - {fileID: 8085276725213475560, guid: 803bd195f913f974987f9bec3f780eab, type: 3}
+  - {fileID: 1940058343657969599, guid: 3e3e6895d135f6f479aa6ef1e0afc86a, type: 3}
+  m_generatePos:
+  - {fileID: 1183609990608231605, guid: bd2828bdb25e0df40a50e9dd3dc50c8c, type: 3}
+  - {fileID: 7902267852053705198, guid: f371e82e24ce1dd4393efc4288efbcb5, type: 3}
+  - {fileID: 2144616696006547368, guid: 74638be327b290f4e8371b0b79361012, type: 3}
+  - {fileID: 2278109333474284540, guid: 40dd783e616e16f4c842b6215518d1b5, type: 3}
+  - {fileID: 8306685335061421893, guid: 32844ffb88766664c908ef7610efe50c, type: 3}
+  - {fileID: 6521489579723123156, guid: ab42e0ab5f76357498811e5fc313f796, type: 3}
+--- !u!82 &6792669796729690218
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8642555483361537688}
+  m_GameObject: {fileID: 8886031959406149490}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 95b9a39710a68b347aff9a43e728cf6d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 87004c91313d9fb48a787817724d814e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

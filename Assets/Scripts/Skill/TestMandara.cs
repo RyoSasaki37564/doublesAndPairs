@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestMandara : PrimaryDefault
 {
-    string m_name = "ゲヘナ";
+    [SerializeField] string m_name = "ゲヘナ";
     public string m_setumei = "「エナジーマトリックス・火」\n" + "プレイヤーターン中、3秒ごとに火属性エナジーを1個生成する。";
 
     // Update is called once per frame
