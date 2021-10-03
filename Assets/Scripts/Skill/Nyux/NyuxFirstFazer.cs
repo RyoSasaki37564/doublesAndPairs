@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class NyuxFirstFazer : EnergyMatrix
 {
-    //フェイザースキルからパーマネント展開をする処理。位置はプライマリーデフォルトとは逆になるように設計した。
+    //フェイザースキルからパーマネント展開をする処理。位置はプライマリーデフォルトの真逆になるように設計した。
     Vector2 m_parmanentPos;
 
-    [SerializeField]float m_x;
-    [SerializeField]float m_y;
+    float m_x = -2.48f;
+    float m_y = 4.49f;
 
     static int m_num = 0;
 
