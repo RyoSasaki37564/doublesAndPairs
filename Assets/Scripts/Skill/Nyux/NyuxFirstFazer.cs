@@ -10,7 +10,7 @@ public class NyuxFirstFazer : EnergyMatrix
     float m_x = -2.48f;
     float m_y = 4.49f;
 
-    static int m_num = 0;
+    public static int m_num = 0;
 
     private void Start()
     {

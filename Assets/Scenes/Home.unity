@@ -4342,7 +4342,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 139215248}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4043777
+  m_Size: 0.40437773
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7610,17 +7610,17 @@ PrefabInstance:
     - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_CanHitCharactors_R.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_CanHitCharactors_SR.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_CanHitCharactors_SSR.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
@@ -7644,6 +7644,11 @@ PrefabInstance:
       objectReference: {fileID: 601075888}
     - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
+      propertyPath: m_CanHitCharactors_R.Array.data[4]
+      value: 
+      objectReference: {fileID: 2114569116}
+    - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
+        type: 3}
       propertyPath: m_CanHitCharactors_SR.Array.data[0]
       value: 
       objectReference: {fileID: 1531487848}
@@ -7664,6 +7669,11 @@ PrefabInstance:
       objectReference: {fileID: 601075888}
     - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
+      propertyPath: m_CanHitCharactors_SR.Array.data[4]
+      value: 
+      objectReference: {fileID: 2114569116}
+    - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
+        type: 3}
       propertyPath: m_CanHitCharactors_SSR.Array.data[0]
       value: 
       objectReference: {fileID: 1531487848}
@@ -7682,6 +7692,11 @@ PrefabInstance:
       propertyPath: m_CanHitCharactors_SSR.Array.data[3]
       value: 
       objectReference: {fileID: 601075888}
+    - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
+        type: 3}
+      propertyPath: m_CanHitCharactors_SSR.Array.data[4]
+      value: 
+      objectReference: {fileID: 2114569116}
     - target: {fileID: 2015151836608302607, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_Text
@@ -7742,17 +7757,17 @@ PrefabInstance:
     - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_CanHitCharactors_R.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_CanHitCharactors_SR.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_CanHitCharactors_SSR.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
@@ -7776,6 +7791,11 @@ PrefabInstance:
       objectReference: {fileID: 601075888}
     - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
+      propertyPath: m_CanHitCharactors_R.Array.data[4]
+      value: 
+      objectReference: {fileID: 2114569116}
+    - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
+        type: 3}
       propertyPath: m_CanHitCharactors_SR.Array.data[0]
       value: 
       objectReference: {fileID: 1531487848}
@@ -7796,6 +7816,11 @@ PrefabInstance:
       objectReference: {fileID: 601075888}
     - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
+      propertyPath: m_CanHitCharactors_SR.Array.data[4]
+      value: 
+      objectReference: {fileID: 2114569116}
+    - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
+        type: 3}
       propertyPath: m_CanHitCharactors_SSR.Array.data[0]
       value: 
       objectReference: {fileID: 1531487848}
@@ -7814,6 +7839,11 @@ PrefabInstance:
       propertyPath: m_CanHitCharactors_SSR.Array.data[3]
       value: 
       objectReference: {fileID: 601075888}
+    - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
+        type: 3}
+      propertyPath: m_CanHitCharactors_SSR.Array.data[4]
+      value: 
+      objectReference: {fileID: 2114569116}
     - target: {fileID: 2015151837060906955, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_Sprite
@@ -9404,6 +9434,7 @@ MonoBehaviour:
   - {fileID: 932400649}
   - {fileID: 1477791547}
   - {fileID: 601075888}
+  - {fileID: 2114569116}
   m_CanHitCharactors_SR:
   - {fileID: 266530306}
   - {fileID: 1851265387}
@@ -11951,7 +11982,7 @@ PrefabInstance:
     - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_CanHitCharactors_SSR.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
@@ -11988,6 +12019,11 @@ PrefabInstance:
       propertyPath: m_CanHitCharactors_SSR.Array.data[3]
       value: 
       objectReference: {fileID: 601075888}
+    - target: {fileID: 2015151836389149558, guid: 193a84c85ed07e5448ec842a89ce4251,
+        type: 3}
+      propertyPath: m_CanHitCharactors_SSR.Array.data[4]
+      value: 
+      objectReference: {fileID: 2114569116}
     - target: {fileID: 2015151836975876065, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_Type
@@ -12037,7 +12073,7 @@ PrefabInstance:
     - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_CanHitCharactors_SSR.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
@@ -12074,6 +12110,11 @@ PrefabInstance:
       propertyPath: m_CanHitCharactors_SSR.Array.data[3]
       value: 
       objectReference: {fileID: 601075888}
+    - target: {fileID: 2015151837060906953, guid: 193a84c85ed07e5448ec842a89ce4251,
+        type: 3}
+      propertyPath: m_CanHitCharactors_SSR.Array.data[4]
+      value: 
+      objectReference: {fileID: 2114569116}
     - target: {fileID: 2015151837060906955, guid: 193a84c85ed07e5448ec842a89ce4251,
         type: 3}
       propertyPath: m_Sprite

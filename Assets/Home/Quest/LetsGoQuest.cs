@@ -18,6 +18,7 @@ public class LetsGoQuest : MonoBehaviour
     public void GoQuest()
     {
         //戦闘画面起動にて各種初期処理
+        NyuxFirstFazer.m_num = 0;
         GiveUp.m_akirame = false;
         m_NowLoadingBack.SetActive(true);
         var x =  Instantiate(m_NowLosdingCanvas);

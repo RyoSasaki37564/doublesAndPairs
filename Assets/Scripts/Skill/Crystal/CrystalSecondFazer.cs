@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrystalSecondFazer : NyuxFirstFazer
+public class CrystalSecondFazer : NyuxFirstFazer //フェイザーからエナジーマトリックス系を使う
 {
     int m_turnCount = 0;
 
@@ -18,7 +18,6 @@ public class CrystalSecondFazer : NyuxFirstFazer
     {
         if (GameManager.turn == GameManager.Turn.CleanUpTurn && m_flg == false)
         {
-            Debug.LogError(m_turnCount);
             m_turnCount++;
             m_flg = true;
             if (m_turnCount == 3)
