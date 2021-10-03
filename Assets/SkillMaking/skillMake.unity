@@ -886,6 +886,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: slash
       objectReference: {fileID: 0}
+    - target: {fileID: 1260001474909929246, guid: de23ebd1e8255d24a8306bfe080c480d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7797006873068745552, guid: de23ebd1e8255d24a8306bfe080c480d,
         type: 3}
       propertyPath: m_audioClip
@@ -1215,6 +1220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Kabe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045393670476258890, guid: ab0abadbc1d7a0440a279d46e457b3fd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5045393670476258891, guid: ab0abadbc1d7a0440a279d46e457b3fd,
         type: 3}

@@ -26,8 +26,8 @@ public class LokiTheTrickStar : MonoBehaviour
         {
             m_DoubleDamageAttack = PlayerPrefs.GetInt("RedS");
             m_DoubleDamageMagic = PlayerPrefs.GetInt("RedC");
-            PlayerPrefs.SetInt("RedS", m_DoubleDamageAttack * 2);
-            PlayerPrefs.SetInt("RedC", m_DoubleDamageMagic * 2);
+            PlayerPrefs.SetInt("RedS", m_DoubleDamageAttack * 3);
+            PlayerPrefs.SetInt("RedC", m_DoubleDamageMagic * 3);
             PlayerPrefs.Save();
             Enemy.m_enemyZokusei = 2;
             m_trick = TrickZokusei.FireBuff;
@@ -36,8 +36,8 @@ public class LokiTheTrickStar : MonoBehaviour
         {
             m_DoubleDamageAttack = PlayerPrefs.GetInt("BlueS");
             m_DoubleDamageMagic = PlayerPrefs.GetInt("BlueC");
-            PlayerPrefs.SetInt("BlueS", m_DoubleDamageAttack * 2);
-            PlayerPrefs.SetInt("BlueC", m_DoubleDamageMagic * 2);
+            PlayerPrefs.SetInt("BlueS", m_DoubleDamageAttack * 3);
+            PlayerPrefs.SetInt("BlueC", m_DoubleDamageMagic * 3);
             PlayerPrefs.Save();
             Enemy.m_enemyZokusei = 0;
             m_trick = TrickZokusei.IceBuff;
@@ -46,8 +46,8 @@ public class LokiTheTrickStar : MonoBehaviour
         {
             m_DoubleDamageAttack = PlayerPrefs.GetInt("GreenS");
             m_DoubleDamageMagic = PlayerPrefs.GetInt("GreenC");
-            PlayerPrefs.SetInt("GreenS", m_DoubleDamageAttack * 2);
-            PlayerPrefs.SetInt("GreenC", m_DoubleDamageMagic * 2);
+            PlayerPrefs.SetInt("GreenS", m_DoubleDamageAttack * 3);
+            PlayerPrefs.SetInt("GreenC", m_DoubleDamageMagic * 3);
             PlayerPrefs.Save();
             Enemy.m_enemyZokusei = 1;
             m_trick = TrickZokusei.WoodBuff;

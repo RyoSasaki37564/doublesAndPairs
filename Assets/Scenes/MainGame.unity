@@ -10330,6 +10330,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 314280331}
     m_Modifications:
     - target: {fileID: 1935272239, guid: 98337de6f48ba2d48b724cda485bfbc7, type: 3}
+      propertyPath: m_setumei
+      value: "\u300C\u30B4\u30C3\u30C9\u30AA\u30D6\u30C8\u30EA\u30C3\u30AF\u30B9\u30BF\u30FC\u300D\n1\u30BF\u30FC\u30F3\u306E\u9593\u3001\u6575\u3068\u540C\u3058\u5C5E\u6027\u306E\u5A01\u529B\u304C3\u500D\u3001\u6575\u306E\u5C5E\u6027\u3092\u300C\u6575\u306E\u73FE\u5728\u306E\u6709\u5229\u5C5E\u6027\uFF08\u4F8B\uFF1A\u5143\u304C\u706B\u306A\u3089\u6728\u3078\uFF09\u300D\u306B\u5909\u3048\u308B\u3002"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935272239, guid: 98337de6f48ba2d48b724cda485bfbc7, type: 3}
       propertyPath: m_pannelPos
       value: 
       objectReference: {fileID: 391376107}
