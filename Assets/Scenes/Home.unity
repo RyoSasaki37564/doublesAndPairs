@@ -10862,6 +10862,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal
       objectReference: {fileID: 0}
+    - target: {fileID: 765689889062296767, guid: b207b91265273ab47b6b0589e8b524cf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2114569117}
+    - target: {fileID: 765689889062296767, guid: b207b91265273ab47b6b0589e8b524cf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PartyIO
+      objectReference: {fileID: 0}
     - target: {fileID: 5050098275784718453, guid: b207b91265273ab47b6b0589e8b524cf,
         type: 3}
       propertyPath: m_Enabled

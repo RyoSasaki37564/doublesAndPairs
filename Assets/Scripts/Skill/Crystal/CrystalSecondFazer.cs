@@ -2,34 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrystalSecondFazer : EnergyMatrix
+public class CrystalSecondFazer : NyuxFirstFazer
 {
     int m_turnCount = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Generate();
-    }
+    bool m_flg = false;
 
     public override void Generate()
     {
-        //エナジーマトリックスの再帰
         base.Generate();
-        StartCoroutine(AbyssGene());
-        if (GameManager.turn == GameManager.Turn.CleanUpTurn)
+        
+    }
+
+    private void Update()
+    {
+        if (GameManager.turn == GameManager.Turn.CleanUpTurn && m_flg == false)
         {
+            Debug.LogError(m_turnCount);
             m_turnCount++;
+            m_flg = true;
             if (m_turnCount == 2)
             {
                 Destroy(this.gameObject);
             }
         }
-    }
-    IEnumerator AbyssGene()
-    {
-        //エナジーマトリックスの再帰
-        yield return new WaitForSeconds(2.0f);
-        Generate();
+
+        if(GameManager.turn != GameManager.Turn.CleanUpTurn && m_flg == true)
+        {
+            m_flg = false;
+        }
+
     }
 }
