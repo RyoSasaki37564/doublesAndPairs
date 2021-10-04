@@ -22,12 +22,12 @@ PrefabInstance:
     - target: {fileID: 1486036833537488420, guid: 4e3787b3b1e24a041995a9a9f8221e3b,
         type: 3}
       propertyPath: m_speed
-      value: -0.005
+      value: -0.00005
       objectReference: {fileID: 0}
     - target: {fileID: 1486036833537488420, guid: 4e3787b3b1e24a041995a9a9f8221e3b,
         type: 3}
       propertyPath: m_ranges
-      value: 0.06
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1486036833537488423, guid: 4e3787b3b1e24a041995a9a9f8221e3b,
         type: 3}

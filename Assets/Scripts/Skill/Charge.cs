@@ -49,7 +49,7 @@ public class Charge : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         //解放演出完了時攻撃
         if (m_chargeState == ChargeEnsyutu.EndState && m_canAttack == true)

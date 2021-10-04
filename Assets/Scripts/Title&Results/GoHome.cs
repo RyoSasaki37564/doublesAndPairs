@@ -45,8 +45,6 @@ public class GoHome : MonoBehaviour
 
     public void GettingAllAndDestroy()
     {
-        SceneManager.UnloadSceneAsync("MainGame");
-        Debug.Log("foo");
         //ヒエラルキーからホームの始祖オブジェクトを持ってきてアクティブ化
         if (m_Obj != null)
         {
@@ -71,5 +69,6 @@ public class GoHome : MonoBehaviour
                 Destroy(m_dustBox);
             }
         }
+        SceneManager.UnloadSceneAsync("MainGame");
     }
 }
