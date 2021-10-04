@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FadeIO : MonoBehaviour
 {
-    float m_speed = 0.005f; //染色速度
+    float m_speed = 0.001f; //染色速度
     float m_r, m_g, m_b, m_a; //色彩
     [SerializeField]Image m_image; //画像
 
@@ -80,7 +80,7 @@ public class FadeIO : MonoBehaviour
         m_r = 0;
         m_g = 0;
         m_b = 0;
-        m_a += m_speed;
+        m_a += m_speed*0.8f;
         if (m_a >= 1)
         {
             m_blackStopper = true;

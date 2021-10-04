@@ -13,7 +13,7 @@ public class SEMDropDestroy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()//FixedUpdate()
     {
         if (GameManager.turn != GameManager.Turn.EnemyTurn &&
             GameManager.turn != GameManager.Turn.GameEnd &&

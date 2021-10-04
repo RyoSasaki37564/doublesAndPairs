@@ -23,11 +23,16 @@ public class BGMManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()//FixedUpdate()
     {
         if(GameManager.turn == GameManager.Turn.GameEnd && Player.m_currentPHp > 0)
         {
             m_sounds = Ongen.Clear;
+            m_jukeBoxes[2].SetActive(true);
+            m_jukeBoxes[3].SetActive(true);
+            m_jukeBoxes[4].SetActive(true);
+            m_jukeBoxes[0].SetActive(false);
+            m_jukeBoxes[1].SetActive(false);
         }
         else if(Enemy.m_isBoss == true)
         {
@@ -51,11 +56,7 @@ public class BGMManager : MonoBehaviour
                 StartCoroutine(SetBossBGM());
                 break;
             case Ongen.Clear:
-                m_jukeBoxes[0].SetActive(false);
-                m_jukeBoxes[1].SetActive(false);
-                m_jukeBoxes[2].SetActive(true);
-                m_jukeBoxes[3].SetActive(true);
-                m_jukeBoxes[4].SetActive(true);
+                //StartCoroutine(SetClear());
                 break;
         }
 
@@ -65,5 +66,14 @@ public class BGMManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         m_jukeBoxes[1].SetActive(true);
+    }
+
+    IEnumerator SetClear()
+    {
+        yield return new WaitForSeconds(0.6f);
+
+        m_jukeBoxes[2].SetActive(true);
+        m_jukeBoxes[3].SetActive(true);
+        m_jukeBoxes[4].SetActive(true);
     }
 }
