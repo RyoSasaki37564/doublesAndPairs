@@ -7,12 +7,14 @@ public class GreenDropDestroy : MonoBehaviour
     public static bool woodAttackFlag = false;
     public static bool woodMagicFlag = false;
 
-    [SerializeField] AudioClip m_destroySE = default; //ドロップ消滅音
+    [SerializeField] AudioSource m_aud = default;
+    AudioClip m_destroySE; //ドロップ消滅音
 
     void Start()
     {
         woodAttackFlag = false;
         woodMagicFlag = false;
+        m_destroySE = m_aud.clip;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,7 +25,7 @@ public class GreenDropDestroy : MonoBehaviour
             {
                 if (collision.gameObject.tag == "SGreen")
                 {
-                    AudioSource.PlayClipAtPoint(m_destroySE, transform.position);
+                    AudioSource.PlayClipAtPoint(m_destroySE, transform.position, 0f);
                     Destroy(collision.gameObject);
                     Destroy(this.gameObject);
                     this.gameObject.SetActive(false);

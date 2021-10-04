@@ -6,13 +6,14 @@ public class RedDropDestroy : MonoBehaviour
 {
     public static bool fireAttackFlag = false;
     public static bool fireMagicFlag = false;
-
-    [SerializeField] AudioClip m_destroySE = default; //ドロップ消滅音
+    [SerializeField] AudioSource m_aud = default;
+    AudioClip m_destroySE; //ドロップ消滅音
 
     void Start()
     {
         fireAttackFlag = false;
         fireMagicFlag = false;
+        m_destroySE = m_aud.clip;
 
     }
 
@@ -24,7 +25,7 @@ public class RedDropDestroy : MonoBehaviour
             {
                 if (collision.gameObject.tag == "SRed")
                 {
-                    AudioSource.PlayClipAtPoint(m_destroySE, transform.position);
+                    AudioSource.PlayClipAtPoint(m_destroySE, transform.position, 0f);
                     Destroy(collision.gameObject);
                     Destroy(this.gameObject);
                     this.gameObject.SetActive(false);

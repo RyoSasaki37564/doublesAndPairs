@@ -6,13 +6,14 @@ public class BlueDropDestroy : MonoBehaviour
 {
     public static bool iceAttackFlag = false;
     public static bool iceMagicFlag = false;
-
-    [SerializeField] AudioClip m_destroySE = default; //ドロップ消滅音
+    [SerializeField] AudioSource m_aud = default;
+    AudioClip m_destroySE; //ドロップ消滅音
 
     void Start()
     {
         iceAttackFlag = false;
         iceMagicFlag = false;
+        m_destroySE = m_aud.clip;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,7 +24,7 @@ public class BlueDropDestroy : MonoBehaviour
             {
                 if (collision.gameObject.tag == "SBlue")
                 {
-                    AudioSource.PlayClipAtPoint(m_destroySE, transform.position);
+                    AudioSource.PlayClipAtPoint(m_destroySE, transform.position, 0f);
                     Destroy(collision.gameObject);
                     Destroy(this.gameObject);
                     this.gameObject.SetActive(false);
