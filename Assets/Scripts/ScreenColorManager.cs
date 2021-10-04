@@ -20,7 +20,6 @@ public class ScreenColorManager : MonoBehaviour
             m_spR.color = new Color32(255, 0, 0, 100); //敵の攻撃で赤くなる
             StartCoroutine(ScreenReset());
         }
-
     }
 
     IEnumerator ScreenReset()

@@ -8,6 +8,7 @@ public class SESys : MonoBehaviour
     //0は現在使用していない。効果音はドロップデストロイに任せている。
 
     bool m_wSEFlg = false;
+    bool m_eSEFlg = false;
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +16,12 @@ public class SESys : MonoBehaviour
         m_SESystem[0].SetActive(false);
         m_SESystem[1].SetActive(false);
         m_SESystem[2].SetActive(false);
+        m_wSEFlg = false;
+        m_eSEFlg = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         //ウィニングファンファーレ
@@ -27,6 +30,7 @@ public class SESys : MonoBehaviour
             m_SESystem[1].SetActive(true);
             m_wSEFlg = true;
         }
+
         if (GameManager.turn == GameManager.Turn.CleanUpTurn)
         {
             m_SESystem[1].SetActive(false);
@@ -34,7 +38,7 @@ public class SESys : MonoBehaviour
         }
 
         //エネミーアタック
-        if (GameManager.turn == GameManager.Turn.EnemyTurn)
+        if (GameManager.turn == GameManager.Turn.EnemyTurn && m_eSEFlg == false)
         {
             m_SESystem[2].SetActive(true);
             StartCoroutine(MutiReset());
@@ -43,7 +47,9 @@ public class SESys : MonoBehaviour
 
     IEnumerator MutiReset()
     {
-        yield return new WaitForSeconds(1.5f);
+        m_eSEFlg = true;
+        yield return new WaitForSeconds(5f);
         m_SESystem[2].SetActive(false);
+        m_eSEFlg = false;
     }
 }
