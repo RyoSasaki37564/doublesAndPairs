@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1396044190344552641}
   - component: {fileID: 6347445432723430398}
   - component: {fileID: -7382301825813556816}
+  - component: {fileID: 7691821445838276657}
   m_Layer: 0
   m_Name: redheart
   m_TagString: Untagged
@@ -211,3 +212,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7691821445838276657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101258260603953757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0454fb0d71070449b396b78b2ddf1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isNotStartSetting: 0
