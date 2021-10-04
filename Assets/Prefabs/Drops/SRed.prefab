@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ed688843b55d8488d4c92b00e2a9d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_destroySE: {fileID: 8300000, guid: 05359c8971fa3d64f9f322550fab8eab, type: 3}
 --- !u!114 &-7549745689710622524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +173,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0454fb0d71070449b396b78b2ddf1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_isNotStartSetting: 0

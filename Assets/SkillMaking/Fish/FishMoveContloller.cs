@@ -6,7 +6,7 @@ public class FishMoveContloller : MonoBehaviour
 {
     Rigidbody2D m_fishBody;
     [SerializeField] float m_speed = -0.001f;
-    [SerializeField] float m_ranges = 0.03f;
+    [SerializeField] float m_ranges = 0.04f;
     float rondom;
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class FishMoveContloller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rondom = Random.Range(-1*m_ranges/3, m_ranges/3);
+        rondom = Random.Range(-1*m_ranges/2, m_ranges/2);
         m_fishBody.AddForce(new Vector2(m_speed, rondom), ForceMode2D.Force);
     }
 

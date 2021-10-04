@@ -4,23 +4,28 @@ using UnityEngine;
 
 public class ScreenColorManager : MonoBehaviour
 {
+    [SerializeField]SpriteRenderer m_spR;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        GetComponent<SpriteRenderer>().material.color = new Color32(0, 0, 0, 0); //平時においては透明
+        m_spR.color = new Color32(0, 0, 0, 0);
     }
 
     // Update is called once per frame
-    void Update()//FixedUpdate()
+    void FixedUpdate()
     {
         if (GameManager.turn == GameManager.Turn.EnemyTurn)
         {
-            GetComponent<SpriteRenderer>().material.color = new Color32(255, 0, 0, 255); //敵の攻撃で赤くなる
+            m_spR.color = new Color32(255, 0, 0, 100); //敵の攻撃で赤くなる
+            StartCoroutine(ScreenReset());
         }
 
-        if (GameManager.turn == GameManager.Turn.ResetTurn)
-        {
-            GetComponent<SpriteRenderer>().material.color = new Color32(0, 0, 0, 0); //戻す
-        }
+    }
+
+    IEnumerator ScreenReset()
+    {
+        yield return new WaitForSeconds(1.2f);
+        m_spR.color = new Color32(0, 0, 0, 0);
     }
 }

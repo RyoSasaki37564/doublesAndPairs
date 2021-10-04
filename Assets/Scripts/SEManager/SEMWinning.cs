@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SEMWinning : MonoBehaviour
 {
+    /*
     AudioSource m_winningSE;
-    private bool m_wSEFlg = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,4 +27,5 @@ public class SEMWinning : MonoBehaviour
             m_wSEFlg = false;
         }
     }
+    */
 }
