@@ -23,7 +23,7 @@ public class BGMManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if(GameManager.turn == GameManager.Turn.GameEnd && Player.m_currentPHp > 0)
         {
