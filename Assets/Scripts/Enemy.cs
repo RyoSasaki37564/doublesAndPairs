@@ -240,6 +240,7 @@ public class Enemy : MonoBehaviour
             else
             {
                 GameManager.turn = GameManager.Turn.GameEnd;
+                Debug.LogError("upd");
             }
 
             if(m_nextBattleReader == m_battleCountNum-1)
@@ -248,6 +249,18 @@ public class Enemy : MonoBehaviour
             }
         }
 
+    }
+
+    private void FixedUpdate()
+    {
+        if (GameManager.turn == GameManager.Turn.NextBattleTurn)
+        {
+            if (m_nextBattleReader == m_battleCountNum)
+            {
+                GameManager.turn = GameManager.Turn.GameEnd;
+                Debug.LogError("fxd");
+            }
+        }
     }
 
     public int EnemyCurrentAttack()
