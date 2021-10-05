@@ -236,12 +236,12 @@ public class Enemy : MonoBehaviour
 
                 m_kamishibai = false;
                 StartCoroutine(NextBattleSet());
-            }
+            }/*
             else
             {
                 GameManager.turn = GameManager.Turn.GameEnd;
                 Debug.LogError("upd");
-            }
+            }*/
 
             if(m_nextBattleReader == m_battleCountNum-1)
             {
@@ -251,14 +251,14 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate() //ここじゃなきゃダメみてー。
     {
         if (GameManager.turn == GameManager.Turn.NextBattleTurn)
         {
             if (m_nextBattleReader == m_battleCountNum)
             {
                 GameManager.turn = GameManager.Turn.GameEnd;
-                Debug.LogError("fxd");
+                //Debug.LogError("fxd");
             }
         }
     }

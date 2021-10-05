@@ -20,11 +20,6 @@ public class BGMManager : MonoBehaviour
          m_sounds = Ongen.Nomal;
     }
 
-    private void Update()
-    {
-        
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -32,7 +27,7 @@ public class BGMManager : MonoBehaviour
         {
             m_sounds = Ongen.Clear;
         }
-        if (Enemy.m_isBoss == true)//else if(Enemy.m_isBoss == true)
+        else if(Enemy.m_isBoss == true)
         {
             m_sounds = Ongen.Boss;
         }
