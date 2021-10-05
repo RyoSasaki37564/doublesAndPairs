@@ -5,8 +5,8 @@ using UnityEngine;
 public class FishMoveContloller : MonoBehaviour
 {
     Rigidbody2D m_fishBody;
-    [SerializeField] float m_speed = -0.001f;
-    [SerializeField] float m_ranges = 0.04f;
+    float m_speed = -0.001f;
+    float m_ranges = 0.04f;
     float rondom;
 
     // Start is called before the first frame update

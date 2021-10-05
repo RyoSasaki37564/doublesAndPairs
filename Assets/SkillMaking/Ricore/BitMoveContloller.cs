@@ -5,7 +5,7 @@ using UnityEngine;
 public class BitMoveContloller : MonoBehaviour
 {
     Rigidbody2D m_bitBody;
-    [SerializeField] float m_speed = -0.1f;
+    float m_speed = -0.5f;
     float rondom;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class BitMoveContloller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rondom = Random.Range(-10f, 10f);
+        rondom = Random.Range(-5f, 5f);
         m_bitBody.AddForce(new Vector2(m_speed, rondom), ForceMode2D.Force);
     }
 
@@ -25,7 +25,7 @@ public class BitMoveContloller : MonoBehaviour
     {
         if (collision.gameObject.tag == "OutLine")
         {
-            rondom = Random.Range(-10f, 10f);
+            rondom = Random.Range(-5f, 5f);
             m_speed *= -1;
             this.gameObject.transform.localScale = new Vector3(this.gameObject.transform.localScale.x * -1,
                 this.gameObject.transform.localScale.y,
