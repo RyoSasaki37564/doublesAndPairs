@@ -5,7 +5,7 @@ using UnityEngine;
 public class BitMoveContloller : MonoBehaviour
 {
     Rigidbody2D m_bitBody;
-    float m_speed = -0.5f;
+    float m_speed = -1f;
     float rondom;
 
     // Start is called before the first frame update

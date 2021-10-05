@@ -5,7 +5,7 @@ using UnityEngine;
 public class FishMoveContloller : MonoBehaviour
 {
     Rigidbody2D m_fishBody;
-    float m_speed = -0.001f;
+    float m_speed = -0.002f;
     float m_ranges = 0.04f;
     float rondom;
 
