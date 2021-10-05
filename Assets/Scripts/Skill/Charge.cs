@@ -9,7 +9,7 @@ public class Charge : MonoBehaviour
     int m_turnCount = -1; //解放カウント。-1からなのはバトルの始めにインクリメントして0にするため
     bool m_countOnOff = false; //カウントの制御。
 
-    [SerializeField] int m_liberationTurn = 2; //チャージ攻撃を実行するターン間隔。
+    [SerializeField] int m_liberationTurn = 3; //チャージ攻撃を実行するターン間隔。
 
     //物理攻撃威力をカウント
     int m_takenDamageFire;
