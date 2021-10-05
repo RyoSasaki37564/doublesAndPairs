@@ -29,8 +29,6 @@ public class GoHome : MonoBehaviour
 
     public void BattleEnded()
     {
-        GettingAllAndDestroy();
-
         if(Player.m_currentPHp > 0)
         {
             m_isBossDrop = true;
@@ -40,14 +38,13 @@ public class GoHome : MonoBehaviour
         {
             m_isBossDrop = false;
         }
-
     }
 
     public void GettingAllAndDestroy()
     {
         //ヒエラルキーからホームの始祖オブジェクトを持ってきてアクティブ化
-        if (m_Obj != null)
-        {
+        //if (m_Obj != null)
+        //{
             foreach (var home in m_Obj)
             {
 #if UNITY_EDITOR
@@ -55,21 +52,18 @@ public class GoHome : MonoBehaviour
                 {
                     continue;
                 }
-
 #endif
-
                 if (home.name == "Home")
                 {
                     home.SetActive(true);
                 }
-
             }
             if (m_dustBox != null)
             {
                 Destroy(m_dustBox);
             }
-        }
-
+        //}
+        BattleEnded();
         SceneManager.UnloadSceneAsync("MainGame");
     }
 }

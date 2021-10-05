@@ -1,15 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEditor;
 
 public class GiveUp : MonoBehaviour
 {
     //クエストをあきらめてホームに戻る！
-
-    GoHome m_goHome = new GoHome();
 
     public static bool m_akirame = false; //スキルのリセッター
 
@@ -25,22 +22,31 @@ public class GiveUp : MonoBehaviour
 
     public void Backer()
     {
-        m_akirame = true;
-        AbyssFazer.m_AbyssCanUse = false;
-        foreach (var home in m_Obj)
-        {
-#if UNITY_EDITOR
-            if (!AssetDatabase.GetAssetOrScenePath(home).Contains(".unity"))
-            {
-                continue;
-            }
-#endif
-            if (home.name == "Home")
-            {
-                home.SetActive(true);
-            }
 
-        }
-        m_goHome.GettingAllAndDestroy();
+        //if (m_Obj != null)
+        //{
+            m_akirame = true;
+            AbyssFazer.m_AbyssCanUse = false;
+            foreach (var home in m_Obj)
+            {
+#if UNITY_EDITOR
+                if (!AssetDatabase.GetAssetOrScenePath(home).Contains(".unity"))
+                {
+                    continue;
+                }
+#endif
+                if (home.name == "Home")
+                {
+                    home.SetActive(true);
+                }
+
+            }
+            if (m_dustBox != null)
+            {
+                Destroy(m_dustBox);
+            }
+        //}
+        SceneManager.UnloadSceneAsync("MainGame");
     }
+
 }
