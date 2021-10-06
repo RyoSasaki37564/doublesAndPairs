@@ -45,25 +45,25 @@ public class GoHome : MonoBehaviour
         //ヒエラルキーからホームの始祖オブジェクトを持ってきてアクティブ化
         //if (m_Obj != null)
         //{
-            foreach (var home in m_Obj)
-            {
+        foreach (var home in m_Obj)
+        {
 #if UNITY_EDITOR
-                if (!AssetDatabase.GetAssetOrScenePath(home).Contains(".unity"))
-                {
-                    continue;
-                }
-#endif
-                if (home.name == "Home")
-                {
-                    home.SetActive(true);
-                }
-            }
-            if (m_dustBox != null)
+            if (!AssetDatabase.GetAssetOrScenePath(home).Contains(".unity"))
             {
-                Destroy(m_dustBox);
+                continue;
             }
+#endif
+            if (home.name == "Home")
+            {
+                home.SetActive(true);
+            }
+        }
+        if (m_dustBox != null)
+        {
+            Destroy(m_dustBox);
+        }
+        SceneManager.UnloadSceneAsync("MainGame");
         //}
         BattleEnded();
-        SceneManager.UnloadSceneAsync("MainGame");
     }
 }

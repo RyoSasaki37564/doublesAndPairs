@@ -13,7 +13,7 @@ public class IO_Test : MonoBehaviour
     void Start()
     {
         path = Application.dataPath + "/" + fileName;
-        Debug.Log(path);
+        Debug.LogError(path);
         ReadFile();
 
         WriteFile(writeTxt);
@@ -36,12 +36,12 @@ public class IO_Test : MonoBehaviour
             using (StreamReader sr = new StreamReader(fi.OpenRead(), Encoding.UTF8))
             {
                 string readTxt = sr.ReadToEnd();
-                Debug.Log(readTxt);
+                Debug.LogError(readTxt);
             }
         }
         catch (Exception e)
         {
-            Debug.Log(e);
+            Debug.LogError(e);
         }
     }
 
