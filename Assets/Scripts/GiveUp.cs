@@ -25,26 +25,25 @@ public class GiveUp : MonoBehaviour
 
         //if (m_Obj != null)
         //{
-            m_akirame = true;
-            AbyssFazer.m_AbyssCanUse = false;
-            foreach (var home in m_Obj)
-            {
+        m_akirame = true;
+        AbyssFazer.m_AbyssCanUse = false;
+        foreach (var home in m_Obj)
+        {
 #if UNITY_EDITOR
-                if (!AssetDatabase.GetAssetOrScenePath(home).Contains(".unity"))
-                {
-                    continue;
-                }
-#endif
-                if (home.name == "Home")
-                {
-                    home.SetActive(true);
-                }
-
-            }
-            if (m_dustBox != null)
+            if (!AssetDatabase.GetAssetOrScenePath(home).Contains(".unity"))
             {
-                Destroy(m_dustBox);
+                continue;
             }
+#endif
+            if (home.name == "Home")
+            {
+                home.SetActive(true);
+            }
+        }
+        if (m_dustBox != null)
+        {
+            Destroy(m_dustBox);
+        }
         //}
         SceneManager.UnloadSceneAsync("MainGame");
     }

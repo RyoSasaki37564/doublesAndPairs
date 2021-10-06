@@ -23,8 +23,8 @@ public class GoHome : MonoBehaviour
     {
         int n = Random.Range(0, m_kaibunshos.Length);
         m_topickTEXT.text = m_kaibunshos[n];
+       // m_Obj = Resources.FindObjectsOfTypeAll<GameObject>();
 
-        m_Obj = Resources.FindObjectsOfTypeAll<GameObject>();
     }
 
     public void BattleEnded()
@@ -42,9 +42,12 @@ public class GoHome : MonoBehaviour
 
     public void GettingAllAndDestroy()
     {
+        m_Obj = Resources.FindObjectsOfTypeAll<GameObject>();
+
         //ヒエラルキーからホームの始祖オブジェクトを持ってきてアクティブ化
         //if (m_Obj != null)
         //{
+
         foreach (var home in m_Obj)
         {
 #if UNITY_EDITOR
