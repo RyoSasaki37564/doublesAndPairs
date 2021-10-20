@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using System.Linq;
 
 public class GoHome : MonoBehaviour
 {
@@ -44,10 +45,6 @@ public class GoHome : MonoBehaviour
     {
         m_Obj = Resources.FindObjectsOfTypeAll<GameObject>();
 
-        //ヒエラルキーからホームの始祖オブジェクトを持ってきてアクティブ化
-        //if (m_Obj != null)
-        //{
-
         foreach (var home in m_Obj)
         {
 #if UNITY_EDITOR
@@ -56,17 +53,21 @@ public class GoHome : MonoBehaviour
                 continue;
             }
 #endif
-            if (home.name == "Home")
-            {
-                home.SetActive(true);
-            }
+            //if (home.name == "Home")
+            //{
+            //    home.SetActive(true);
+            //}
         }
+
+        //ラムダ化
+        m_Obj.Where(home => home.name == "Home").ToList().ForEach(home => home.SetActive(true));
+
         if (m_dustBox != null)
         {
             Destroy(m_dustBox);
         }
         SceneManager.UnloadSceneAsync("MainGame");
-        //}
+
         BattleEnded();
     }
 }
