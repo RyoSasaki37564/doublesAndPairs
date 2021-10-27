@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;  // DOTween を使うため
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Player : MonoBehaviour
 
     /// <summary>スライダー</summary>
     public Slider m_pHPSlider;
+
+    public float m_changeValueInterval = 1f; //値の変化速度
 
     // Start is called before the first frame update
     void Start()
@@ -49,9 +52,10 @@ public class Player : MonoBehaviour
             if (GameManager.turn == GameManager.Turn.EnemyTurn) //敵の攻撃
             {
                 Debug.Log("敵の攻撃");
-                m_currentPHp -= Enemy.m_enemyAttack;
-                m_pHPSlider.value = m_currentPHp;
-                m_playerHPNum.text = m_currentPHp.ToString();
+                DOTween.To(() => m_currentPHp, x => m_currentPHp = x, m_currentPHp - Enemy.m_enemyAttack, m_changeValueInterval);
+                DOTween.To(() => m_pHPSlider.value, x => m_pHPSlider.value = x, m_currentPHp - Enemy.m_enemyAttack, m_changeValueInterval)
+                    .OnUpdate(() => m_playerHPNum.text = m_currentPHp.ToString())
+                .OnComplete(() => m_playerHPNum.text = m_currentPHp.ToString());
 
                 GameManager.turnFlag = true; //ドロップ操作用前提フラグ
 
